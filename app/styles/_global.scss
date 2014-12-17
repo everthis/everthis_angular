@@ -1,0 +1,36 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+@include sticky-footer(50px, ".root", ".root_footer", ".footer");
+html * {
+    font-family: $font-family;
+    font-size: $sm-font-size;
+}
+.clearfix {
+    @include clearfix();
+}
+.hide {
+    display: none !important;
+}
+.pre-code {
+	background-color: #eee;
+	padding: 1em;
+}
+a:active {
+	color: red;
+}
+a:link {
+    color: $purple;
+}
+
+a:visited {
+    color: $purple;
+}
+
+a:hover {
+    color: $purple;
+}
+
+.invisible {
+    visibility: hidden;
+}
