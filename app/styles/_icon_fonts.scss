@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('/icon_fonts/icomoon.eot?#iefix') format("embedded-opentype"),
+         url("/icon_fonts/icomoon.ttf") format("truetype"),
+         url("/icon_fonts/icomoon.woff") format("woff"),
+         url("/icon_fonts/icomoon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mark-github:before {
+    content: "\f00a";
+}
+.icon-home:before {
+    content: "\e601";
+}
+.icon-heart:before {
+    content: "\e603";
+}
+.icon-sigma:before {
+    content: "\e602";
+}
+.icon-mail:before {
+    content: "\e600";
+}
+.icon-twitter:before {
+    content: "\e605";
+}
+.icon-feed:before {
+    content: "\e607";
+}
+
+
+
+.icon-mark-github {
+    color: black;
+}
+.icon-home, .icon-sigma {
+    color: $purple;
+}
+.icon-heart {
+    color: red;
+}
+.icon-mail {
+    color: $royalblue;
+}
+.icon-twitter {
+    color: cyan;
+}
+.icon-feed {
+    color: $dark_orange;
+}
+
+

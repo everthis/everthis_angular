@@ -1,7 +1,7 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-@include sticky-footer(50px, ".root", ".root_footer", ".footer");
+@include sticky-footer(40px, ".root", ".root_footer", ".footer");
 html * {
     font-family: $font-family;
     font-size: $sm-font-size;
