@@ -1,5 +1,5 @@
 <p>Bored with "tar -zxvf" for .tar.gz, "tar -xvjf" for .tar.bz2 or something else? </p>
-<pre class="pre-code">
+<pre class="brush: bash;">
 	extract () {
 	  if [ -f $1 ] ; then
 	      case $1 in
@@ -23,7 +23,7 @@
 </pre>
 
 <p>For something like "cd .." or "cd ../.."</p>
-<pre class="pre-code">
+<pre class="brush: bash;">
 	up(){
 	 local d=""
 	 limit=$1
@@ -39,3 +39,5 @@
 	}
 </pre>
 <p class="hint">Hint: Don't forget to execute "source ~/.bashrc" or ". ~/.bashrc" after modifying the .bashrc file.</p>
+
+<script src="scripts/test.js"></script>

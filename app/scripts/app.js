@@ -3,32 +3,53 @@
 /* App Module */
 
 var everthisApp = angular.module('everthisApp', [
-  'ngAnimate',
-  'ngAria',
-  'ngCookies',
-  'ngMessages',
-  'ngResource',
-  'ngRoute',
-  'ngSanitize',
-  'ngTouch',
-  'phonecatAnimations',
-  'everthisControllers',
-  'phonecatFilters',
-  'everthisServices'
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'phonecatAnimations',
+    'everthisControllers',
+    'phonecatFilters',
+    'everthisServices'
 ]);
 
 everthisApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: 'partials/posts-list.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/views/:postName', {
-        templateUrl: function($routeParams){ return '/views/' + $routeParams.postName + '.html'; },
-        controller: 'PhoneDetailCtrl'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
-  }]);
+    function($routeProvider) {
+        $routeProvider.
+        when('/', {
+            templateUrl: 'partials/posts-list.html',
+            controller: 'PhoneListCtrl'
+        }).
+        when('/views/:postName', {
+            templateUrl: function(params) {
+                return '/views/' + params.postName + '.html';
+            },
+            controller: 'PhoneDetailCtrl'
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
+    }
+]);
+
+
+everthisApp.config(['$provide', function($provide) {
+    // We use a decorator to agument the behavior of the default $browser
+    // service. This is guaranteed to be called before anyone uses
+    // $browser which is great.
+    $provide.decorator('$browser', ['$delegate', function($delegate) {
+        var superUrl = $delegate.url;
+        $delegate.url = function(url, replace) {
+            if (url !== undefined) {
+                return superUrl(url.replace(/\%20/g, "+"), replace);
+            } else {
+                return superUrl().replace(/\+/g, "%20");
+            }
+        }
+        return $delegate;
+    }]);
+}]);

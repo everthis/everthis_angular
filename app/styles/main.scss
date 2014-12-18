@@ -54,6 +54,19 @@
     font-weight: normal;
   }
 }
+.filter-section {
+  @extend %inline-block-fix;
+  .search-field {
+    line-height: 20px;
+  }
+  .sort-field {
+    line-height: 20px;
+    margin-left: 2em;
+    .order-select {
+      height: 22px;
+    }
+  }
+}
 .content-section {
   @include bxsd();
   padding: 1em;
@@ -99,8 +112,9 @@
   color: white;
   padding: 1em;
 }
-
-
+h3 {
+  font-size: 24px;
+}
 // bower:scss
 // endbower
 
