@@ -1,0 +1,32 @@
+.site-header {
+  @include lower-bxsd();
+  .container {
+    @extend %inline-block-fix;
+    padding: 8px 0 2px;
+  }
+  .home-link {
+    text-decoration: line-through;
+    .logo {
+      font-family: "Courier New";
+      font-size: 10px;
+      &:active {
+        color: red;
+      }
+    }
+    &:link {
+      color: $purple;
+    }
+    &:visited {
+      color: $purple;
+    }
+    &:active {
+      color: red;
+    }
+  }
+  .search {
+    padding: 1.3em 0 0 2em;
+  }
+  .sub-header {
+      font-size: 2px;
+  }
+}
