@@ -91,3 +91,7 @@
 h3 {
   font-size: 24px;
 }
+
+.list {
+  @extend %decimal-list;
+}

@@ -1,79 +1,69 @@
-<ul>
-	<li>
-		<p>get current Linux kernel version</p>
-		<pre class="brush: bash;">
-			uname -r
-		</pre>
-		<img src="images/hybla/uname.jpg " alt="">
-	</li>
-	<li>
-		<p>go to <a href="https://www.kernel.org/">https://www.kernel.org/</a>to download kernel source code.</p>
-		<p>since my kernel verison is 3.16.7</p>
-		<pre class="brush: bash;">
+<ul class="list">
+    <li>
+        <p>get current Linux kernel version</p>
+        <pre class="brush: bash;">
+			uname -r</pre>
+        <img src="images/hybla/uname.jpg " alt="">
+    </li>
+    <li>
+        <p>go to <a href="https://www.kernel.org/">https://www.kernel.org/</a>to download kernel source code.</p>
+        <p>since my kernel verison is 3.16.7</p>
+        <pre class="brush: bash;">
 			wget "https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.gz"
-			tar zxvf linux-3.16.7.tar.gz
-		</pre>
-	</li>
-	<li>
-		<p>install essential tools</p>
-		<pre class="brush: bash;">
-			apt-get update && apt-get install -y build-essential libncurses5-dev
-		</pre>
-	</li>
-	<li>
-		<p>create and edit the .config file </p>
-		<pre class="brush: bash;">
-			cd linux-3.16.7
-			zcat /proc/config.gz > .config
-			vim .config
-		</pre>
-		<p>find "CONFIG_TCP_CONG_CUBIC=y" and add "CONFIG_TCP_CONG_HYBLA=y" </p>
-		<p>then do the "make" procedure, which could take some time. On my single core, 1GB RAM Linode, it took 20 minitues or so.</p>
-		<pre class="brush: bash;">
-			make
-		</pre>
-	</li>
-	<li>
-		<p>go to net/ipv4/ directory and edit the Makefile.</p>
-		<pre class="brush: bash;">
+			tar zxvf linux-3.16.7.tar.gz</pre>
+    </li>
+    <li>
+        <p>install essential tools</p>
+        <pre class="brush: bash;">
+			apt-get update && apt-get install -y build-essential libncurses5-dev</pre>
+    </li>
+    <li>
+        <p>create and edit the .config file </p>
+        <pre class="brush: bash;">
+		cd linux-3.16.7
+		zcat /proc/config.gz > .config
+		vim .config</pre>
+        <p>find "CONFIG_TCP_CONG_CUBIC=y" and add "CONFIG_TCP_CONG_HYBLA=y" </p>
+        <p>then do the "make" procedure, which could take some time. On my single core, 1GB RAM Linode, it took 20 minitues or so.</p>
+        <pre class="brush: bash;">
+			make</pre>
+    </li>
+    <li>
+        <p>go to net/ipv4/ directory and edit the Makefile.</p>
+        <pre class="brush: bash;">
 			cd net/ipv4/
 			mv Makefile Makefile.old
-			vim Makefile
-		</pre>
-		<p>The Makefile should look like this. <span>Please make sure the value of the "KDIR" is right.</span>
-		</p>
-		<pre class="brush: bash;">
+			vim Makefile</pre>
+        <p>The Makefile should look like this. <span>Please make sure the value of the "KDIR" is right.</span>
+        </p>
+        <pre class="brush: bash;">
 			# Makefile for tcp_hybla.ko
 			obj-m := tcp_hybla.o
 			KDIR := /root/linux-3.16.7
 			PWD := $(shell pwd)
 			default:
-			$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
-		</pre>
-	</li>
-	<li>
-		<p>change directory to the source and compile modules.</p>
-		<pre class="brush: bash;">
+			$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules</pre>
+    </li>
+    <li>
+        <p>change directory to the source and compile modules.</p>
+        <pre class="brush: bash;">
 			cd /root/linux-3.16.7
-			make modules
-		</pre>
-	</li>
-	<li>
-		<p>test compiled module.</p>
-		<pre class="brush: bash;">
+			make modules</pre>
+    </li>
+    <li>
+        <p>test compiled module.</p>
+        <pre class="brush: bash;">
 			cd /root/linux-3.16.7/net/ipv4
 			cp tcp_hybla.ko /root/
 			cd /root/
-			insmod tcp_hybla.ko
-		</pre>
-		<p>set "net.ipv4.tcp_congestion_control" to "hybla".</p>
-		<pre class="brush: bash;">
-			sysctl net.ipv4.tcp_congestion_control=hybla
-		</pre>
-	</li>
-	<li>
-		<p>Load module at system startup.</p>
-		<pre class="brush: bash;">
+			insmod tcp_hybla.ko</pre>
+        <p>set "net.ipv4.tcp_congestion_control" to "hybla".</p>
+        <pre class="brush: bash;">
+			sysctl net.ipv4.tcp_congestion_control=hybla</pre>
+    </li>
+    <li>
+        <p>Load module at system startup.</p>
+        <pre class="brush: bash;">
 			cd /lib/modules/3.16.7-x86_64-linode49
 			mkdir -p kernel/net/ipv4
 			cd kernel/net/ipv4
@@ -81,21 +71,18 @@
 			cd /lib/modules/3.16.7-x86_64-linode49
 			cp /root/linux-3.16.7/modules.builtin ./
 			cp /root/linux-3.16.7/modules.order ./
-			depmod -a
-		</pre>
-	</li>
-	<li>
-		<p>edit "/etc/sysctl.conf" file to set "hybla" as the "tcp_congestion_control" algorithm.</p>
-		<pre class="brush: bash;">
-			vim /etc/sysctl.conf
-		</pre>
-		<p>add "net.ipv4.tcp_congestion_control = hybla" to the end of the file.</p>
+			depmod -a</pre>
+    </li>
+    <li>
+        <p>edit "/etc/sysctl.conf" file to set "hybla" as the "tcp_congestion_control" algorithm.</p>
+        <pre class="brush: bash;">
+			vim /etc/sysctl.conf</pre>
+        <p>add "net.ipv4.tcp_congestion_control = hybla" to the end of the file.</p>
 
-		<p>make the modification take effect.</p>
-		<pre class="brush: bash;">
-			sysctl -p
-		</pre>
-	</li>	
+        <p>make the modification take effect.</p>
+        <pre class="brush: bash;">
+			sysctl -p</pre>
+    </li>
 </ul>
 
 <p>Finally, the work is done.</p>
