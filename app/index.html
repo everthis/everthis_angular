@@ -8,8 +8,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link type="text/css" rel="stylesheet" href="syntaxHighLighter/styles/shCoreDefault.css"/>
-    <link type="text/css" rel="stylesheet" href="syntaxHighLighter/styles/shThemeMidnight.css"/>
+    <link rel="stylesheet" href="bower_components/SyntaxHighlighter/styles/shCore.css" />
+    <link rel="stylesheet" href="bower_components/SyntaxHighlighter/styles/shCoreMidnight.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -111,10 +111,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script type="text/javascript" src="syntaxHighLighter/scripts/shCore.js"></script>
-    <script type="text/javascript" src="syntaxHighLighter/scripts/shBrushJScript.js"></script>
-    <script type="text/javascript" src="syntaxHighLighter/scripts/shBrushBash.js"></script>
-    <script type="text/javascript" src="syntaxHighLighter/scripts/shBrushCss.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="bower_components/SyntaxHighlighter/scripts/shAutoloader.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -125,9 +124,46 @@
         <script src="scripts/filters.js"></script>
         <script src="scripts/services.js"></script>
         
+        <script src="bower_components/SyntaxHighlighter/scripts/shBrushBash.js"></script>
+        <script src="bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+        <script src="bower_components/SyntaxHighlighter/scripts/shBrushCss.js"></script>
         
+        <!-- <script type="text/javascript"> 
+            var baseSyntaxHighlighterScriptsPath = "bower_components/SyntaxHighlighter/scripts/";
+            function getSyntaxHighlighterScriptPath(name){
+                return name.replace('@', baseSyntaxHighlighterScriptsPath);
+            }
+             
+            SyntaxHighlighter.autoloader(
+                [ 'applescript', getSyntaxHighlighterScriptPath('@shBrushAppleScript.js') ],
+                [ 'actionscript3', 'as3', getSyntaxHighlighterScriptPath('@shBrushAS3.js') ],
+                [ 'bash', 'shell', getSyntaxHighlighterScriptPath('@shBrushBash.js') ],
+                [ 'coldfusion', 'cf', getSyntaxHighlighterScriptPath('@shBrushColdFusion.js') ],
+                [ 'cpp', 'c', getSyntaxHighlighterScriptPath('@shBrushCpp.js') ],
+                [ 'c#', 'c-sharp', 'csharp', getSyntaxHighlighterScriptPath('@shBrushCSharp.js') ],
+                [ 'css', getSyntaxHighlighterScriptPath('@shBrushCss.js') ],
+                [ 'diff', 'patch', 'pas', getSyntaxHighlighterScriptPath('@shBrushDiff.js') ],
+                [ 'erl', 'erlang', getSyntaxHighlighterScriptPath('@shBrushErlang.js') ],
+                [ 'groovy', getSyntaxHighlighterScriptPath('@shBrushGroovy.js') ],
+                [ 'java', getSyntaxHighlighterScriptPath('@shBrushJava.js') ],
+                [ 'jfx', 'javafx', getSyntaxHighlighterScriptPath('@shBrushJavaFX.js') ],
+                [ 'js', 'javascript', 'jscript', getSyntaxHighlighterScriptPath('@shBrushJScript.js') ],
+                [ 'perl', 'pl', getSyntaxHighlighterScriptPath('@shBrushPerl.js') ],
+                [ 'php', getSyntaxHighlighterScriptPath('@shBrushPhp.js') ],
+                [ 'text', 'plain', getSyntaxHighlighterScriptPath('@shBrushPlain.js') ],
+                [ 'py', 'python', getSyntaxHighlighterScriptPath('@shBrushPython.js') ],
+                [ 'ruby', 'rails', 'ror', 'rb', getSyntaxHighlighterScriptPath('@shBrushRuby.js') ],
+                [ 'sass', 'scss', getSyntaxHighlighterScriptPath('@shBrushSass.js') ],
+                [ 'scala', getSyntaxHighlighterScriptPath('@shBrushScala.js') ],
+                [ 'sql', getSyntaxHighlighterScriptPath('@shBrushSql.js') ],
+                [ 'vb', 'vbnet', getSyntaxHighlighterScriptPath('@shBrushVb.js') ],
+                [ 'xml', 'xslt', 'html', 'htm', getSyntaxHighlighterScriptPath('@shBrushXml.js') ]
+            );
+             
+            SyntaxHighlighter.all();
+        </script>  -->
         
-       
+
         <!-- endbuild -->
 </body>
 </html>

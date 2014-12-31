@@ -22,13 +22,22 @@ everthisApp.config(['$routeProvider',
         $routeProvider.
         when('/', {
             templateUrl: 'partials/posts-list.html',
-            controller: 'PhoneListCtrl'
+            controller: 'postsListCtrl'
         }).
+        // when('/views/:postName', {
+        //     templateUrl: function(params) {
+        //         return '/views/' + params.postName + '.html';
+        //     },
+        //     controller: 'PhoneDetailCtrl'
+        // }).
         when('/views/:postName', {
             templateUrl: function(params) {
-                return '/views/' + params.postName + '.html';
+                return '/views/'+ params.postName + '.html';
             },
-            controller: 'PhoneDetailCtrl'
+            // controller: function(params) {
+            //     return 'everthis' + params.category + 'Ctrl';
+            // }
+            controller: 'everthisLinuxCtrl'
         }).
         otherwise({
             redirectTo: '/'

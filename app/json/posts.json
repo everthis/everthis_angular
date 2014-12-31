@@ -3,31 +3,49 @@
         "age": 0,
         "postName": "Linux Bash scripts", 
         "date": "2014-12-15", 
+        "category": "Linux",
         "isModified": "yes"
     },{
         "age": 1,
         "postName": "Tutorial of Git", 
         "date": "2014-12-16", 
+        "category": "Linux",
         "isModified": "yes"
     },{
         "age": 2,
         "postName": "Get Parameters from your Script Tag", 
         "date": "2014-12-17", 
+        "category": "Linux",
         "isModified": ""
     },{
         "age": 3,
         "postName": "front end", 
         "date": "2014-12-18", 
+        "category": "Linux",
         "isModified": "yes"
     },{
         "age": 4,
         "postName": "some css snippets", 
         "date": "2014-12-19", 
+        "category": "Linux",
         "isModified": "yes"
     },{
         "age": 5,
         "postName": "workflow", 
         "date": "2014-12-20", 
+        "category": "Linux",
         "isModified": "yes"
+    },{
+        "age": 6,
+        "postName": "It's a wonderful life (1946)", 
+        "date": "2014-12-20", 
+        "category": "Linux",
+        "isModified": ""
+    },{
+        "age": 7,
+        "postName": "bring hybla to Linode", 
+        "date": "2014-12-30", 
+        "category": "Linux",
+        "isModified": ""
     }
 ]
