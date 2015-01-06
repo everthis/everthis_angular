@@ -42,6 +42,10 @@
       height: 22px;
     }
   }
+  .tag-field {
+    line-height: 20px;
+    padding-left: 1em;
+  }
 }
 .content-section {
   @include bxsd();
