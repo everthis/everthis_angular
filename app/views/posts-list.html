@@ -15,7 +15,7 @@
     </span>
   </span>
 </div>
-<a class="post-item" ng-repeat="post in posts | filter:query | orderBy:orderProp" href="#/views/{{post.category}}/{{post.postName}}">
+<a class="post-item" ng-repeat="post in posts | filter:query | orderBy:orderProp:true" href="#/views/{{post.category}}/{{post.postName}}">
   <span class="post-title">{{post.postName}}</span>
   <span class="date">{{post.date}}<span class="modified-mark {{post.isModified ? 'show' : 'invisible'}}">*</span></span>
 </a>

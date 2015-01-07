@@ -56,7 +56,7 @@ everthisApp.config(['$routeProvider',
 
 
 everthisApp.config(['$provide', function($provide) {
-    // We use a decorator to agument the behavior of the default $browser
+    // Use a decorator to agument the behavior of the default $browser
     // service. This is guaranteed to be called before anyone uses
     // $browser which is great.
     $provide.decorator('$browser', ['$delegate', function($delegate) {
