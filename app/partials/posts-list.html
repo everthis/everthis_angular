@@ -10,8 +10,8 @@
     </select>
   </span>
   <span class="tag-field">
-    <span ng-repeat="post in posts | unique:'category'">
-        {{post.category}}
+    <span ng-repeat="post in posts | unique:'category'" class="per-tag">
+        #{{post.category}}
     </span>
   </span>
 </div>
