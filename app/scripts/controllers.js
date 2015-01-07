@@ -21,13 +21,13 @@ everthisControllers.controller('everthisLinuxCtrl', ['$scope', '$routeParams', '
     };
   }]);
 
-everthisControllers.controller('everthisFilm', ['$scope', '$routeParams', 'Film',
-  function($scope, Film) {
+everthisControllers.controller('everthisFilmsCtrl', ['$scope', '$routeParams', 'Film',
+  function($scope, $routeParams, Film) {
     // $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
     //   $scope.mainImageUrl = phone.images[0];
     // });
 
-    $scope.film = Film.get({filmId: $routeParams.filmId}, function(film) {
+    $scope.film = Film.get({postName: $routeParams.postName}, function(film) {
 
     });
 

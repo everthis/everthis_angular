@@ -21,7 +21,7 @@ everthisApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/', {
-            templateUrl: 'partials/posts-list.html',
+            templateUrl: 'views/posts-list.html',
             controller: 'postsListCtrl'
         }).
         // when('/views/:postName', {
@@ -38,6 +38,15 @@ everthisApp.config(['$routeProvider',
             //     return 'everthis' + params.category + 'Ctrl';
             // }
             controller: 'everthisLinuxCtrl'
+        }).
+        when('/views/Films/:postName', {
+            templateUrl: function(params) {
+                return '/views/Films/'+ params.postName + '.html';
+            },
+            // controller: function(params) {
+            //     return 'everthis' + params.category + 'Ctrl';
+            // }
+            controller: 'everthisFilmsCtrl'
         }).
         otherwise({
             redirectTo: '/'

@@ -13,7 +13,7 @@ everthisServices.factory('Phone', ['$resource',
 
 everthisServices.factory('Film', ['$resource',
   function($resource){
-    return $resource('json/films/:postId.json', {}, {
-      query: {method:'GET', params:{postId:'posts'}, isArray:true}
+    return $resource('json/Films/:postName.json', {}, {
+      query: {method:'GET', params:{postName:'posts'}, isArray:true}
     });
   }]);

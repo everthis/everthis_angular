@@ -1,0 +1,21 @@
+<div class="filter-section">
+  <span class="search-field">
+    Search: <input ng-model="query">
+  </span>
+  <span class="sort-field">
+    Sort by:
+    <select class="order-select" ng-model="orderProp">
+      <option value="postName">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
+  </span>
+  <span class="tag-field">
+    <span ng-repeat="post in posts | unique:'category'" class="per-tag">
+        #{{post.category}}
+    </span>
+  </span>
+</div>
+<a class="post-item" ng-repeat="post in posts | filter:query | orderBy:orderProp" href="#/views/{{post.category}}/{{post.postName}}">
+  <span class="post-title">{{post.postName}}</span>
+  <span class="date">{{post.date}}<span class="modified-mark {{post.isModified ? 'show' : 'invisible'}}">*</span></span>
+</a>

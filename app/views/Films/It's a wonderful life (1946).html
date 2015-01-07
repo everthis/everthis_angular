@@ -1,20 +1,19 @@
-<div class="container-fluid" style="text-align:center">
-
-    <span class="imdbRatingPlugin" data-user="ur27755069" data-title="tt0038650" data-style="p1">
-            It's a wonderful life (1946)
-            </a>
-        </span>
+<div class="film-title-area">
+    <p>{{film.filmTitle}}</p>
+</div>
+<div class="film-single-item" ng-repeat="content in film.contents">
+    <div class="screenshot" ng-repeat="image in content.images">
+        <img ng-src="{{film.filmImagesLocation}}{{image}}" alt="{{image}}">
+    </div>
+    <div class="film-quote" ng-repeat="quote in content.quotes" ng-hide="!quote.character">
+        <div class="character">{{quote.character}}:</div>
+        <div class="lines">{{quote.lines}}</div>
+    </div>
 </div>
 
 
-<div class="film-single-item">
-    <div class="screenshot"><img ng-src="{{}}" alt="{{}}"></div>
-    
-</div>
 
-
-
-<div class="container film-img">
+<!-- <div class="container film-img">
     <p class="img"> <img src="images/it_is_a_wonderful_life/It's.A.Wonderful.Life.Colorized.Version.1946.720p.BluRay.x264-EbP.mkv_000537.jpg" alt="">
         <div class="quote">
             <blockquote>
@@ -260,3 +259,4 @@
     </p>
 
     <hr>
+ -->
