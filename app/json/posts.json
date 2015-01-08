@@ -15,19 +15,19 @@
         "age": 2,
         "postName": "Get Parameters from your Script Tag",
         "date": "2014-12-17",
-        "category": "Linux",
+        "category": "JavaScript",
         "isModified": ""
     },{
         "age": 3,
         "postName": "front end",
         "date": "2014-12-18",
-        "category": "Linux",
+        "category": "WebDev",
         "isModified": "yes"
     },{
         "age": 4,
         "postName": "some css snippets",
         "date": "2014-12-19",
-        "category": "CSS",
+        "category": "HTML&CSS",
         "isModified": "yes"
     },{
         "age": 5,
@@ -51,7 +51,7 @@
         "age": 8,
         "postName": "javascript",
         "date": "2015-01-07",
-        "category": "WebDev",
+        "category": "JavaScript",
         "isModified": ""
     }
 ]

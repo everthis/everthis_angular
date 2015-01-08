@@ -30,23 +30,56 @@ everthisApp.config(['$routeProvider',
         //     },
         //     controller: 'PhoneDetailCtrl'
         // }).
-        when('/views/:postName', {
-            templateUrl: function(params) {
-                return '/views/'+ params.postName + '.html';
-            },
-            // controller: function(params) {
-            //     return 'everthis' + params.category + 'Ctrl';
-            // }
-            controller: 'everthisLinuxCtrl'
-        }).
+        // when('/views/:postName', {
+        //     templateUrl: function(params) {
+        //         return '/views/'+ params.postName + '.html';
+        //     },
+        //     // controller: function(params) {
+        //     //     return 'everthis' + params.category + 'Ctrl';
+        //     // }
+        //     controller: 'everthisLinuxCtrl'
+        // }).
         when('/views/Films/:postName', {
             templateUrl: function(params) {
                 return '/views/Films/'+ params.postName + '.html';
             },
-            // controller: function(params) {
-            //     return 'everthis' + params.category + 'Ctrl';
-            // }
             controller: 'everthisFilmsCtrl'
+        }).
+        when('/views/Linux/:postName', {
+            templateUrl: function(params) {
+                return '/views/Linux/'+ params.postName + '.html';
+            },
+            controller: 'everthisLinuxCtrl'
+        }).
+        when('/views/HTML&CSS/:postName', {
+            templateUrl: function(params) {
+                return '/views/HTML&CSS/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
+        when('/views/WebDev/:postName', {
+            templateUrl: function(params) {
+                return '/views/WebDev/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
+        when('/views/JavaScript/:postName', {
+            templateUrl: function(params) {
+                return '/views/JavaScript/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
+        when('/views/Git/:postName', {
+            templateUrl: function(params) {
+                return '/views/Git/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
+        when('/views/Workflow/:postName', {
+            templateUrl: function(params) {
+                return '/views/Workflow/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
         }).
         otherwise({
             redirectTo: '/'

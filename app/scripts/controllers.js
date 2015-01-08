@@ -37,3 +37,6 @@ everthisControllers.controller('everthisFilmsCtrl', ['$scope', '$routeParams', '
     };
   }]);
 
+everthisControllers.controller('everthisCommonCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+  }]);
