@@ -124,9 +124,6 @@
         <script src="scripts/filters.js"></script>
         <script src="scripts/services.js"></script>
 
-        <script src="bower_components/SyntaxHighlighter/scripts/shBrushBash.js"></script>
-        <script src="bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
-        <script src="bower_components/SyntaxHighlighter/scripts/shBrushCss.js"></script>
         <script>
             $('body').on('click', '.per-tag', function(event) {
                 event.preventDefault();
@@ -134,41 +131,6 @@
                 $(this).toggleClass('checked');
             });
         </script>
-
-        <!-- <script type="text/javascript">
-            var baseSyntaxHighlighterScriptsPath = "bower_components/SyntaxHighlighter/scripts/";
-            function getSyntaxHighlighterScriptPath(name){
-                return name.replace('@', baseSyntaxHighlighterScriptsPath);
-            }
-
-            SyntaxHighlighter.autoloader(
-                [ 'applescript', getSyntaxHighlighterScriptPath('@shBrushAppleScript.js') ],
-                [ 'actionscript3', 'as3', getSyntaxHighlighterScriptPath('@shBrushAS3.js') ],
-                [ 'bash', 'shell', getSyntaxHighlighterScriptPath('@shBrushBash.js') ],
-                [ 'coldfusion', 'cf', getSyntaxHighlighterScriptPath('@shBrushColdFusion.js') ],
-                [ 'cpp', 'c', getSyntaxHighlighterScriptPath('@shBrushCpp.js') ],
-                [ 'c#', 'c-sharp', 'csharp', getSyntaxHighlighterScriptPath('@shBrushCSharp.js') ],
-                [ 'css', getSyntaxHighlighterScriptPath('@shBrushCss.js') ],
-                [ 'diff', 'patch', 'pas', getSyntaxHighlighterScriptPath('@shBrushDiff.js') ],
-                [ 'erl', 'erlang', getSyntaxHighlighterScriptPath('@shBrushErlang.js') ],
-                [ 'groovy', getSyntaxHighlighterScriptPath('@shBrushGroovy.js') ],
-                [ 'java', getSyntaxHighlighterScriptPath('@shBrushJava.js') ],
-                [ 'jfx', 'javafx', getSyntaxHighlighterScriptPath('@shBrushJavaFX.js') ],
-                [ 'js', 'javascript', 'jscript', getSyntaxHighlighterScriptPath('@shBrushJScript.js') ],
-                [ 'perl', 'pl', getSyntaxHighlighterScriptPath('@shBrushPerl.js') ],
-                [ 'php', getSyntaxHighlighterScriptPath('@shBrushPhp.js') ],
-                [ 'text', 'plain', getSyntaxHighlighterScriptPath('@shBrushPlain.js') ],
-                [ 'py', 'python', getSyntaxHighlighterScriptPath('@shBrushPython.js') ],
-                [ 'ruby', 'rails', 'ror', 'rb', getSyntaxHighlighterScriptPath('@shBrushRuby.js') ],
-                [ 'sass', 'scss', getSyntaxHighlighterScriptPath('@shBrushSass.js') ],
-                [ 'scala', getSyntaxHighlighterScriptPath('@shBrushScala.js') ],
-                [ 'sql', getSyntaxHighlighterScriptPath('@shBrushSql.js') ],
-                [ 'vb', 'vbnet', getSyntaxHighlighterScriptPath('@shBrushVb.js') ],
-                [ 'xml', 'xslt', 'html', 'htm', getSyntaxHighlighterScriptPath('@shBrushXml.js') ]
-            );
-
-            SyntaxHighlighter.all();
-        </script>  -->
 
 
         <!-- endbuild -->
