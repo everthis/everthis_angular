@@ -5,6 +5,7 @@
 html * {
     font-family: $font-family;
     font-size: $sm-font-size;
+    outline: none;
 }
 .clearfix {
     @include clearfix();
