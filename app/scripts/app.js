@@ -49,7 +49,7 @@ everthisApp.config(['$routeProvider',
             templateUrl: function(params) {
                 return '/views/Linux/'+ params.postName + '.html';
             },
-            controller: 'everthisLinuxCtrl'
+            controller: 'everthisCommonCtrl'
         }).
         when('/views/HTML&CSS/:postName', {
             templateUrl: function(params) {

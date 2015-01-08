@@ -4,7 +4,7 @@
 
 var everthisServices = angular.module('everthisServices', ['ngResource']);
 
-everthisServices.factory('Phone', ['$resource',
+everthisServices.factory('Posts', ['$resource',
   function($resource){
     return $resource('json/:postId.json', {}, {
       query: {method:'GET', params:{postId:'posts'}, isArray:true}
