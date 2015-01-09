@@ -19,3 +19,11 @@
   <span class="post-title">{{post.postName}}</span>
   <span class="date">{{post.date}}<span class="modified-mark {{post.isModified ? 'show' : 'invisible'}}">*</span></span>
 </a>
+
+<script>
+    $('body').on('click', '.per-tag', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(this).toggleClass('checked');
+    });
+</script>

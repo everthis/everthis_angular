@@ -1,5 +1,5 @@
 var baseSyntaxHighlighterScriptsPath = "bower_components/SyntaxHighlighter/scripts/";
-SyntaxHighlighter.vars.discoveredBrushes=null;
+SyntaxHighlighter.vars.discoveredBrushes = null;
 function getSyntaxHighlighterScriptPath(name){
     return name.replace('@', baseSyntaxHighlighterScriptsPath);
 }
