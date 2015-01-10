@@ -1,3 +1,5 @@
+'use strict';
+
 var baseSyntaxHighlighterScriptsPath = "bower_components/SyntaxHighlighter/scripts/";
 SyntaxHighlighter.vars.discoveredBrushes = null;
 function getSyntaxHighlighterScriptPath(name){

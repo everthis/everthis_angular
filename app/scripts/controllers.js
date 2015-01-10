@@ -10,6 +10,9 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts',
         $scope.orderProp = 'age';
 
         $scope.postsIncludes = [];
+
+        $scope.tagChecked = 0;
+
         $scope.includePost = function(post) {
             var i = $.inArray(post, $scope.postsIncludes);
             if (i > -1) {
@@ -17,6 +20,7 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts',
             } else {
                 $scope.postsIncludes.push(post);
             };
+            this.tagChecked = !(this.tagChecked);
         }
 
         $scope.PostFilter = function(posts) {

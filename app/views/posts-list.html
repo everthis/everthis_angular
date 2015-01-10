@@ -10,7 +10,7 @@
     </select>
   </span>
   <span class="tag-field">
-    <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-click="includePost('{{post.category}}')">
+    <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{'checked': tagChecked};" ng-click="includePost('{{post.category}}')">
         #{{post.category}}
     </span>
   </span>
@@ -19,11 +19,3 @@
   <span class="post-title">{{post.postName}}</span>
   <span class="date">{{post.date}}<span class="modified-mark {{post.isModified ? 'show' : 'invisible'}}">*</span></span>
 </a>
-
-<script>
-    $('body').on('click', '.per-tag', function(event) {
-        event.preventDefault();
-        /* Act on the event */
-        $(this).toggleClass('checked');
-    });
-</script>
