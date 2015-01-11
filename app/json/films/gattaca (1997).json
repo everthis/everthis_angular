@@ -1,0 +1,15 @@
+{
+    "filmTitle": "Gattaca (1997)",
+    "filmImagesLocation": "images/gattaca/",
+    "contents": [
+        {
+            "images": [
+                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+            ],
+            "quotes": [{
+                    "character": "George Bailey",
+                    "lines": "I wish I had a million dollars... Hot dog!"
+            }]
+        }
+    ]
+}

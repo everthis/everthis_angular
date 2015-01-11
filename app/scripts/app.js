@@ -41,7 +41,7 @@ everthisApp.config(['$routeProvider',
         // }).
         when('/views/Films/:postName', {
             templateUrl: function(params) {
-                return '/views/Films/'+ params.postName + '.html';
+                return '/views/Films/filmTemplate.html';
             },
             controller: 'everthisFilmsCtrl'
         }).
