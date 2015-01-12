@@ -2,25 +2,15 @@
     "filmTitle": "Gattaca (1997)",
     "filmImagesLocation": "images/gattaca/",
     "contents": [
-        {
+         {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
-            ],
-            "quotes": [{
-                    "character": "Vincent",
-                    "lines": "You want to know how I did it? This is how I did it, Anton: I never saved anything for the swim back."
-            }]
-        }, {
-            "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
-            ],
-            "quotes": [{
-                    "character": "Vincent",
-                    "lines": "For someone who was never meant for this world, I must confess I'm suddenly having a hard time leaving it. Of course, they say every atom in our bodies was once part of a star. Maybe I'm not leaving... maybe I'm going home."
-            }]
-        }, {
-            "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+                "vlcsnap-2015-01-10-20h37m32s123.jpg",
+                "vlcsnap-2015-01-10-20h37m37s172.jpg",
+                "vlcsnap-2015-01-10-20h37m41s207.jpg",
+                "vlcsnap-2015-01-10-20h37m45s252.jpg",
+                "vlcsnap-2015-01-10-20h37m51s57.jpg",
+                "vlcsnap-2015-01-10-20h37m58s125.jpg",
+                "vlcsnap-2015-01-10-20h38m04s186.jpg"
             ],
             "quotes": [{
                     "character": "Vincent",
@@ -31,7 +21,9 @@
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+                "vlcsnap-2015-01-10-20h32m09s216.jpg",
+                "vlcsnap-2015-01-10-20h33m05s8.jpg",
+                "vlcsnap-2015-01-10-20h33m55s255.jpg"
             ],
             "quotes": [{
                     "character": "Anton Freeman",
@@ -48,7 +40,11 @@
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+                "vlcsnap-2015-01-10-20h23m31s153.jpg",
+                "vlcsnap-2015-01-10-20h23m38s231.jpg",
+                "vlcsnap-2015-01-10-20h24m05s240.jpg",
+                "vlcsnap-2015-01-10-20h26m07s176.jpg",
+                "vlcsnap-2015-01-10-20h26m14s254.jpg"
             ],
             "quotes": [{
                     "character": "Irene",
@@ -93,6 +89,12 @@
             }]
         }, {
             "images": [
+                "vlcsnap-2015-01-10-20h30m19s141.jpg",
+                "vlcsnap-2015-01-10-20h30m25s200.jpg",
+                "vlcsnap-2015-01-10-20h30m31s7.jpg",
+                "vlcsnap-2015-01-10-20h30m52s209.jpg",
+                "vlcsnap-2015-01-10-20h31m06s101.jpg",
+                "vlcsnap-2015-01-10-20h31m12s158.jpg",
                 "vlcsnap-2015-01-10-20h28m19s224.jpg"
             ],
             "quotes": [{
@@ -101,11 +103,21 @@
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+                "vlcsnap-2015-01-11-13h26m47s228.jpg",
+                "vlcsnap-2015-01-11-13h27m23s75.jpg"
             ],
             "quotes": [{
                     "character": "Antonio",
                     "lines": "The only way you're going to see the inside of a spaceship is if you were cleaning it."
+            }]
+        }, {
+            "images": [
+                "vlcsnap-2015-01-10-20h42m37s101.jpg",
+                "vlcsnap-2015-01-10-20h43m11s177.jpg"
+            ],
+            "quotes": [{
+                    "character": "Vincent",
+                    "lines": "For someone who was never meant for this world, I must confess I'm suddenly having a hard time leaving it. Of course, they say every atom in our bodies was once part of a star. Maybe I'm not leaving... maybe I'm going home."
             }]
         }
     ]
