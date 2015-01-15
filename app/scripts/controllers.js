@@ -4,8 +4,8 @@
 
 var everthisControllers = angular.module('everthisControllers', []);
 
-everthisControllers.controller('postsListCtrl', ['$scope', 'Posts',
-    function($scope, Posts) {
+everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
+    function($scope, Posts, $location) {
         $scope.posts = Posts.query();
         $scope.orderProp = 'age';
 
@@ -30,6 +30,8 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts',
             }
             return posts;
         }
+
+        // $scope.showPageHero = $location.path() === '/';
 
     }
 ]);

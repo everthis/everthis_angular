@@ -7,15 +7,20 @@
                  "vlcsnap-2015-01-08-19h28m43s45.jpg",
                  "vlcsnap-2015-01-08-19h29m14s101.jpg",
                  "vlcsnap-2015-01-08-19h29m26s215.jpg",
-                 "vlcsnap-2015-01-08-19h29m33s34.jpg",
+                 "vlcsnap-2015-01-08-19h29m33s34.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "The most unremarkable of events: Jerome Morrow, navigator first class, is about to embark on a one-year manned mission to Titan, 14th moon of Saturn. A highly prestigious assignment, although for Jerome, selection was virtually guaranteed at birth. He's blessed with all the gifts required for such an undertaking: a genetic quotient second to none. No, there is truly nothing remarkable about the progress of Jerome Morrow... except that I am not Jerome Morrow."
+             }]
+         }, {
+             "images": [
                  "vlcsnap-2015-01-08-19h31m05s188.jpg",
                  "vlcsnap-2015-01-08-19h33m11s160.jpg",
                  "vlcsnap-2015-01-08-19h41m09s78.jpg",
                  "vlcsnap-2015-01-11-13h24m08s179.jpg",
                  "vlcsnap-2015-01-11-13h26m10s108.jpg",
                  "vlcsnap-2015-01-11-13h26m33s88.jpg",
-                 "vlcsnap-2015-01-11-13h27m26s106.jpg",
-                 "vlcsnap-2015-01-11-13h27m29s141.jpg",
                  "vlcsnap-2015-01-10-20h16m51s248.jpg",
                  "vlcsnap-2015-01-10-20h16m55s32.jpg",
                  "vlcsnap-2015-01-13-19h53m12s144.jpg",
@@ -42,7 +47,43 @@
                      "character": "Director Josef",
                      "lines": "You shouldn't listen to talk. You leave in a week. You've got a substance test."
              }]
-         },{
+         }, {
+            "images": [
+                "vlcsnap-2015-01-11-13h26m47s228.jpg",
+                "vlcsnap-2015-01-11-13h27m23s75.jpg"
+            ],
+            "quotes": [{
+                    "character": "Vincent",
+                    "lines": "Maybe it was a love of the planets, maybe it was just my growing dislike for this one, but for as long as I can remember, I have dreamt of going to space. My goals didn't change a lot in the intervening years, much to my parents's dismay."
+            }, {
+                    "character": "Vincent's mother",
+                    "lines": "You have to be realistic, with a heart condition like yours..."
+            }, {
+                    "character": "Vincent",
+                    "lines": "Mom, there's a chance there's nothing even wrong with my heart."
+            }, {
+                    "character": "Vincent's father",
+                    "lines": "One chance in a hundred!"
+            }, {
+                    "character": "Vincent",
+                    "lines": "Well I'll take it all right?"
+            }, {
+                    "character": "Vincent's mother",
+                    "lines": "The trouble is that they won't."
+            }, {
+                    "character": "Vincent's father",
+                    "lines": "Listen for God's sake, you gotta understand something, the only way that you'll see the inside of a spaceship is if you're cleaning it."
+            }]
+        }, {
+             "images": [
+                 "vlcsnap-2015-01-11-13h27m26s106.jpg",
+                 "vlcsnap-2015-01-11-13h27m29s141.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "My father was right. It did not matter how much I lied on my resume. My real resume was in my cells. Why should anybody invest all that money to train me when there were a thousand other applicants with a far cleaner profile? Of course, it's illegal to discriminate, 'genoism' it's called. But no one takes the law seriously. If you refuse to disclose, they can always take a sample from a door handle or a handshake, even the saliva on your application form. If in doubt, a legal drug test can just as easily become an illegal peek at your future in the company."
+             }]
+         }, {
              "images": [
                  "vlcsnap-2015-01-11-13h29m58s91.jpg",
                  "vlcsnap-2015-01-11-13h30m24s91.jpg",
@@ -75,30 +116,6 @@
             }, {
                     "character": "Antonio",
                     "lines": "Anton. No, Vincent Anton. That's a good name."
-            }]
-        }, {
-            "images": [
-                "vlcsnap-2015-01-11-13h26m47s228.jpg",
-                "vlcsnap-2015-01-11-13h27m23s75.jpg"
-            ],
-            "quotes": [{
-                    "character": "Vincent's mother",
-                    "lines": "You have to be realistic, with a heart condition like yours..."
-            }, {
-                    "character": "Vincent",
-                    "lines": "Mom, there's a chance there's nothing even wrong with my heart."
-            }, {
-                    "character": "Vincent's father",
-                    "lines": "One chance in a hundred!"
-            }, {
-                    "character": "Vincent",
-                    "lines": "Well I'll take it all right?"
-            }, {
-                    "character": "Vincent's mother",
-                    "lines": "The trouble is that they won't."
-            }, {
-                    "character": "Vincent's father",
-                    "lines": "Listen for God's sake, you gotta understand something, the only way that you'll see the inside of a spaceship is if you're cleaning it."
             }]
         }, {
             "images": [
