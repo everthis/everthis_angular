@@ -10,17 +10,12 @@
                  "vlcsnap-2015-01-08-19h29m33s34.jpg",
                  "vlcsnap-2015-01-08-19h31m05s188.jpg",
                  "vlcsnap-2015-01-08-19h33m11s160.jpg",
-                 "vlcsnap-2015-01-08-19h41m09s78.jpg",                 
+                 "vlcsnap-2015-01-08-19h41m09s78.jpg",
                  "vlcsnap-2015-01-11-13h24m08s179.jpg",
                  "vlcsnap-2015-01-11-13h26m10s108.jpg",
                  "vlcsnap-2015-01-11-13h26m33s88.jpg",
                  "vlcsnap-2015-01-11-13h27m26s106.jpg",
                  "vlcsnap-2015-01-11-13h27m29s141.jpg",
-                 "vlcsnap-2015-01-11-13h29m58s91.jpg",
-                 "vlcsnap-2015-01-11-13h30m24s91.jpg",
-                 "vlcsnap-2015-01-11-13h31m04s235.jpg",
-                 "vlcsnap-2015-01-11-13h31m05s254.jpg",
-                 "vlcsnap-2015-01-11-13h31m33s16.jpg",
                  "vlcsnap-2015-01-10-20h16m51s248.jpg",
                  "vlcsnap-2015-01-10-20h16m55s32.jpg",
                  "vlcsnap-2015-01-13-19h53m12s144.jpg",
@@ -32,50 +27,78 @@
                  "vlcsnap-2015-01-08-19h51m22s63.jpg"
              ],
              "quotes": [{
-                     "character": "Vincent",
-                     "lines": "I don't know how to thank you."
+                     "character": "Director Josef",
+                     "lines": "You keep your work station so clean, Jerome."
              }, {
-                     "character": "Jerome",
-                     "lines": "No, no. I got the better end of the deal. I only lent you my body. You lent me your dream."
+                     "character": "Vincent",
+                     "lines": "It's next to godliness. Isn't that what they say?"
+             }, {
+                     "character": "Director Josef",
+                     "lines": "Godliness. I reviewed your flight plan. Not one error in a million keystrokes. Phenomenal. It's right that someone like you is taking us to Titan."
+             }, {
+                     "character": "Vincent",
+                     "lines": "Has the committee approved the mission? There's been talk of delay."
+             }, {
+                     "character": "Director Josef",
+                     "lines": "You shouldn't listen to talk. You leave in a week. You've got a substance test."
              }]
          },{
+             "images": [
+                 "vlcsnap-2015-01-11-13h29m58s91.jpg",
+                 "vlcsnap-2015-01-11-13h30m24s91.jpg",
+                 "vlcsnap-2015-01-11-13h31m04s235.jpg",
+                 "vlcsnap-2015-01-11-13h31m05s254.jpg",
+                 "vlcsnap-2015-01-11-13h31m33s16.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "Like many others in my situation, I moved around a lot next few years, getting work where I could. I must've cleaned half the toilets in the state. I belonged to a new underclass, no longer determined by social status or the colour of your skin. We now have discrimination down to a science."
+             }, {
+                     "character": "Vincent",
+                     "lines": "I was never more certain of how far away I was from my goal than when I was standing right beside it."
+             }]
+         }, {
             "images": [
                 "vlcsnap-2015-01-11-13h21m06s151.jpg",
                 "vlcsnap-2015-01-11-13h21m11s196.jpg",
-                "vlcsnap-2015-01-11-13h21m19s21.jpg",
-                "vlcsnap-2015-01-10-20h37m32s123.jpg",
-                "vlcsnap-2015-01-10-20h37m37s172.jpg",
-                "vlcsnap-2015-01-10-20h37m41s207.jpg",
-                "vlcsnap-2015-01-10-20h37m45s252.jpg",
-                "vlcsnap-2015-01-10-20h37m51s57.jpg",
-                "vlcsnap-2015-01-10-20h37m58s125.jpg",
-                "vlcsnap-2015-01-10-20h38m04s186.jpg"
+                "vlcsnap-2015-01-11-13h21m19s21.jpg"
             ],
             "quotes": [{
-                    "character": "Vincent",
-                    "lines": "I don't know how to thank you."
+                    "character": "Nurse",
+                    "lines": "Neurological condition, 60% probability, manic depression, 42% probability. Attention deficit disorder, 89% probability. Heart disorder, 99% probability. Early fatal potential. Life expectancy: 30.2 years."
             }, {
-                    "character": "Jerome",
-                    "lines": "No, no. I got the better end of the deal. I only lent you my body. You lent me your dream."
+                    "character": "Antonio",
+                    "lines": "30 years?"
+            }, {
+                    "character": "Nurse",
+                    "lines": "The name for the certificate?"
+            }, {
+                    "character": "Antonio",
+                    "lines": "Anton. No, Vincent Anton. That's a good name."
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h32m09s216.jpg",
-                "vlcsnap-2015-01-10-20h33m05s8.jpg",
-                "vlcsnap-2015-01-10-20h33m55s255.jpg"
+                "vlcsnap-2015-01-11-13h26m47s228.jpg",
+                "vlcsnap-2015-01-11-13h27m23s75.jpg"
             ],
             "quotes": [{
-                    "character": "Anton Freeman",
-                    "lines": "Vincent! How are you doing this Vincent? How have you done any of this? We have to go back."
+                    "character": "Vincent's mother",
+                    "lines": "You have to be realistic, with a heart condition like yours..."
             }, {
                     "character": "Vincent",
-                    "lines": "It's too late for that. We're closer to the other side."
+                    "lines": "Mom, there's a chance there's nothing even wrong with my heart."
             }, {
-                    "character": "Anton Freeman",
-                    "lines": "What other side? You wanna drown us both?"
+                    "character": "Vincent's father",
+                    "lines": "One chance in a hundred!"
             }, {
                     "character": "Vincent",
-                    "lines": "You wanna know how I did it? This is how I did it Anton. I never saved anything for the swim back."
+                    "lines": "Well I'll take it all right?"
+            }, {
+                    "character": "Vincent's mother",
+                    "lines": "The trouble is that they won't."
+            }, {
+                    "character": "Vincent's father",
+                    "lines": "Listen for God's sake, you gotta understand something, the only way that you'll see the inside of a spaceship is if you're cleaning it."
             }]
         }, {
             "images": [
@@ -120,14 +143,6 @@
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
-            ],
-            "quotes": [{
-                    "character": "Vincent",
-                    "lines": "I was never more certain of how far away I was from my goal than when I was standing right beside it."
-            }]
-        }, {
-            "images": [
                 "vlcsnap-2015-01-10-20h30m19s141.jpg",
                 "vlcsnap-2015-01-10-20h30m25s200.jpg",
                 "vlcsnap-2015-01-10-20h30m31s7.jpg",
@@ -137,17 +152,137 @@
                 "vlcsnap-2015-01-10-20h28m19s224.jpg"
             ],
             "quotes": [{
+                    "character": "Anton",
+                    "lines": "Vincent. My God you have changed. Has it been so long, you don't recognize your own brother?"
+            },{
                     "character": "Vincent",
-                    "lines": "Is the only way you can succeed is to see me fail?"
+                    "lines": "Are we brothers?"
+            },{
+                    "character": "Anton",
+                    "lines": "Our parents both died thinking they'd outlived you. I had my doubts."
+            },{
+                    "character": "Vincent",
+                    "lines": "What are you doing here Anton?"
+            },{
+                    "character": "Anton",
+                    "lines": " I should ask you that question. I have a right to be here. You don't."
+            },{
+                    "character": "Vincent",
+                    "lines": "You almost sound as if you believe that. I committed no murder. You must be disappointed."
+            },{
+                    "character": "Anton",
+                    "lines": "You committed fraud. [Pause] Listen, you're in a lot of trouble Vincent. I can get you out of here-"
+            },{
+                    "character": "Vincent",
+                    "lines": "Do you have any idea what it took to get IN here?!"
+            },{
+                    "character": "Anton",
+                    "lines": "You've gone as far as you can go. You come with me now!"
+            },{
+                    "character": "Vincent",
+                    "lines": "There is still a few million miles left to go."
+            },{
+                    "character": "Anton",
+                    "lines": "It's over.."
+            },{
+                    "character": "Vincent",
+                    "lines": "Is it the only way you can succeed is to see me fail?"
+            },{
+                    "character": "Anton",
+                    "lines": " I'm telling you....."
+            },{
+                    "character": "Vincent",
+                    "lines": "My god, even you are going to tell me what i can and can't do now?! In case you haven't noticed, I don't need any rescuing, but you did once. Well.. you've got all the answers, how do you explain that?"
+            },{
+                    "character": "Anton",
+                    "lines": "You didn't beat me that day. I beat myself."
+            },{
+                    "character": "Vincent",
+                    "lines": "Who are you trying to convince?"
+            },{
+                    "character": "Anton",
+                    "lines": "Do you want me to prove it to you?"
+            },{
+                    "character": "Vincent",
+                    "lines": "It's not important Anton. It's forgotten."
+            },{
+                    "character": "Anton",
+                    "lines": "I'll prove it to you. YOU WANT ME TO PROVE IT TO YOU?! I'LL PROVE IT TO YOU!"
+            },{
+                    "character": "Vincent",
+                    "lines": "I do."
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-11-13h26m47s228.jpg",
-                "vlcsnap-2015-01-11-13h27m23s75.jpg"
+                "vlcsnap-2015-01-10-20h32m09s216.jpg",
+                "vlcsnap-2015-01-10-20h33m05s8.jpg",
+                "vlcsnap-2015-01-10-20h33m55s255.jpg"
             ],
             "quotes": [{
-                    "character": "Antonio",
-                    "lines": "The only way you're going to see the inside of a spaceship is if you were cleaning it."
+                    "character": "Anton Freeman",
+                    "lines": "Vincent! How are you doing this Vincent? How have you done any of this? We have to go back."
+            }, {
+                    "character": "Vincent",
+                    "lines": "It's too late for that. We're closer to the other side."
+            }, {
+                    "character": "Anton Freeman",
+                    "lines": "What other side? You wanna drown us both?"
+            }, {
+                    "character": "Vincent",
+                    "lines": "You wanna know how I did it? This is how I did it Anton. I never saved anything for the swim back."
+            }]
+        }, {
+            "images": [
+                "vlcsnap-2015-01-10-20h37m32s123.jpg",
+                "vlcsnap-2015-01-10-20h37m37s172.jpg",
+                "vlcsnap-2015-01-10-20h37m41s207.jpg",
+                "vlcsnap-2015-01-10-20h37m45s252.jpg",
+                "vlcsnap-2015-01-10-20h37m51s57.jpg",
+                "vlcsnap-2015-01-10-20h37m58s125.jpg",
+                "vlcsnap-2015-01-10-20h38m04s186.jpg"
+            ],
+            "quotes": [{
+                    "character": "Vincent",
+                    "lines": "I don't know how to thank you."
+            }, {
+                    "character": "Jerome",
+                    "lines": "No, no. I got the better end of the deal. I only lent you my body. You lent me your dream."
+            }]
+        }, {
+            "images": [
+                "vlcsnap-2015-01-10-20h40m36s168.jpg",
+                "vlcsnap-2015-01-10-20h40m38s185.jpg"
+            ],
+            "quotes": [{
+                    "character": "Vincent",
+                    "lines": "What's this?"
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": "New policy, what's the matter? Flight got you nervous."
+            }, {
+                    "character": "Vincent",
+                    "lines": "Nope, there's a problem Lamar."
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": " I still haven't told you about my son, have I? He's a big fan of yours."
+            }, {
+                    "character": "Vincent",
+                    "lines": "Just remember. I was as good as any, and better than most."
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": "He wants to apply here."
+            }, {
+                    "character": "Vincent",
+                    "lines": "I could've gone up and back and nobody would've been the wiser."
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": "unfortunately my son's not all that they promised. But then again, who knows what he could do."
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": "For future reference, right-handed men don't hold it with their left. Just one of those things."
+            }, {
+                    "character": "Dr. Lamar",
+                    "lines": "You're gonna miss your flight, Vincent."
             }]
         }, {
             "images": [
