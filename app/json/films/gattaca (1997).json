@@ -16,20 +16,7 @@
          }, {
              "images": [
                  "vlcsnap-2015-01-08-19h31m05s188.jpg",
-                 "vlcsnap-2015-01-08-19h33m11s160.jpg",
-                 "vlcsnap-2015-01-08-19h41m09s78.jpg",
-                 "vlcsnap-2015-01-11-13h24m08s179.jpg",
-                 "vlcsnap-2015-01-11-13h26m10s108.jpg",
-                 "vlcsnap-2015-01-11-13h26m33s88.jpg",
-                 "vlcsnap-2015-01-10-20h16m51s248.jpg",
-                 "vlcsnap-2015-01-10-20h16m55s32.jpg",
-                 "vlcsnap-2015-01-13-19h53m12s144.jpg",
-                 "vlcsnap-2015-01-13-19h54m03s139.jpg",
-                 "vlcsnap-2015-01-13-20h25m06s79.jpg",
-                 "vlcsnap-2015-01-13-20h25m27s37.jpg",
-                 "vlcsnap-2015-01-13-20h25m52s31.jpg",
-                 "vlcsnap-2015-01-13-20h26m52s117.jpg",
-                 "vlcsnap-2015-01-08-19h51m22s63.jpg"
+                 "vlcsnap-2015-01-15-20h13m27s8.jpg"
              ],
              "quotes": [{
                      "character": "Director Josef",
@@ -46,6 +33,46 @@
              }, {
                      "character": "Director Josef",
                      "lines": "You shouldn't listen to talk. You leave in a week. You've got a substance test."
+             }]
+         }, {
+            "images": [
+                "vlcsnap-2015-01-11-13h21m06s151.jpg",
+                "vlcsnap-2015-01-11-13h21m11s196.jpg",
+                "vlcsnap-2015-01-11-13h21m19s21.jpg"
+            ],
+            "quotes": [{
+                    "character": "Nurse",
+                    "lines": "Neurological condition, 60% probability, manic depression, 42% probability. Attention deficit disorder, 89% probability. Heart disorder, 99% probability. Early fatal potential. Life expectancy: 30.2 years."
+            }, {
+                    "character": "Antonio",
+                    "lines": "30 years?"
+            }, {
+                    "character": "Nurse",
+                    "lines": "The name for the certificate?"
+            }, {
+                    "character": "Antonio",
+                    "lines": "Anton. No, Vincent Anton. That's a good name."
+            }]
+        }, {
+             "images": [
+                 "vlcsnap-2015-01-08-19h41m09s78.jpg",
+                 "vlcsnap-2015-01-11-13h24m08s179.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "That's how my brother Anton came into the world. A son my father considered worthy of his name."
+             }, {
+                     "character": "Antonio",
+                     "lines": "I'm proud of you, son. - What'd I tell you. See how much he's grown."
+             }]
+         }, {
+             "images": [
+                 "vlcsnap-2015-01-11-13h26m10s108.jpg",
+                 "vlcsnap-2015-01-11-13h26m33s88.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "300 million, 350 million, 400 million. Maybe it was the love of the planets, maybe it was just my growing dislike for this one, but for as long as I can remember I've dreamed of going into space. 750 million, 800 million, 850 million. How many astronauts are there anyway? I bet I could be one if I wanted. Hey don't eat that. It's Pluto."
              }]
          }, {
             "images": [
@@ -86,7 +113,14 @@
          }, {
              "images": [
                  "vlcsnap-2015-01-11-13h29m58s91.jpg",
-                 "vlcsnap-2015-01-11-13h30m24s91.jpg",
+                 "vlcsnap-2015-01-11-13h30m24s91.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "Like many others in my situation, I moved around a lot next few years, getting work where I could. I must've cleaned half the toilets in the state. I belonged to a new underclass, no longer determined by social status or the colour of your skin. We now have discrimination down to a science."
+             }]
+         }, {
+             "images": [
                  "vlcsnap-2015-01-11-13h31m04s235.jpg",
                  "vlcsnap-2015-01-11-13h31m05s254.jpg",
                  "vlcsnap-2015-01-11-13h31m33s16.jpg"
@@ -95,29 +129,25 @@
                      "character": "Vincent",
                      "lines": "Like many others in my situation, I moved around a lot next few years, getting work where I could. I must've cleaned half the toilets in the state. I belonged to a new underclass, no longer determined by social status or the colour of your skin. We now have discrimination down to a science."
              }, {
+                     "character": "Caesar",
+                     "lines": "Welcome to Gattaca, gentlemen. Allright, there's your cleaning material. Start from the front and clean all the way back. And I want to see my smiling face on that floor. What about you, your majesty? You're dreaming of space? Come here. You have to start by cleaning this space right here!"
+             }, {
                      "character": "Vincent",
                      "lines": "I was never more certain of how far away I was from my goal than when I was standing right beside it."
              }]
          }, {
-            "images": [
-                "vlcsnap-2015-01-11-13h21m06s151.jpg",
-                "vlcsnap-2015-01-11-13h21m11s196.jpg",
-                "vlcsnap-2015-01-11-13h21m19s21.jpg"
-            ],
-            "quotes": [{
-                    "character": "Nurse",
-                    "lines": "Neurological condition, 60% probability, manic depression, 42% probability. Attention deficit disorder, 89% probability. Heart disorder, 99% probability. Early fatal potential. Life expectancy: 30.2 years."
-            }, {
-                    "character": "Antonio",
-                    "lines": "30 years?"
-            }, {
-                    "character": "Nurse",
-                    "lines": "The name for the certificate?"
-            }, {
-                    "character": "Antonio",
-                    "lines": "Anton. No, Vincent Anton. That's a good name."
-            }]
-        }, {
+             "images": [
+                 "vlcsnap-2015-01-13-20h25m06s79.jpg",
+                 "vlcsnap-2015-01-13-20h25m27s37.jpg",
+                 "vlcsnap-2015-01-13-20h25m52s31.jpg",
+                 "vlcsnap-2015-01-13-20h26m52s117.jpg",
+                 "vlcsnap-2015-01-08-19h51m22s63.jpg"
+             ],
+             "quotes": [{
+                     "character": "Vincent",
+                     "lines": "Jerome never questioned my commitment again. I took my mind off the pain by reminding myself that when I'd eventually did stand up, I'be exactly two inches closer to the stars."
+             }]
+         }, {
             "images": [
                 "vlcsnap-2015-01-10-20h23m31s153.jpg",
                 "vlcsnap-2015-01-10-20h23m38s231.jpg",
@@ -152,7 +182,7 @@
             }]
         }, {
             "images": [
-                "vlcsnap-2015-01-10-20h28m19s224.jpg"
+                "vlcsnap-2015-01-15-19h00m45s159.jpg"
             ],
             "quotes": [{
                     "character": "Vincent",
@@ -224,7 +254,7 @@
                     "lines": "It's not important Anton. It's forgotten."
             },{
                     "character": "Anton",
-                    "lines": "I'll prove it to you. YOU WANT ME TO PROVE IT TO YOU?! I'LL PROVE IT TO YOU!"
+                    "lines": "I'll prove it to you. You want me to prove it to you?! I'll prove it to you!"
             },{
                     "character": "Vincent",
                     "lines": "I do."
@@ -249,6 +279,23 @@
                     "lines": "You wanna know how I did it? This is how I did it Anton. I never saved anything for the swim back."
             }]
         }, {
+             "images": [
+                 "vlcsnap-2015-01-10-20h16m51s248.jpg",
+                 "vlcsnap-2015-01-10-20h16m55s32.jpg",
+                 "vlcsnap-2015-01-13-19h53m12s144.jpg",
+                 "vlcsnap-2015-01-13-19h54m03s139.jpg"
+             ],
+             "quotes": [{
+                     "character": "Irene",
+                     "lines": "You couldn't see, could you? That night, crossing the street. You crossed anyway."
+             }, {
+                     "character": "Vincent",
+                     "lines": "If you're still interested, let me know."
+             }, {
+                     "character": "Irene",
+                     "lines": "Sorry. The wind caught it."
+             }]
+         }, {
             "images": [
                 "vlcsnap-2015-01-10-20h37m32s123.jpg",
                 "vlcsnap-2015-01-10-20h37m37s172.jpg",
