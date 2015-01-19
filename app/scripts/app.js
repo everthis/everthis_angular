@@ -81,6 +81,12 @@ everthisApp.config(['$routeProvider',
             },
             controller: 'everthisCommonCtrl'
         }).
+        when('/views/Others/:postName', {
+            templateUrl: function(params) {
+                return '/views/Others/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
         otherwise({
             redirectTo: '/'
         });
