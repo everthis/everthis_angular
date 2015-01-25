@@ -7,7 +7,7 @@ var everthisControllers = angular.module('everthisControllers', []);
 everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
     function($scope, Posts, $location) {
         $scope.posts = Posts.query();
-        $scope.orderProp = 'age';
+        $scope.orderProp = 'date';
 
         $scope.postsIncludes = [];
 
