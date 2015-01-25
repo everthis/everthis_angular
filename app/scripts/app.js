@@ -87,6 +87,12 @@ everthisApp.config(['$routeProvider',
             },
             controller: 'everthisCommonCtrl'
         }).
+        when('/views/Hardware/:postName', {
+            templateUrl: function(params) {
+                return '/views/Hardware/'+ params.postName + '.html';
+            },
+            controller: 'everthisCommonCtrl'
+        }).
         when('/views/Others/:postName', {
             templateUrl: function(params) {
                 return '/views/Others/'+ params.postName + '.html';
