@@ -6,9 +6,9 @@
 @import "animation";
 @import "header";
 @import "footer";
-@import "it_is_a_wonderful_life";
 @import "icon_fonts";
 @import "film";
+@import "postLists";
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -27,65 +27,7 @@
         font-weight: normal;
     }
 }
-.filter-section {
-    @extend %inline-block-fix;
-    .search-field {
-        line-height: 20px;
-    }
-    .tag-field {
-        line-height: 20px;
-        padding-left: .5em;
-        .per-tag {
-            display: inline-block;
-            height: 24px;
-            line-height: 24px;
-            padding: 0 .6em;
-            cursor: pointer;
-            background-color: #E7E7F7;
-            border-right: 1px solid #fff;
-            &.checked {
-                background-color: #A2CDF0;
-            }
-        }
-    }
-}
-.sort-field {
-    position: relative;
-    line-height: 24px;
-    margin-left: .5em;
-    .order-select {
-        height: 24px;
-        border: 1px solid #ddd;
-        -webkit-appearance: menulist-button;
-    }
-    .postName-field {
-        position: absolute;
-        top: 0;
-        left: -100px;
-    }
-    .date-field {
-        position: absolute;
-        top: 0;
-        right: -60px;
-    }
-    .up {
-        color: $purple;
-        &:before {
-            @include arrow-up($purple, 6px);
-            margin-right: 4px;
-        }
-    }
-    .down {
-        color: $royalblue;
-        &:before {
-            @include arrow-down($purple, 6px);
-            margin-right: 4px;
-        }
-    }
-    .random {
-        color: $black;
-    }
-}
+
 .content-section {
     @include bxsd();
     padding: 1em;

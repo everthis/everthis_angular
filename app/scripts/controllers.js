@@ -8,13 +8,13 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
     function($scope, Posts, $location) {
         $scope.posts = Posts.query();
         $scope.sortField = 'date';
-        $scope.reverse = true;
 
         $scope.postsIncludes = [];
 
         $scope.tagChecked = false;
         $scope.postReverse = null;
-        $scope.dateReverse = false;
+        $scope.dateReverse = true;
+        $scope.reverse = true;
 
         $scope.includePost = function(post) {
             var i = $.inArray(post, $scope.postsIncludes);
@@ -29,11 +29,15 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
 
         $scope.sortPostName = function(s) {
                 s.postReverse = !s.postReverse;
+                $scope.sortField = 'postName';
+                $scope.reverse = s.postReverse;
                 $scope.dateReverse = null;
         }
 
         $scope.sortPostDate = function(s) {
                 s.dateReverse = !s.dateReverse;
+                $scope.sortField = 'date';
+                $scope.reverse = s.dateReverse;
                 $scope.postReverse = null;
         }
 

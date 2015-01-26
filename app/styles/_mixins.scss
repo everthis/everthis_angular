@@ -24,20 +24,20 @@
     content: " ";
     width: 0;
     height: 0;
-    border-bottom: $width solid $color;
+    border-top: $width solid $color;
     border-right: $width solid transparent;
     border-left: $width solid transparent;
-    border-top: $width solid transparent;
+    border-bottom: 0 solid transparent;
 }
 @mixin arrow-up($color, $width) {
     display: inline-block;
     content: " ";
     width: 0;
     height: 0;
-    border-top: $width solid $color;
+    border-top: 0 solid transparent;
     border-right: $width solid transparent;
     border-left: $width solid transparent;
-    border-bottom: 0 solid transparent;
+    border-bottom: $width solid $color;
 }
 %inline-block-fix {
     font-size: 0;
