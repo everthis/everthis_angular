@@ -9,130 +9,130 @@
 @import "it_is_a_wonderful_life";
 @import "icon_fonts";
 @import "film";
-
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto;
 }
-
 .footer {
-  @include upper-bxsd();
+    @include upper-bxsd();
 }
-
 .post-header {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
-  padding: .5em;
-  border-bottom: 2px dashed #aaa;
-  .header-hint {
-    font-size: 12px;
-    font-weight: normal;
-  }
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: .5em;
+    border-bottom: 2px dashed #aaa;
+    .header-hint {
+        font-size: 12px;
+        font-weight: normal;
+    }
 }
 .filter-section {
-  @extend %inline-block-fix;
-
-  .search-field {
-    line-height: 20px;
-  }
-
-  .tag-field {
-    line-height: 20px;
-    padding-left: .5em;
-    .per-tag {
-      display: inline-block;
-      height: 24px;
-      line-height: 24px;
-      padding: 0 .6em;
-      cursor: pointer;
-      background-color: #E7E7F7;
-      border-right: 1px solid #fff;
-      &.checked {
-        background-color: #A2CDF0;
-      }
+    @extend %inline-block-fix;
+    .search-field {
+        line-height: 20px;
     }
-  }
-
+    .tag-field {
+        line-height: 20px;
+        padding-left: .5em;
+        .per-tag {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 .6em;
+            cursor: pointer;
+            background-color: #E7E7F7;
+            border-right: 1px solid #fff;
+            &.checked {
+                background-color: #A2CDF0;
+            }
+        }
+    }
 }
 .sort-field {
-  position: relative;
-  line-height: 24px;
-  margin-left: .5em;
-  .order-select {
-    height: 24px;
-    border: 1px solid #ddd;
-    -webkit-appearance: menulist-button;
-  }
-  .postName-field {
-    position: absolute;
-    top: 0;
-    left: -80px;
-  }
-  .date-field {
-    position: absolute;
-    top: 0;
-    right: -60px;
-  }
-  .up {
-    color: $purple;
-  }
-  .down {
-    color: $royalblue;
-  }
-  .random {
-    color: $dark-grey;
-  }
+    position: relative;
+    line-height: 24px;
+    margin-left: .5em;
+    .order-select {
+        height: 24px;
+        border: 1px solid #ddd;
+        -webkit-appearance: menulist-button;
+    }
+    .postName-field {
+        position: absolute;
+        top: 0;
+        left: -100px;
+    }
+    .date-field {
+        position: absolute;
+        top: 0;
+        right: -60px;
+    }
+    .up {
+        color: $purple;
+        &:before {
+            @include arrow-up($purple, 6px);
+            margin-right: 4px;
+        }
+    }
+    .down {
+        color: $royalblue;
+        &:before {
+            @include arrow-down($purple, 6px);
+            margin-right: 4px;
+        }
+    }
+    .random {
+        color: $black;
+    }
 }
 .content-section {
-  @include bxsd();
-  padding: 1em;
+    @include bxsd();
+    padding: 1em;
 }
 .git-ol {
-  list-style-type: decimal;
-  padding: 0 0 0 4em;
-  li {
-    &:first-of-type {
-      border-top: none;
+    list-style-type: decimal;
+    padding: 0 0 0 4em;
+    li {
+        &:first-of-type {
+            border-top: none;
+        }
+        border-top: 1px solid #aaa;
+        padding: 10px 0;
+        margin-right: 4em;
     }
-    border-top: 1px solid #aaa;
-    padding: 10px 0;
-    margin-right: 4em;
-  }
-  img {
-    display: block;
-    margin: 1em 0 0 0;
-  }
+    img {
+        display: block;
+        margin: 1em 0 0 0;
+    }
 }
 .post-item {
-  @extend %inline-block-fix;
-  @include lower-bxsd();
-  display: block;
-  padding: 10px;
-  margin: $post-item-margins;
-  .post-title {
-    width: 70%;
-  }
-  > span {
-    font-size: 14px;
-  }
-  .date {
-    float: right;
-  }
+    @extend %inline-block-fix;
+    @include lower-bxsd();
+    display: block;
+    padding: 10px;
+    margin: $post-item-margins;
+    .post-title {
+        width: 70%;
+    }
+    > span {
+        font-size: 14px;
+    }
+    .date {
+        float: right;
+    }
 }
 .page-body {
-  padding: 1em 0;
+    padding: 1em 0;
 }
-
 .hint {
-  background-color: $purple;
-  color: white;
-  padding: 1em;
+    background-color: $purple;
+    color: white;
+    padding: 1em;
 }
 h3 {
-  font-size: 24px;
+    font-size: 24px;
 }
-
 .list {
-  @extend %decimal-list;
+    @extend %decimal-list;
 }

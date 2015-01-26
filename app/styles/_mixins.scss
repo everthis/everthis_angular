@@ -1,34 +1,52 @@
 @mixin lower-bxsd() {
-	box-shadow: 0 1px 4px 1px #ccc;
+    box-shadow: 0 1px 4px 1px #ccc;
 }
 @mixin upper-bxsd() {
-	box-shadow: 0 -1px 4px 1px #ccc;
+    box-shadow: 0 -1px 4px 1px #ccc;
 }
 @mixin bxsd() {
-	box-shadow: 0 0 4px 0 #ccc;
+    box-shadow: 0 0 4px 0 #ccc;
 }
 @mixin bdrs() {
-	border-radius: 5px;
+    border-radius: 5px;
 }
 @mixin clearfix() {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
-
+@mixin arrow-down($color, $width) {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-bottom: $width solid $color;
+    border-right: $width solid transparent;
+    border-left: $width solid transparent;
+    border-top: $width solid transparent;
+}
+@mixin arrow-up($color, $width) {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: $width solid $color;
+    border-right: $width solid transparent;
+    border-left: $width solid transparent;
+    border-bottom: 0 solid transparent;
+}
 %inline-block-fix {
     font-size: 0;
     > span {
         display: inline-block;
-        vertical-align: top;        
+        vertical-align: top;
     }
 }
 %decimal-list {
-  list-style-type: decimal;
-  padding: 0 0 0 2.5em;
+    list-style-type: decimal;
+    padding: 0 0 0 2.5em;
 }

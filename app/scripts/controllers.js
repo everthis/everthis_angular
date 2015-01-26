@@ -14,7 +14,7 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
 
         $scope.tagChecked = false;
         $scope.postReverse = null;
-        $scope.dateReverse = true;
+        $scope.dateReverse = false;
 
         $scope.includePost = function(post) {
             var i = $.inArray(post, $scope.postsIncludes);
