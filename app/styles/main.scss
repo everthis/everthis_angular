@@ -80,6 +80,9 @@
   .down {
     color: $royalblue;
   }
+  .random {
+    color: $dark-grey;
+  }
 }
 .content-section {
   @include bxsd();

@@ -5,17 +5,21 @@
     </div>
   </span>
   <span class="tag-field">
-    <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{'checked': tagChecked};" ng-click="includePost('{{post.category}}')">
+    <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{checked: tagChecked === true};" ng-click="includePost('{{post.category}}')">
         #{{post.category}}
     </span>
   </span>
 </div>
 <div class="sort-field">
   <span class="postName-field">
-    <a href="javascript:;" ng-click="sortPostName(this); sortField = 'postName'; reverse = !reverse" ng-class="{up: postReverse, down: !postReverse}">postName</a>
+    <a href="javascript:;"
+       ng-click="sortPostName(this); sortField = 'postName'; reverse = !reverse"
+       ng-class="{up: postReverse === true, down: postReverse === false, random: postReverse === null}">postName</a>
   </span>
   <span class="date-field">
-    <a href="javascript:;" ng-click="sortPostDate(this); sortField = 'date'; reverse = !reverse" ng-class="{up: dateReverse, down: !dateReverse}">date</a>
+    <a href="javascript:;"
+       ng-click="sortPostDate(this); sortField = 'date'; reverse = !reverse"
+       ng-class="{up: dateReverse === true, down: dateReverse === false, random: dateReverse === null}">date</a>
   </span>
 </div>
 <a class="post-item" ng-repeat="post in posts | filter: query | filter:PostFilter | orderBy:sortField:reverse" href="#/views/{{post.category}}/{{post.postName}}">

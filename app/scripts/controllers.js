@@ -12,9 +12,9 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
 
         $scope.postsIncludes = [];
 
-        $scope.tagChecked = 0;
-        $scope.postReverse = false;
-        $scope.dateReverse = false;
+        $scope.tagChecked = false;
+        $scope.postReverse = null;
+        $scope.dateReverse = true;
 
         $scope.includePost = function(post) {
             var i = $.inArray(post, $scope.postsIncludes);
@@ -34,6 +34,7 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
 
         $scope.sortPostDate = function(s) {
                 s.dateReverse = !s.dateReverse;
+                $scope.postReverse = null;
         }
 
         $scope.PostFilter = function(posts) {
