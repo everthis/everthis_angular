@@ -32,18 +32,11 @@
 }
 .filter-section {
   @extend %inline-block-fix;
+
   .search-field {
     line-height: 20px;
   }
-  .sort-field {
-    line-height: 24px;
-    margin-left: .5em;
-    .order-select {
-      height: 24px;
-      border: 1px solid #ddd;
-      -webkit-appearance: menulist-button;
-    }
-  }
+
   .tag-field {
     line-height: 20px;
     padding-left: .5em;
@@ -59,6 +52,33 @@
         background-color: #A2CDF0;
       }
     }
+  }
+
+}
+.sort-field {
+  position: relative;
+  line-height: 24px;
+  margin-left: .5em;
+  .order-select {
+    height: 24px;
+    border: 1px solid #ddd;
+    -webkit-appearance: menulist-button;
+  }
+  .postName-field {
+    position: absolute;
+    top: 0;
+    left: -80px;
+  }
+  .date-field {
+    position: absolute;
+    top: 0;
+    right: -60px;
+  }
+  .up {
+    color: $purple;
+  }
+  .down {
+    color: $royalblue;
   }
 }
 .content-section {

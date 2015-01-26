@@ -1,13 +1,8 @@
 <div class="filter-section">
-  <span class="search-field">
-    Search: <input ng-model="query">
-  </span>
-  <span class="sort-field">
-    Sort by:
-    <select class="order-select" ng-model="orderProp">
-      <option value="postName">Alphabetical</option>
-      <option value="date">Newest</option>
-    </select>
+  <span>
+    <div class="search-field">
+      Search: <input ng-model="query">
+    </div>
   </span>
   <span class="tag-field">
     <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{'checked': tagChecked};" ng-click="includePost('{{post.category}}')">
@@ -15,7 +10,15 @@
     </span>
   </span>
 </div>
-<a class="post-item" ng-repeat="post in posts | filter: query | filter:PostFilter | orderBy:orderProp:true" href="#/views/{{post.category}}/{{post.postName}}">
+<div class="sort-field">
+  <span class="postName-field">
+    <a href="javascript:;" ng-click="sortPostName(this); sortField = 'postName'; reverse = !reverse" ng-class="{up: postReverse, down: !postReverse}">postName</a>
+  </span>
+  <span class="date-field">
+    <a href="javascript:;" ng-click="sortPostDate(this); sortField = 'date'; reverse = !reverse" ng-class="{up: dateReverse, down: !dateReverse}">date</a>
+  </span>
+</div>
+<a class="post-item" ng-repeat="post in posts | filter: query | filter:PostFilter | orderBy:sortField:reverse" href="#/views/{{post.category}}/{{post.postName}}">
   <span class="post-title">{{post.postName}}</span>
   <span class="date">{{post.date}}<span class="modified-mark {{post.isModified ? 'show' : 'invisible'}}">*</span></span>
 </a>

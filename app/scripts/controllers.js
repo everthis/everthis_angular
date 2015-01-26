@@ -7,11 +7,14 @@ var everthisControllers = angular.module('everthisControllers', []);
 everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
     function($scope, Posts, $location) {
         $scope.posts = Posts.query();
-        $scope.orderProp = 'date';
+        $scope.sortField = 'date';
+        $scope.reverse = true;
 
         $scope.postsIncludes = [];
 
         $scope.tagChecked = 0;
+        $scope.postReverse = false;
+        $scope.dateReverse = false;
 
         $scope.includePost = function(post) {
             var i = $.inArray(post, $scope.postsIncludes);
@@ -21,6 +24,16 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
                 $scope.postsIncludes.push(post);
             };
             this.tagChecked = !(this.tagChecked);
+        }
+
+
+        $scope.sortPostName = function(s) {
+                s.postReverse = !s.postReverse;
+                $scope.dateReverse = null;
+        }
+
+        $scope.sortPostDate = function(s) {
+                s.dateReverse = !s.dateReverse;
         }
 
         $scope.PostFilter = function(posts) {
