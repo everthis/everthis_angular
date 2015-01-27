@@ -4,6 +4,33 @@
 
 var everthisControllers = angular.module('everthisControllers', []);
 
+
+// (function(app) {
+
+//   var routeLoadingIndicator = function($rootScope) {
+//     return {
+//       restrict: 'E',
+//       template: "<h1 ng-if='isRouteLoading'>Loading...</h1>",
+//       link: function(scope, elem, attrs) {
+//         scope.isRouteLoading = false;
+
+//         $rootScope.$on('$routeChangeStart', function() {
+//           scope.isRouteLoading = true;
+//         });
+
+//         $rootScope.$on('$routeChangeSuccess', function() {
+//           scope.isRouteLoading = false;
+//         });
+//       }
+//     };
+//   };
+//   routeLoadingIndicator.$inject = ['$rootScope'];
+
+//   app.directive('routeLoadingIndicator', routeLoadingIndicator);
+
+// }(angular.module('everthisControllers')));
+
+
 everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
     function($scope, Posts, $location) {
         $scope.posts = Posts.query();
@@ -49,15 +76,6 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
             return posts;
         }
 
-        // $scope.showPageHero = $location.path() === '/';
-        //
-        $scope.isViewLoading = false;
-        $scope.$on('$routeChangeStart', function() {
-          $scope.isViewLoading = true;
-        });
-        $scope.$on('$routeChangeSuccess', function() {
-          $scope.isViewLoading = false;
-        });
     }
 ]);
 

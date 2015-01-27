@@ -1,23 +1,29 @@
 .filter-section {
     @extend %inline-block-fix;
-    .search-field {
-        line-height: 20px;
+
+    > span {
+        margin-bottom: .2em;
     }
-    .tag-field {
-        line-height: 20px;
-        padding-left: .5em;
-        .per-tag {
-            display: inline-block;
-            height: 24px;
-            line-height: 24px;
-            padding: 0 .6em;
-            cursor: pointer;
-            background-color: #E7E7F7;
-            border-right: 1px solid #fff;
-            &.checked {
-                background-color: #A2CDF0;
-            }
+    .query-input {
+        margin: 0 .5em;
+        line-height: $query-input-lineHeight;
+        > input {
+            height: $label-height;
+            width: 11.25em;
         }
+    }
+    .per-tag {
+        display: inline-block;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 .5em;
+        cursor: pointer;
+        background-color: #E7E7F7;
+        border-right: 1px solid #fff;
+        &.checked {
+            background-color: #A2CDF0;
+        }
+
     }
 }
 .sort-field {

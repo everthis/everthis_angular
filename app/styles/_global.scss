@@ -17,6 +17,10 @@ html * {
     background-color: #eee;
     padding: 1em;
 }
+.label {
+    height: $label-height;
+    line-height: $label-lineHeight;
+}
 a:active {
     color: red;
 }

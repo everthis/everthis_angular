@@ -1,14 +1,13 @@
 <div class="filter-section">
-  <span>
-    <div class="search-field">
-      Search: <input ng-model="query">
-    </div>
+
+
+  <span class="label">Search: </span>
+  <span class="query-input"><input ng-model="query"></span>
+  <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{checked: tagChecked === true};" ng-click="includePost('{{post.category}}')">
+      #{{post.category}}
   </span>
-  <span class="tag-field">
-    <span ng-repeat="post in posts | unique:'category'" class="per-tag" ng-class="{checked: tagChecked === true};" ng-click="includePost('{{post.category}}')">
-        #{{post.category}}
-    </span>
-  </span>
+
+
 </div>
 <div class="sort-field">
   <span class="postName-field">
