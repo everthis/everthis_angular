@@ -1,6 +1,6 @@
 'use strict';
 
-var baseSyntaxHighlighterScriptsPath = "bower_components/SyntaxHighlighter/scripts/";
+var baseSyntaxHighlighterScriptsPath = "SyntaxHighlighter/scripts/";
 SyntaxHighlighter.vars.discoveredBrushes = null;
 function getSyntaxHighlighterScriptPath(name){
     return name.replace('@', baseSyntaxHighlighterScriptsPath);

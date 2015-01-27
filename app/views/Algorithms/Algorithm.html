@@ -3,7 +3,7 @@
 	function f(a){
 	    var $={};
 	    function _(a) {
-	        return $[a] ? $[a] : ($[a] = a <= 1 ? 1 : _(a-1) + _(a-2));
+	        return $[a] ? $[a] : ($[a] = a &lt;= 1 ? 1 : _(a-1) + _(a-2));
 	    }
 	    return _(a);
 	};
