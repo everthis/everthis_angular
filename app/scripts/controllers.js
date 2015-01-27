@@ -50,7 +50,14 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
         }
 
         // $scope.showPageHero = $location.path() === '/';
-
+        //
+        $scope.isViewLoading = false;
+        $scope.$on('$routeChangeStart', function() {
+          $scope.isViewLoading = true;
+        });
+        $scope.$on('$routeChangeSuccess', function() {
+          $scope.isViewLoading = false;
+        });
     }
 ]);
 
