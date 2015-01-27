@@ -206,9 +206,10 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          // '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          // '<%= yeoman.dist %>/views/{,*/}*.html',
+          // '<%= yeoman.dist %>/images/*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -341,8 +342,12 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'fonts/{,*/}*.*'
+            'images/{,*/}*.{png,jpg,jpeg,gif,webp,JPG}',
+            'fonts/{,*/}*.*',
+            'icon_fonts/{,*/}*.*',
+            'syntaxhighlighter/{,*/}*.*',
+            'scripts/syntaxhighter.js',
+            'json/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -421,7 +426,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
     'filerev',
