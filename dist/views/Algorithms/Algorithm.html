@@ -1,0 +1,10 @@
+<p>50个阶梯，你一次可以上一阶或两阶，走上去，共有多少种走法</p> <pre class="brush: js;">
+	function f(a){
+	    var $={};
+	    function _(a) {
+	        return $[a] ? $[a] : ($[a] = a &lt;= 1 ? 1 : _(a-1) + _(a-2));
+	    }
+	    return _(a);
+	};
+	alert(f(50));
+</pre> <p class="hint">考虑到这里会有大量重复的运算，所以放置一个变量存储每个n对应的走法数</p> <script src="/scripts/syntaxhighter.js"></script>

@@ -1,0 +1,23 @@
+<pre class="brush: js;">
+    function getScriptParams(scriptFileName) {
+       // Get all script tag
+      var scripts = document.getElementsByTagName('script');
+      var result = {};
+      for(var i = 0; i &lt; scripts.length; ++i) {
+         // Check if the file name is the same as scriptFileName
+        if(scripts[i].src.indexOf(scriptFileName) !== -1) {
+          // Get the parameters string
+          var urls = scripts[i].src.split('?');
+          if(urls.length == 2) {
+            var parameters = urls[1].split('&');
+            for(var j=0; j &lt; parameters.length; ++j) {
+              var pair = parameters[j].split('=');
+              result[pair[0]] = pair[1];
+            }
+          }
+          break;
+        }
+      }
+      return result;
+    }
+</pre> <script src="scripts/syntaxhighter.js"></script>
