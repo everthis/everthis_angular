@@ -1,6 +1,6 @@
 'use strict';
 
-var baseSyntaxHighlighterScriptsPath = "SyntaxHighlighter/scripts/";
+var baseSyntaxHighlighterScriptsPath = "syntaxhighlighter/scripts/";
 SyntaxHighlighter.vars.discoveredBrushes = null;
 function getSyntaxHighlighterScriptPath(name){
     return name.replace('@', baseSyntaxHighlighterScriptsPath);
