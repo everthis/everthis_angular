@@ -42,9 +42,13 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
         $scope.postReverse = null;
         $scope.dateReverse = true;
         $scope.reverse = true;
+        var arr = [];
 
         $scope.includePost = function(post) {
-            var i = $.inArray(post, $scope.postsIncludes);
+
+            var i = ($scope.postsIncludes == null ? -1 : arr.indexOf.call( $scope.postsIncludes, post));
+
+            // var i = $.inArray(post, $scope.postsIncludes);
             if (i > -1) {
                 $scope.postsIncludes.splice(i, 1);
             } else {
@@ -70,7 +74,9 @@ everthisControllers.controller('postsListCtrl', ['$scope', 'Posts', '$location',
 
         $scope.PostFilter = function(posts) {
             if ($scope.postsIncludes.length > 0) {
-                if ($.inArray(posts.category, $scope.postsIncludes) < 0)
+                if (arr.indexOf.call( $scope.postsIncludes, posts.category) < 0)
+
+                // if ($.inArray(posts.category, $scope.postsIncludes) < 0)
                     return;
             }
             return posts;

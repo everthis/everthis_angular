@@ -1,5 +1,5 @@
 <ul class="list"> <li> <p>get current Linux kernel version</p> <pre class="brush: bash;">
-			uname -r</pre> <img src="images/hybla/uname.jpg" alt=""> </li> <li> <p>go to <a href="https://www.kernel.org/">https://www.kernel.org/</a>to download kernel source code.</p> <p>since my kernel verison is 3.16.7</p> <pre class="brush: bash;">
+			uname -r</pre> <img src="images/hybla/uname.JPG" alt=""> </li> <li> <p>go to <a href="https://www.kernel.org/">https://www.kernel.org/</a>to download kernel source code.</p> <p>since my kernel verison is 3.16.7</p> <pre class="brush: bash;">
 			wget "https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.gz"
 			tar zxvf linux-3.16.7.tar.gz</pre> </li> <li> <p>install essential tools</p> <pre class="brush: bash;">
 			apt-get update && apt-get install -y build-essential libncurses5-dev</pre> </li> <li> <p>create and edit the .config file </p> <pre class="brush: bash;">
@@ -32,4 +32,4 @@
 			cp /root/linux-3.16.7/modules.order ./
 			depmod -a</pre> </li> <li> <p>edit "/etc/sysctl.conf" file to set "hybla" as the "tcp_congestion_control" algorithm.</p> <pre class="brush: bash;">
 			vim /etc/sysctl.conf</pre> <p>add "net.ipv4.tcp_congestion_control = hybla" to the end of the file.</p> <p>make the modification take effect.</p> <pre class="brush: bash;">
-			sysctl -p</pre> </li> </ul> <p>Finally, the work is done.</p> <p>note, according to linode settings, kernel may be updated automatically when you restart linode.</p> <script src="/scripts/syntaxhighter.js"></script>
+			sysctl -p</pre> </li> </ul> <p>Finally, the work is done.</p> <p>note, according to linode settings, kernel may be updated automatically when you restart linode.</p> <script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>

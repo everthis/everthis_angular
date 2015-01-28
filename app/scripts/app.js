@@ -3,15 +3,10 @@
 /* App Module */
 
 var everthisApp = angular.module('everthisApp', [
-    'ngAnimate',
     'ngAria',
-    'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
     'ngTouch',
-    'phonecatAnimations',
     'everthisControllers',
     'phonecatFilters',
     'everthisServices'
@@ -24,21 +19,6 @@ everthisApp.config(['$routeProvider',
             templateUrl: 'views/posts-list.html',
             controller: 'postsListCtrl'
         }).
-        // when('/views/:postName', {
-        //     templateUrl: function(params) {
-        //         return '/views/' + params.postName + '.html';
-        //     },
-        //     controller: 'PhoneDetailCtrl'
-        // }).
-        // when('/views/:postName', {
-        //     templateUrl: function(params) {
-        //         return '/views/'+ params.postName + '.html';
-        //     },
-        //     // controller: function(params) {
-        //     //     return 'everthis' + params.category + 'Ctrl';
-        //     // }
-        //     controller: 'everthisLinuxCtrl'
-        // }).
         when('/views/Films/:postName', {
             templateUrl: function(params) {
                 return '/views/Films/filmTemplate.html';
@@ -128,3 +108,32 @@ everthisApp.config(['$provide', function($provide) {
         return $delegate;
     }]);
 }]);
+
+/*global angular */
+
+everthisApp.directive('script', function() {
+  return {
+    restrict: 'E',
+    scope: false,
+    link: function(scope, elem, attr)
+    {
+      if (attr.type==='text/javascript-lazy')
+      {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        var src = elem.attr('src');
+        if(src!==undefined)
+        {
+            s.src = src;
+        }
+        else
+        {
+            var code = elem.text();
+            s.text = code;
+        }
+        document.head.appendChild(s);
+        elem.remove();
+      }
+    }
+  };
+});
