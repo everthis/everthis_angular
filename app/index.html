@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" ng-app="everthisApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -15,83 +16,26 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
+
+<body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="root">
-      <header class="site-header">
-        <div class="container">
-          <span class="">
-            <a ng-href="#/" class="home-link" title="www.everthis.com">
-              <pre class="logo">
-███████╗██╗   ██╗███████╗██████╗ ████████╗██╗  ██╗██╗███████╗
-██╔════╝██║   ██║██╔════╝██╔══██╗╚══██╔══╝██║  ██║██║██╔════╝
-█████╗  ██║   ██║█████╗  ██████╔╝   ██║   ███████║██║███████╗
-██╔══╝  ╚██╗ ██╔╝██╔══╝  ██╔══██╗   ██║   ██╔══██║██║╚════██║
-███████╗ ╚████╔╝ ███████╗██║  ██║   ██║   ██║  ██║██║███████║
-╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝</pre>
-            </a>
-          </span>
-          <span class="sub-head">
-            <!-- <input type="text"> -->
-            <pre class="sub-header">
-. ▄▄       ▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄       ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄       ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄
-▐░░▌     ▐░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌
-▐░▌░▌   ▐░▐░▌▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌      ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀      ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░▌       ▐░▌ ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌     ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌
-▐░▌▐░▌ ▐░▌▐░▌▐░▌       ▐░▌▐░▌       ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░▌               ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌               ▐░▌       ▐░▌▐░▌               ▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌       ▐░▌
-▐░▌ ▐░▐░▌ ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄      ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░▌          ▐░█▄▄▄▄▄▄▄▄▄      ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄      ▐░▌   ▄   ▐░▌     ▐░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌       ▐░▌
-▐░▌  ▐░▌  ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌          ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌          ▐░░░░░░░░░░░▌     ▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌     ▐░▌  ▐░▌  ▐░▌     ▐░▌          ▐░▌     ▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌       ▐░▌
-▐░▌   ▀   ▐░▌▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀           ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀█░█▀▀ ▐░▌          ▐░█▀▀▀▀▀▀▀▀▀      ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░▌ ▐░▌░▌ ▐░▌     ▐░▌          ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌      ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░▌       ▐░▌
-▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░▌               ▐░▌          ▐░▌       ▐░▌▐░▌     ▐░▌  ▐░▌          ▐░▌               ▐░▌       ▐░▌▐░▌               ▐░▌▐░▌ ▐░▌▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌
-▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄      ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄      ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄      ▐░▌░▌   ▐░▐░▌ ▄▄▄▄█░█▄▄▄▄      ▐░▌     ▐░▌       ▐░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌ ▄
-▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░▌          ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌     ▐░░▌     ▐░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░▌       ▐░▌          ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌
- ▀         ▀  ▀         ▀       ▀                 ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀       ▀▀       ▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀         ▀            ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀
-            </pre>
-          </span>
-        </div>
-      </header>
-      <div class="container page-body">
-           <div ng-view="" class="content-section"></div>
-           <span ng-show="isViewLoading"> loading the view... <span>
+        <ng-include src="'partials/header.html'"></ng-include>
+
+        <div class="container page-body">
+            <div ng-view="" class="content-section"></div>
+            <span ng-show="isViewLoading"> loading the view... <span>
            <!-- <route-loading-indicator /> -->
       </div>
       <div class="root_footer"></div>
     </div>
-    <div class="footer">
-      <div class="container">
-        <div class="contact_methods">
-            <div class="contact_item">
-                Contact me:
-            </div>
-            <div class="contact_item">
-                <a href="mailto:wwwaap@gmail.com" title="email">
-                    <span class="icon icon-mail"></span>
-                </a>
-            </div>
-            <div class="contact_item">
-                <a href="https://twitter.com/wwwap" target="_blank" title="twitter">
-                    <span class="icon icon-twitter"></span>
-                </a>
-            </div>
-           <!--  <div class="contact_item">
-                <span class="icon icon-feed"></span>
-            </div> -->
-            <div class="contact_item">
-                <a href="https://github.com/everthis" target="_blank" title="github">
-                    <span class="icon icon-mark-github"></span>
-                </a>
-            </div>
-        </div>
-        <div class="copyrights">
-            <span class="icon icon-heart"></span>
-            <span class="address">from everthis.com</span>
-        </div>
-      </div>
-    </div>
+    <ng-include src="'partials/footer.html'"></ng-include>
+
 
 
     <!-- build:js(.) scripts/oldieshim.js -->
@@ -137,6 +81,41 @@
 
           ga('create', 'UA-44971143-1', 'auto');
           ga('send', 'pageview');
+
+        </script>
+
+        <script>
+
+          function getAttrEle(tag, attribute, attrVal) {
+            var matchingElements = [];
+            var allElements = document.getElementsByTagName(tag);
+            for (var i = 0, n = allElements.length; i < n; i++) {
+              if (allElements[i].getAttribute(attribute) == attrVal)
+              {
+                // Element exists with attribute. Add to array.
+                matchingElements.push(allElements[i]);
+              }
+            }
+            return matchingElements;
+          }
+
+          function showTooltip() {
+            var _email_address = document.querySelectorAll(".email_address")[0];
+            _email_address.style.display="inline-block";
+            _email_address.style.color="black";
+          }
+          function hideTooltip() {
+            var _email_address = document.querySelectorAll(".email_address")[0];
+            _email_address.style.display="none";
+          }
+
+          // add event listener to table
+          window.onload = function() {
+            var email_ele = getAttrEle('a', 'title', 'email')[0];
+            email_ele.addEventListener("mouseover", showTooltip, false);
+            email_ele.addEventListener("mouseleave", hideTooltip, false);
+          };
+
 
         </script>
 </body>

@@ -10,6 +10,13 @@
         width: 60%;
         display: inline-block;
         vertical-align: top;
+        a[title="email"] {
+            vertical-align: top;
+        }
+    }
+    .email_address {
+        vertical-align: top;
+        display: none;
     }
     .copyrights {
         display: inline-block;
