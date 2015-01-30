@@ -348,7 +348,7 @@ module.exports = function (grunt) {
             'icon_fonts/{,*/}*.*',
             'syntaxhighlighter/{,*/}*.*',
             'scripts/syntaxhighter.js',
-            'json/{,*/}*.*'
+            'json/{,*/}*.json'
           ]
         }, {
           expand: true,
