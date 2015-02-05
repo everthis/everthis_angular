@@ -1,0 +1,12 @@
+.row {
+	font-size: 0;
+	> span {
+		display: inline-block;
+		font-size: 12px;
+		vertical-align: top;
+		width: 12.5%;
+	}
+	img {
+		width: 100%;
+	}
+}
