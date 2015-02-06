@@ -1,47 +1,11 @@
+<div class="postTitle">{{film.postTitle}}</div>
 <div class="row">
-	<span class="item">
+	<span class="item" ng-repeat="content in film.contents">
 		<div class="row">
-			<img src="../images/Tux.svg" alt="">
+	        <img ng-src="{{film.imagesLocation}}{{content.image}}" alt="{{image}}">
 		</div>
 		<div class="row">
-			<span>Linux</span>
-		</div>
-	</span>
-	<span class="item">
-		<div class="row">
-			<img src="../images/Nginx_logo.svg" alt="">
-		</div>
-		<div class="row">
-			<span>nginx</span>
-		</div>
-	</span>
-		<span class="item">
-		<div class="row">
-			<img src="../images/Node.js_logo.svg" alt="">
-		</div>
-		<div class="row">
-			<span>nodejs</span>
-		</div>
-	</span>
-	<span class="item">
-		<div class="row">
-			<img src="../images/PHP-logo.svg" alt="">
-		</div>
-		<div class="row">
-			<span>PHP</span>
-		</div>
-	</span>
-	<span class="item">
-		<div class="row">
-			<img src="../images/Postgresql_elephant.svg" alt="">
-		</div>
-		<div class="row">
-			<span>PostgreSQL</span>
+	        <span>{{content.text}}</span>
 		</div>
 	</span>
 </div>
-
-<p>grunt, bower, yeoman, Cordova, PhoneGap</p>
-<p>sass, compass, HTML, Javascript, CoffeeScript, markdown, LaTex</p>
-<p>sublime text, git</p>
-<p>Angular, jQuery, Bootstrap</p>

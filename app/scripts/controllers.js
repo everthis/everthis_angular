@@ -105,6 +105,14 @@ everthisControllers.controller('everthisFilmsCtrl', ['$scope', '$routeParams', '
     }
 ]);
 
+everthisControllers.controller('everthisWebDevCtrl', ['$scope', '$routeParams', 'WebDev',
+    function($scope, $routeParams, WebDev) {
+        $scope.film = WebDev.get({
+            postName: $routeParams.postName
+        }, function(film) {});
+    }
+]);
+
 everthisControllers.controller('everthisCommonCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {}
 ]);

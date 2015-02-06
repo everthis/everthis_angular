@@ -17,3 +17,9 @@ everthisServices.factory('Film', ['$resource',
       query: {method:'GET', params:{postName:'posts'}, isArray:true}
     });
   }]);
+everthisServices.factory('WebDev', ['$resource',
+  function($resource){
+    return $resource('json/WebDev/:postName.json', {}, {
+      query: {method:'GET', params:{postName:'posts'}, isArray:true}
+    });
+  }]);

@@ -1,0 +1,65 @@
+{
+	"postTitle": "My workflow",
+	"imagesLocation": "images/logos/",
+	"contents": [{
+		"image": "Tux.svg",
+		"text": "Linux"
+		},{
+		"image": "Nginx_logo.svg",
+		"text": "Nginx"
+		},{
+		"image": "Node.js_logo.svg",
+		"text": "nodejs"
+		},{
+		"image": "PHP-logo.svg",
+		"text": "php"
+		},{
+		"image": "Postgresql_elephant.svg",
+		"text": "PostgreSQL"
+		},{
+		"image": "grunt-logo.svg",
+		"text": "grunt"
+		},{
+		"image": "bower-logo.svg",
+		"text": "bower"
+		},{
+		"image": "yeoman.png",
+		"text": "yeoman"
+		},{
+		"image": "PhoneGap.jpeg",
+		"text": "PhoneGap"
+		},{
+		"image": "sass.png",
+		"text": "Sass"
+		},{
+		"image": "compasslogo.png",
+		"text": "compass"
+		},{
+		"image": "js-logo.png",
+		"text": "JavaScript"
+		},{
+		"image": "CoffeeScript-logo.png",
+		"text": "CoffeeScript"
+		},{
+		"image": "Markdown-logo.png",
+		"text": "Markdown"
+		},{
+		"image": "latex.png",
+		"text": "LaTex"
+		},{
+		"image": "Sublime_Text_Logo.png",
+		"text": "sublime"
+		},{
+		"image": "Git-Logo-2Color.png",
+		"text": "Git"
+		},{
+		"image": "AngularJS-medium.png",
+		"text": "AngularJS"
+		},{
+		"image": "jquery-logo2_wfHYiyq.png",
+		"text": "jquery"
+		},{
+		"image": "bootstrap-logo-128.png",
+		"text": "bootstrap"
+		}]
+}

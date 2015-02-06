@@ -59,7 +59,7 @@ everthisApp.config(['$routeProvider',
             templateUrl: function(params) {
                 return '/views/Workflow/' + params.postName + '.html';
             },
-            controller: 'everthisCommonCtrl'
+            controller: 'everthisWebDevCtrl'
         }).
         when('/views/Games/:postName', {
             templateUrl: function(params) {
