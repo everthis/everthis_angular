@@ -21,7 +21,11 @@ everthisApp.config(['$routeProvider',
         }).
         when('/views/Films/:postName', {
             templateUrl: function(params) {
-                return '/views/Films/filmTemplate.html';
+                if (params.postName.indexOf("matrix") > -1) {
+                    return '/views/Films/The matrix.html';
+                } else{
+                    return '/views/Films/filmTemplate.html';
+                };
             },
             controller: 'everthisFilmsCtrl'
         }).
