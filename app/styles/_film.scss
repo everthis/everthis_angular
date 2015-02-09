@@ -41,3 +41,18 @@
 		}
 	}
 }
+
+#matrix_rain_container {
+	height: 80px;
+	position: relative;
+	> h1 {
+		position: absolute;
+		text-align: center;
+		font-family: "matrix";
+		font-size: 3em;
+		width: 100%;
+		color: #0F0;
+		top: 0;
+		left: 0;
+	}
+}
