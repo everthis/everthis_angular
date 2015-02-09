@@ -49,10 +49,45 @@
 		position: absolute;
 		text-align: center;
 		font-family: "matrix";
+		text-transform: uppercase;
 		font-size: 3em;
 		width: 100%;
 		color: #0F0;
 		top: 0;
 		left: 0;
+	}
+}
+.matrix_row {
+	@extend %inline-block-fix;
+	&.even {
+		@include clearfix();
+		.matrix_cover {
+			float: right;
+		}
+	}
+	&.odd {
+		.matrix_cover {
+		}
+		img {
+			float: right;
+		}
+	}
+	#matrix_rain_container + & {
+		margin-top: 20px;
+		border-top: 1px solid $border-color;
+	}
+	border-left: 1px solid $border-color;
+	border-right: 1px solid $border-color;
+	background-color: #53695C;
+	.matrix_cover {
+		width: 50%;
+		background-color: $white;
+	}
+	.matrix_text {
+		text-indent: 2em;
+		color: $white;
+		width: 50%;
+		padding: 15px 10px 0 10px;
+		line-height: 16px;
 	}
 }

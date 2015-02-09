@@ -2,6 +2,11 @@
     <canvas id="matrix_rain" class="matrix">
         <h1 class="matrix">Dude,your browser does not support canvas.</h1>
     </canvas>
-    <h1>The matrix</h1>
+    <h1>{{film.postTitle}}</h1>
 </div>
+<div class="matrix_row" ng-repeat="content in film.contents" ng-class-odd="'odd'" ng-class-even="'even'">
+	<span class="matrix_cover"><img ng-src="{{film.imagesLocation}}{{content.image}}" alt="{{image}}"></span>
+	<span class="matrix_text">{{content.text}}</span>
+</div>
+
     <script type="text/javascript-lazy" src="/scripts/matrix.js"></script>
