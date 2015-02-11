@@ -2,12 +2,15 @@
     background-color: white;
     color: black;
     padding: 4px 0;
+    .container {
+        font-size: 0;
+    }
     .footer_content {
         width: $container_width;
         margin: 0 auto;
     }
     .contact_methods {
-        width: 60%;
+        width: 55%;
         display: inline-block;
         vertical-align: top;
         a[title="email"] {
@@ -20,7 +23,7 @@
     }
     .copyrights {
         display: inline-block;
-        width: 30%;
+        width: 45%;
         .address {
             @extend .contact_item;
             margin-left: .3em;
