@@ -30,4 +30,19 @@ and (max-device-width : 960px) {
 	.banner-header h1 {
 		font-size: 12px;
 	}
+	.center-img-container {
+	    img {
+	        width: 100%;
+	    }
+	}
+	.img-container {
+	    img {
+	        width: 100%;
+	    }
+	}
+	.screenshot {
+		img {
+			width: 100%;
+		}
+	}
 }
