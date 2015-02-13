@@ -59,13 +59,15 @@
     padding: 10px;
     margin: $post-item-margins;
     .post-title {
-        width: 70%;
+        width: 68%;
+        padding: 0 5px 0 0;
     }
     > span {
         font-size: 14px;
     }
     .date {
-        float: right;
+        width: 32%;
+        text-align: right;
     }
 }
 .page-body {

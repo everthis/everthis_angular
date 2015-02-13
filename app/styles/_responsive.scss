@@ -21,4 +21,13 @@ and (max-device-width : 960px) {
 	.syntaxhighlighter * {
 		font-size: 4px;
 	}
+	table th, table td {
+		padding: 5px 10px;
+	}
+	.footer .copyrights .address {
+		display: none;
+	}
+	.banner-header h1 {
+		font-size: 12px;
+	}
 }
