@@ -36,20 +36,6 @@ window.onscroll = function() {
     }
 }
 
-// document.getElementById('back_to_top').onclick = function() {
-//     scrollTo(document.body, 0, 500);
-// }
-
-// function scrollTo(element, to, duration) {
-//     if (duration < 0) return;
-//     var difference = to - element.scrollTop;
-//     var perTick = difference / duration * 2;
-
-//     setTimeout(function() {
-//         element.scrollTop = element.scrollTop + perTick;
-//         scrollTo(element, to, duration - 10);
-//     }, 10);
-// }
 
 function runScroll() {
     scrollTo(document.body, 0, 400);
