@@ -48,7 +48,7 @@
 		"text": "LaTex"
 		},{
 		"image": "Sublime_Text_Logo.png",
-		"text": "sublime"
+		"text": "sublime text"
 		},{
 		"image": "Git-Logo-2Color.png",
 		"text": "Git"
@@ -58,6 +58,9 @@
 		},{
 		"image": "jquery-logo2_wfHYiyq.png",
 		"text": "jquery"
+		},{
+		"image": "jasmine-horizontal.svg",
+		"text": "jasmine"
 		},{
 		"image": "bootstrap-logo-128.png",
 		"text": "bootstrap"
