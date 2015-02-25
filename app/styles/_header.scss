@@ -9,9 +9,6 @@
     .logo {
       font-family: "Courier New";
       font-size: 10px;
-      &:active {
-        color: red;
-      }
     }
     &:link {
       color: $purple;
@@ -22,6 +19,7 @@
     &:active {
       color: red;
     }
+
   }
   .sub-head {
     padding: 1.3em 0 0 2em;
@@ -34,6 +32,6 @@
       // position: absolute;
       // left: 0;
       // top: 0;
-      font-size: 2px;
+      // font-size: 2px;
   }
 }
