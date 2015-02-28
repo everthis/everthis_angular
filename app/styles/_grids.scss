@@ -1,0 +1,16 @@
+.grid-container {
+	@extend %inline-block-fix;
+}
+.grid {
+
+}
+@media  (max-width: 767px){
+	.grid-sm-12 {
+		width: 100%;
+	}
+}
+@media  (min-width: 768px){
+	.grid-md-6 {
+		width: 50%;
+	}
+}
