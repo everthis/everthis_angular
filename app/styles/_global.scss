@@ -79,8 +79,17 @@ p {
 }
 .center-img-container {
     text-align: center;
-    
+
 }
 .img-container {
-    
+
+}
+#back_to_top {
+    visibility: hidden;
+    position: fixed;
+    right: 30px;
+    bottom: 62px;
+    padding: 1em;
+    background-color: $purple;
+    color: $white;
 }
