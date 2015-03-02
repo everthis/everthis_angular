@@ -1,2 +1,21 @@
 <p>IE7 float right elements begins in a new line.</p>
 <p>solution: just put float right element to the topmost of its parent.</p>
+
+<pre class="brush: html;">
+	<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]> <html class=""> <![endif]-->
+</pre>
+
+<h1>OR</h1>
+
+<pre class="brush: html;">
+	<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+	<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+	<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+	<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]> <html class=""> <![endif]-->
+</pre>
+
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>
