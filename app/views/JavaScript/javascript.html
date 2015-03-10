@@ -24,7 +24,111 @@
 
 <p>But in the case with function declarations, where the entire function body will be hoisted as well.</p>
 
-<h2>JavaScript Errors</h2>
+<h2>JavaScript Module Pattern</h2>
+
+<h2>basic module pattern</h2>
+<pre class="brush: js;">
+	var Module = (function () {
+
+	  return {
+	    publicMethod: function () {
+	      // code
+	    }
+	  };
+
+	})();
+</pre>
+<h2>Locally scoped Object Literal</h2>
+<pre class="brush: js;">
+	var Module = (function () {
+
+	  // locally scoped Object
+	  var myObject = {};
+
+	  // declared with `var`, must be "private"
+	  var privateMethod = function () {};
+
+	  myObject.someMethod = function () {
+	    // take it away Mr. Public Method
+	  };
+
+	  return myObject;
+
+	})();
+</pre>
+OR
+<pre class="brush: js;">
+	var Module = (function () {
+
+	  var privateMethod = function () {};
+
+	  var myObject = {
+	    someMethod:  function () {
+
+	    },
+	    anotherMethod:  function () {
+
+	    }
+	  };
+
+	  return myObject;
+
+	})();
+</pre>
+<h2>Accessing "Private" Methods</h2>
+<pre class="brush: js;">
+	var Module = (function () {
+
+	  var privateMethod = function (message) {
+	    console.log(message);
+	  };
+
+	  var publicMethod = function (text) {
+	    privateMethod(text);
+	  };
+
+	  return {
+	    publicMethod: publicMethod
+	  };
+
+	})();
+
+	// Example of passing data into a private method
+	// the private method will then `console.log()` 'Hello!'
+	Module.publicMethod('Hello!');
+</pre>
+<h2>pass Module into ModuleTwo</h2>
+<pre class="brush: js;">
+	var ModuleTwo = (function (Module) {
+
+	    Module.extension = function () {
+	        // another method!
+	    };
+
+	    return Module;
+
+	})(Module || {});
+</pre>
+
+<h2>Private Naming Conventions, using "_"</h2>
+<pre class="brush: js;">
+	var Module = (function () {
+
+	  var _privateMethod = function () {
+	    // private stuff
+	  };
+
+	  var publicMethod = function () {
+	    _privateMethod();
+	  };
+
+	  return {
+	    publicMethod: publicMethod
+	  };
+
+	})();
+</pre>
+<!-- <h2>JavaScript Errors</h2>
 <pre class="brush: js;">
 Uncaught TypeError: undefined is not a function
 </pre>
@@ -59,5 +163,5 @@ XMLHttpRequest cannot load http://some/url/. No â€˜Access-Control-Allow-Originâ€
 </pre>
 <pre class="brush: js;">
 InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
-</pre>
+</pre> -->
 <script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>
