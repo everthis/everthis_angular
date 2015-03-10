@@ -21,7 +21,9 @@ function showTooltip() {
 // add event listener to table
 window.onload = function() {
     var email_ele = getAttrEle('a', 'title', 'email')[0];
-    email_ele.addEventListener("click", showTooltip, false);
+    if (email_ele) {
+        email_ele.addEventListener("click", showTooltip, false);
+    };
 };
 
 /**
@@ -38,19 +40,22 @@ window.onscroll = function() {
 
 
 function runScroll() {
-    scrollTo(document.body, 0, 400);
+    scrollTo(document.body || document.documentElement, 0, 400);
 }
 
-document.querySelector("#back_to_top").addEventListener("click", runScroll, false)
+document.getElementById("back_to_top").addEventListener("click", runScroll, false)
 
 function scrollTo(element, to, duration) {
         if (duration < 0) return;
-        var difference = to - element.scrollTop;
+        var toTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var difference = to - toTop;
         var perTick = difference / duration * 10;
 
+
         setTimeout(function() {
-            element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop == to) return;
+            toTop = toTop + perTick;
+           window.scroll(0, toTop);
+            if (toTop === to) return;
             scrollTo(element, to, duration - 10);
         }, 10);
     }
