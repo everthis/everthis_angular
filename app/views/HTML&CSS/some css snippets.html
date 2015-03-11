@@ -68,13 +68,13 @@
   .star-box {
     width: 5em;
     height: 5em;
-    background: linear-gradient(-72deg, transparent 15%, #f77 15%) no-repeat, 
-      linear-gradient(72deg, transparent 15%, #7f7 15%) no-repeat 100% 0, 
-      linear-gradient(36deg, #77f 47%, transparent 47%) no-repeat 0 45%, 
-      linear-gradient(-36deg, #077 47%, transparent 47%) no-repeat 100% 45%, 
-      linear-gradient(-72deg, transparent 47%, #f70 47%) no-repeat 0 100%, 
-      linear-gradient(72deg, transparent 47%, #ff7 47%) no-repeat 100% 100%, 
-      linear-gradient(-36deg, #707 45%, transparent 45%) no-repeat 0 100%, 
+    background: linear-gradient(-72deg, transparent 15%, #f77 15%) no-repeat,
+      linear-gradient(72deg, transparent 15%, #7f7 15%) no-repeat 100% 0,
+      linear-gradient(36deg, #77f 47%, transparent 47%) no-repeat 0 45%,
+      linear-gradient(-36deg, #077 47%, transparent 47%) no-repeat 100% 45%,
+      linear-gradient(-72deg, transparent 47%, #f70 47%) no-repeat 0 100%,
+      linear-gradient(72deg, transparent 47%, #ff7 47%) no-repeat 100% 100%,
+      linear-gradient(-36deg, #707 45%, transparent 45%) no-repeat 0 100%,
       linear-gradient(36deg, #f7f 45%, transparent 45%) no-repeat 100% 100%;
       background-size: 50% 37.5%, 50% 37.5%, 50% 17.7%, 50% 17.7%, 50% 45.8%, 50% 45.8%, 50% 34.7%, 50% 34.7%;
       font-size: 8em;
@@ -82,16 +82,16 @@
 </pre>
 
 <h4>Moving Elements With Translate() Is Better Than Pos:abs Top/left</h4>
-<p>
-	Guidelines for animation
+<h2>Guidelines for animation</h2>
+<ul class="ul-list">
+  <li>Use CSS keyframe animation or CSS transitions, if at all possible. The browser can optimize painting and compositing bigtime here.</li>
+  <li>If needs to be it’s JS-based animation, use requestAnimationFrame. Avoid setTimeout, setInterval.</li>
+  <li>Avoid changing inline styles on every frame (jQuery animate()-style) if you can, declarative animations in CSS can be optimized by the browser way more.</li>
+  <li>Using 2D transforms instead of absolute positioning will typically provide better FPS by way of smaller paint times and smoother animation.</li>
+  <li>Use Timeline Frame’s mode to investigate what is slowing down your behavior</li>
+  <li>"Show Paint Rects” and “Render Composited Layer Borders" are good pro-moves to verify where your element is being rendered.</li>
+</ul>
 
-	Use CSS keyframe animation or CSS transitions, if at all possible. The browser can optimize painting and compositing bigtime here.
-	If needs to be it’s JS-based animation, use requestAnimationFrame. Avoid setTimeout, setInterval.
-	Avoid changing inline styles on every frame (jQuery animate()-style) if you can, declarative animations in CSS can be optimized by the browser way more.
-	Using 2D transforms instead of absolute positioning will typically provide better FPS by way of smaller paint times and smoother animation.
-	Use Timeline Frame’s mode to investigate what is slowing down your behavior
-	“Show Paint Rects” and “Render Composited Layer Borders” are good pro-moves to verify where your element is being rendered.
-</p>
 <div>
   <img src="images/sele.JPG" alt="">
 </div>

@@ -205,3 +205,71 @@ everthisControllers.controller('ExampleController', ['$scope', '$interval',
 //         }
 //     }
 // ]);
+
+everthisControllers.controller('gamesController', ['$scope',
+
+       function($scope){
+
+            if (!Array.prototype.shuffle) {
+                Array.prototype.shuffle = function() {
+                    for(var j, x, i = this.length; i; j = parseInt(Math.random() * i), x = this[--i], this[i] = this[j], this[j] = x);
+                    return this;
+                };
+            }
+
+            $scope.currentdata = [0,1,2,3,4,5,6,7,8];
+
+
+            $scope.init = function(){
+                $scope.currentdata.shuffle();
+                $scope.data = $scope.currentdata;
+                $scope.time = 0;
+                $scope.timer = null;
+            }
+
+            $scope.runTimmer = function(){
+                $scope.timer = setInterval(function(){
+                    $scope.time += 1;
+                }, 1000);
+            }
+
+            $scope.doclick = function(c,i){
+
+                if( $scope.timer == null ){
+                    $scope.runTimmer();
+                }
+
+                var greyclass = $scope.currentdata.indexOf(8) ;
+                var leng = Math.abs( i - greyclass );
+                if( ( leng == 1 && parseInt(i/3) == parseInt(greyclass/3) ) || leng == 3 ){
+                    var res = $scope.doexchange($scope.currentdata,greyclass,i);
+                    $scope.data = res;
+                    $scope.checkSuccess(res);
+                }
+            }
+
+            $scope.doexchange = function(data,index1,index2){
+                var tmp = data[index1];
+                data[index1] = data[index2];
+                data[index2] = tmp;
+                return data;
+            }
+
+            $scope.checkSuccess = function(data){
+                if( data[0] == 0 &&
+                    data[1] == 1 &&
+                    data[2] == 2 &&
+                    data[3] == 3 &&
+                    data[4] == 4 &&
+                    data[5] == 5 &&
+                    data[6] == 6 &&
+                    data[7] == 7
+                ){
+                    clearInterval($scope.timer);
+                    alert('You have used '+ $scope.time +'seconds to complete the puzzle.');
+                    // $scope.init();
+                }
+            }
+        }
+
+    ])

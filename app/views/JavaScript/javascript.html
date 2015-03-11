@@ -97,6 +97,16 @@ OR
 	// the private method will then `console.log()` 'Hello!'
 	Module.publicMethod('Hello!');
 </pre>
+<h2>Augmentation</h2>
+<pre class="brush: js;">
+	var MODULE = (function (my) {
+		my.anotherMethod = function () {
+			// added method...
+		};
+
+		return my;
+	}(MODULE || {}));
+</pre>
 <h2>pass Module into ModuleTwo</h2>
 <pre class="brush: js;">
 	var ModuleTwo = (function (Module) {
@@ -109,7 +119,12 @@ OR
 
 	})(Module || {});
 </pre>
-
+<h2>Global Import</h2>
+<pre class="brush: js;">
+	(function ($, YAHOO) {
+		// now have access to globals jQuery (as $) and YAHOO in this code
+	}(jQuery, YAHOO));
+</pre>
 <h2>Private Naming Conventions, using "_"</h2>
 <pre class="brush: js;">
 	var Module = (function () {

@@ -69,7 +69,7 @@ everthisApp.config(['$routeProvider',
             templateUrl: function(params) {
                 return '/views/Games/' + params.postName + '.html';
             },
-            controller: 'everthisCommonCtrl'
+            controller: 'gamesController'
         }).
         when('/views/Hardware/:postName', {
             templateUrl: function(params) {

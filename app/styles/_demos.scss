@@ -67,3 +67,85 @@
     50% 45.8%, 50% 45.8%, 50% 34.7%, 50% 34.7%;
   font-size: 8em;
 }
+
+
+/** Lena puzzle */
+
+ #puzzle_ul {
+    position: relative;
+    width: 512px;
+    height: 512px;
+    margin: 0 auto;
+    li {
+         position: absolute;
+         width: 170px;
+         height: 170px;
+         background-image: url('../images/lena.jpg');
+         cursor: pointer;
+    }
+    .c0 {
+        background-position: 0 0;
+    }
+    .c1 {
+        background-position: -170px 0;
+    }
+    .c2 {
+        background-position: -340px 0;
+    }
+    .c3 {
+        background-position: 0 -170px;
+    }
+    .c4 {
+        background-position: -170px -170px;
+    }
+    .c5 {
+        background-position: -340px -170px;
+    }
+    .c6 {
+        background-position: 0 -340px;
+    }
+    .c7 {
+        background-position: -170px -340px;
+    }
+    .c8 {
+         background-image: none;
+         background-color: $white;
+     }
+     #i0 {
+         left: 0;
+         top: 0;
+     }
+     #i1 {
+         left: 170px;
+         top: 0;
+     }
+     #i2 {
+         left: 340px;
+         top: 0;
+     }
+     #i3 {
+         left: 0;
+         top: 170px;
+     }
+     #i4 {
+         left: 170px;
+         top: 170px;
+     }
+     #i5 {
+         left: 340px;
+         top: 170px;
+     }
+     #i6 {
+         left: 0;
+         top: 340px;
+     }
+     #i7 {
+         left: 170px;
+         top: 340px;
+     }
+     #i8 {
+         left: 340px;
+         top: 340px;
+     }
+
+  }

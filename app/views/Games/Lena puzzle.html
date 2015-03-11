@@ -1,0 +1,8 @@
+<div ng-init="init();">
+    <ul id="puzzle_ul">
+        <li ng-repeat="x in data" class="c{{x}}" id="i{{$index}}" ng-click="doclick(x,$index);"></li>
+    </ul>
+    <p>{{time}}s</p>
+    <p><input ng-click="init();" value="reset" type="button"></p>
+</div>
+
