@@ -55,24 +55,7 @@
         margin: 1em 0 0 0;
     }
 }
-.post-item {
-    @extend %inline-block-fix;
-    @include lower-bxsd();
-    display: block;
-    padding: 10px;
-    margin: $post-item-margins;
-    .post-title {
-        width: 68%;
-        padding: 0 5px 0 0;
-    }
-    > span {
-        font-size: 14px;
-    }
-    .date {
-        width: 32%;
-        text-align: right;
-    }
-}
+
 .page-body {
     padding: 1em 0;
 }
