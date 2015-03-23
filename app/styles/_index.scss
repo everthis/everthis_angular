@@ -2,7 +2,7 @@
     @extend %inline-block-fix;
     @include lower-bxsd();
     display: block;
-    padding: 6px 10px;
+    padding: 8px 10px;
     margin: $post-item-margins;
     .post-title {
         width: 68%;
