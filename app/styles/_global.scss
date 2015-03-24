@@ -69,9 +69,13 @@ code {
 code, kbd, pre, samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-h1, h2, h3 {
-    margin-top: $large-margin;
-    margin-bottom: $middle-margin;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+    font-size: 1.6em;
+    margin: 0.4em 0;
 }
 p {
     text-indent: 2em;
