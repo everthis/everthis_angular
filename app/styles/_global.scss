@@ -67,7 +67,10 @@ code {
 }
 
 code, kbd, pre, samp {
-    font-family: Arial, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+h1, h2, h3, h4 {
+    font-family: 'PT Sans Caption';
 }
 h1 {
   font-size: 2em;
@@ -76,6 +79,10 @@ h1 {
 h2 {
     font-size: 1.6em;
     margin: 0.4em 0;
+}
+li, p {
+    font-family: "Noto Serif",serif;
+      font-size: 14px;
 }
 p {
     text-indent: 2em;
