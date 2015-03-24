@@ -39,6 +39,13 @@
     border-left: $width solid transparent;
     border-bottom: $width solid $color;
 }
+@mixin inline-block-fix($element) {
+    font-size: 0;
+    > #{$element} {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 %inline-block-fix {
     font-size: 0;
     > span {
@@ -49,4 +56,5 @@
 %decimal-list {
     list-style-type: decimal;
     padding: 0 0 0 2.5em;
+    line-height: 1.4;
 }

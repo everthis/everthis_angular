@@ -1,4 +1,4 @@
-<h4>REVERSE ELLIPSIS</h4>
+<h1>REVERSE ELLIPSIS</h1>
 <div class="grid-container">
 	<span class="grid grid-md-6 grid-sm-12">
 		<h2>Ellipsis</h2>
@@ -62,7 +62,7 @@
 }
 </pre>
 
-<h4>CSS star</h4>
+<h1>CSS star</h1>
 <div class="star-box"></div>
 <pre class="brush: css;">
   .star-box {
@@ -81,7 +81,7 @@
   }
 </pre>
 
-<h4>Moving Elements With Translate() Is Better Than Pos:abs Top/left</h4>
+<h1>Moving Elements With Translate() Is Better Than Pos:abs Top/left</h1>
 <h2>Guidelines for animation</h2>
 <ul class="ul-list">
   <li>Use CSS keyframe animation or CSS transitions, if at all possible. The browser can optimize painting and compositing bigtime here.</li>
@@ -92,6 +92,16 @@
   <li>"Show Paint Rects” and “Render Composited Layer Borders" are good pro-moves to verify where your element is being rendered.</li>
 </ul>
 
+<h1>Box-sizing: Border-box</h1>
+<pre class="brush: css;">
+  /* apply a natural box layout model to all elements, but allowing components to change */
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+</pre>
 <div>
   <img src="images/sele.JPG" alt="">
 </div>
