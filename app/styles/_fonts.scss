@@ -1,3 +1,7 @@
 @import "compass/css3/font-face";
 @include font-face("matrix", font-files("/fonts/matrix-webfont.eot", "/fonts/matrix-webfont.svg", "/fonts/matrix-webfont.ttf", "/fonts/matrix-webfont.woff", "/fonts/matrix-webfont.woff2"));
 
+@include font-face("monaco", font-files("/fonts/monaco-webfont.eot", "/fonts/monaco-webfont.svg", "/fonts/monaco-webfont.ttf", "/fonts/monaco-webfont.woff", "/fonts/monaco-webfont.woff2"));
+@include font-face("pt-sans-caption", font-files("/fonts/PT_Sans-Caption-Web-Regular-webfont.eot", "/fonts/PT_Sans-Caption-Web-Regular-webfont.svg", "/fonts/PT_Sans-Caption-Web-Regular-webfont.ttf", "/fonts/PT_Sans-Caption-Web-Regular-webfont.woff", "/fonts/PT_Sans-Caption-Web-Regular-webfont.woff2"));
+
+
