@@ -26,6 +26,30 @@
 
 <h2>JavaScript Module Pattern</h2>
 
+<h4>Anonymous Closures</h4>
+<pre class="brush: js;">
+  (function () {
+    // ... all vars and functions are in this scope only
+    // still maintains access to all globals
+  }());
+</pre>
+
+<h4>Module Export</h4>
+<pre class="brush: js;">
+  var MODULE = (function () {
+    var my = {},
+      privateVariable = 1;
+    function privateMethod() {
+      // ...
+    }
+    my.moduleProperty = 1;
+    my.moduleMethod = function () {
+      // ...
+    };
+    return my;
+  }());
+</pre>
+
 <h2>basic module pattern</h2>
 <pre class="brush: js;">
 	var Module = (function () {
