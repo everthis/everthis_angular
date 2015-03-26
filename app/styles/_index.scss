@@ -4,10 +4,14 @@
     display: block;
     padding: 8px 10px;
     margin: $post-item-margins;
+    &:hover {
+            text-shadow: $text-shadow;
+        }
     .post-title {
         width: 68%;
         padding: 0 5px 0 0;
         font-family: "pt-sans-caption";
+
     }
     > span {
         font-size: 14px;
