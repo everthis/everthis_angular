@@ -1,0 +1,170 @@
+
+<div class="banner-header">
+    <div class="container">
+        <h1>Take one step closer to the browser.</h1>
+    </div>
+</div>
+<div id="front_end">
+    <img src="images/fks0.jpg" alt="">
+</div>
+<div id="html_css">
+    <h2 id="Block-level_elements">Block-level_elements</h2>
+    <div class="block_element">block element</div>
+    <div class="block_element">block element</div>
+    <div class="block_element">block element</div>
+    <code>&lt;div&gt;</code>
+    <code>&lt;p&gt;</code>
+    <code>&lt;table&gt;</code>
+    <code>&lt;ul&gt;</code>
+    <code>&lt;form&gt;</code>
+    <code>&lt;audio&gt;</code>
+    <br>
+    <a class="top_10px" target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Block-level_elements">https://developer.mozilla.org/en-US/docs/HTML/Block-level_elements</a>
+    <h2 id="Inline_elements">Inline_elements</h2>
+    <p>
+        <span class="inline_element">Inline element0</span>
+        <span class="inline_element">Inline element111111</span>
+        <span class="inline_element">Inline element1313131313131313</span>
+    </p>
+
+    <br>
+    <code>&lt;span&gt;</code>
+    <code>&lt;code&gt;</code>
+    <code>&lt;em&gt;</code>
+    <code>&lt;strong&gt;</code>
+    <code>&lt;input&gt;</code>
+    <code>&lt;input&gt;</code>
+    <br>
+    <a class="top_10px" target="_blank" href="https://developer.mozilla.org/en-US/docs/HTML/Inline_elements">https://developer.mozilla.org/en-US/docs/HTML/Inline_elements</a>
+    <h2 id="box_model">CSS Box Model</h2>
+    <div class="row clearfix">
+        <div class="column fourth">
+            <img src="images/content.png" alt="content">
+            <h2 class="content">Content</h2>
+            <p>The content of the box, where text and images appear.</p>
+        </div>
+
+        <div class="column fourth">
+            <img src="images/padding.png" alt="padding">
+            <h2 class="padding">Padding</h2>
+            <p>Clears an area around the content.</p>
+        </div>
+
+        <div class="column fourth">
+            <img src="images/border.png" alt="border">
+            <h2 class="border">Border</h2>
+            <p>A border that goes around the padding.</p>
+        </div>
+
+        <div class="column fourth">
+            <img src="images/margin.png" alt="margin">
+            <h2 class="margin">Margin</h2>
+            <p>Clears an area around the border.</p>
+        </div>
+    </div>
+
+    <h2 id="box-sizing">box-sizing:border-box;</h2>
+    <pre class="brush: css;">
+                        *, *:before, *:after {
+                          -moz-box-sizing: border-box;
+                          -webkit-box-sizing: border-box;
+                          box-sizing: border-box;
+                        }
+                    </pre>
+    <div>
+        <img src="images/box-sizing.jpg" alt="">
+        <img src="images/step-4.jpg" alt="">
+    </div>
+    <h2>position:relative;/absolute;</h2>
+    <p>区别：相对定位的元素仍然在当前文档元素的排列顺序中。</p>
+    <h2>Something About the Z-Index Property</h2>
+    <div>
+        <img src="images/stacking-order.png" alt="">
+    </div>
+    <h2 id="visibility">Visibility API</h2>
+    <img src="images/visibility.gif" alt="">
+</div>
+<div id="DevTools">
+    <h1>Chrome DevTools</h1>
+    <a href="https://developers.google.com/chrome-developer-tools/">https://developers.google.com/chrome-developer-tools/</a>
+    <h2 id="elements">elements</h2>
+    <p>hover事件</p>
+    <img src="images/elements.gif" alt="">
+    <p>查看颜色</p>
+    <img src="images/elements_1.gif" alt="">
+    <h2 id="sources">sources</h2>
+    <p>格式化代码</p>
+    <img src="images/dev_mouse.gif" alt="">
+    <h2>sources + workspace</h2>
+    <p>可以在浏览器中直接编辑，预览，保存文件。</p>
+    <img src="images/workspace.gif" alt="">
+    <h2 id="network">network</h2>
+    <img src="images/network.gif" alt="">
+    <h2 id="timeline">Timeline</h2>
+    <p>查看页面帧数(能反映页面性能)</p>
+    <img src="images/dev.gif" alt="">
+    <p>查看页面占用内存情况(判断是否出现内存泄漏。)</p>
+    <img src="images/dev_mem.gif" alt="">
+    <h2 id="console">console</h2>
+    <img src="images/console.JPG" alt="">
+    <h2 id="emulation">emulation</h2>
+    <p>模拟其他设备，地理位置，加速度计，CSS media等</p>
+    <img src="images/emulation.gif" alt="">
+    <h2 id="remote_debugging">Remote debugging</h2>
+    <p>通过USB连接调试页面(about:inspect)</p>
+    <img src="images/about-inspect-stuff.png" alt="">
+    <img src="images/remote-debug-overview.jpg" alt="">
+</div>
+<div class="workflow">
+    <h2 id="st">workflow</h2>
+    <h2>Sublime Text</h2>
+<!--     <div id="anim_container">
+        <canvas id="target" width="800" height="450">
+            <div id="fallback" style="width: 800px; height: 450px; position: relative;"></div>
+        </canvas>
+        <div id="anim_overlay"></div>
+    </div>
+    <div id="content">
+        <div id="content1">Use Multiple Selections to rename variables quickly.
+            <br>Here
+            <span class="pc key">Ctrl+D</span> is used to select the next occurrence of the current word.</div>
+
+        <div id="content2" style="display: none">Make batch edits with Multiple Selections.
+            <br>Here
+            <span class="pc key">Ctrl+Shift+L</span> is used to split a selection into lines, and each line is then edited simultaneously.</div>
+
+        <div id="content3" style="display: none">The Command Palette gives fast access to functionality.
+            <br>Here
+            <span class="pc key">Ctrl+Shift+P</span> is used to show the Command Palette, "sspy" (short for Set Syntax: Python) is used set the syntax of the current file to Python.</div>
+
+        <div id="content4" style="display: none">Use Goto Anything to quickly navigate between files, even in the largest projects.
+            <br>
+            <span class="pc key">Ctrl+P</span> shows Goto Anything, and typing then filters on file and directory names.</div>
+
+        <div id="content5" style="display: none">Goto Anything can also be used to show a function, line or word within a file.
+            <br>Type @ after a file name to filter on symbols.
+        </div>
+
+        <div id="content6" style="display: none">Find and Replace with regular expressions.
+            <br>Here unwanted whitespace is removed by using the regex " +" to find groups of spaces, which are then selected simultaneously with the Find All button.</div>
+        <div id="content_index">1 / 6</div>
+    </div> -->
+    <div>
+        <img src="images/st.gif" alt="">
+        <img src="images/expand.gif" alt="">
+        <img src="images/lorem.gif" alt="">
+    </div>
+    <div id="grunt">
+        <h2>Grunt</h2>
+        <img src="images/grunt.gif" alt="">
+    </div>
+</div>
+<hr>
+<h2>Conclusion</h2>
+<p>Web前端涉及到很多知识，而且技术更新速度很快，这里提到的只是冰山一角，讲的是我平时用的一些东西，就当是抛砖引玉了。:）</p>
+<hr>
+<div id="footer_community"></div>
+<div id="footer_grass"></div>
+<div id="footer"></div>
+
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>

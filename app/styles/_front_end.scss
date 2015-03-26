@@ -1,0 +1,65 @@
+
+.block_element {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background-color: $purple;
+    color: $white;
+    margin: 0 0 1em 0;
+}
+.inline_element {
+    display: inline;
+    background-color: $purple;
+    color: $white;
+    padding: 5px;
+
+}
+#html_css,
+#front_end,
+#DevTools,
+#workflow {
+    img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.column.fourth {
+    width: 25%;
+    display: inline-block;
+}
+.banner-header {
+    position: relative;
+    padding: 30px 15px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #5600DD;
+    background-image: -webkit-linear-gradient(top, #CFD1DB 0, #5600DD 100%);
+    background-image: linear-gradient(to bottom, #CFD1DB 0, #5600DD 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFD1DB', endColorstr='#5600DD', GradientType=0);
+    margin-bottom: 40px;
+}
+.banner-header:hover{
+    background-image: -webkit-linear-gradient(top, #CFD1DB 0, #17AF72 100%);
+    background-image: linear-gradient(to bottom, #CFD1DB 0, #17AF72 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFD1DB', endColorstr='#17AF72', GradientType=0);
+}
+#footer_community {
+background: url(../images/community.png) center no-repeat;
+height: 180px;
+bottom: 0;
+}
+#footer_grass {
+background: url(../images/grass.png) repeat-x scroll top transparent;
+height: 39px;
+margin-top: -33px;
+bottom: 0;
+}
+#footer {
+background: none repeat scroll 0 0 #D3D7CF;
+color: #555753;
+padding: 14px 0 195px;
+margin-bottom: 0;
+}
