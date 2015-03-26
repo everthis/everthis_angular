@@ -235,9 +235,9 @@ everthisControllers.controller('gamesController', ['$scope',
 
             $scope.doclick = function(c,i){
 
-                if( $scope.timer == null ){
-                    $scope.runTimmer();
-                }
+                // if( $scope.timer == null ){
+                //     $scope.runTimmer();
+                // }
 
                 var greyclass = $scope.currentdata.indexOf(8) ;
                 var leng = Math.abs( i - greyclass );
