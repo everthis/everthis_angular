@@ -122,3 +122,6 @@ p {
 .ul-list {
     @extend %decimal-list;
 }
+.inline_block {
+    display: inline-block;
+}

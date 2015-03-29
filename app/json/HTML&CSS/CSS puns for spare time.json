@@ -1,0 +1,48 @@
+{
+	"postTitle": "CSS puns for spare time",
+	"postImagesLocation": "images/gattaca/",
+	"contents": [[{
+		"selector": "#lego",
+		"property":	["display"],
+		"value": ["block"]
+	}], [{
+		"selector": "#usa + #mexico",
+		"property":	["border"],
+		"value": ["1px dashed"]
+	}], [{
+		"selector": "#europe .country",
+		"property":	["border"],
+		"value": ["none"]
+	}], [{
+		"selector": ".hobbit",
+		"property":	["height"],
+		"value": ["50%"]
+	}, {
+		"selector": ".hobbit #foot",
+		"property":	["width"],
+		"value": ["200%"]
+	}], [{
+		"selector": "#tower-of-pisa",
+		"property":	["font-style"],
+		"value": ["italic"]
+	}], [{
+		"selector": "#samsung",
+		"value":	["@extend apple"]
+	}], [{
+		"selector": "#mario.mushroom",
+		"property":	["transform"],
+		"value": ["scale(200%)"]
+	}], [{
+		"selector": "#eminem",
+		"property":	["word-spacing"],
+		"value": ["0"]
+	}], [{
+		"selector": ".ninja",
+		"property":	["color", "visibility", "animation-duration"],
+		"value": ["black", "hidden", "0.00001s"]
+	}], [{
+		"selector": "#chucknorris",
+		"property":	["color"],
+		"value": ["#BADA55"]
+	}]]
+}

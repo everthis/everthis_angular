@@ -1,0 +1,40 @@
+.per_pun {
+	margin: 0 0 2em 0;
+	text-align: center;
+	background-color: #F0F8FF;
+	padding: 1em;
+	* {
+		line-height: 1.4
+	}
+	.bracket_row {
+		width: 10em;
+		text-align: right;
+		&.end {
+			text-align: right;
+			padding: 0 3em 0 0;
+		}
+	}
+	.selector {
+		color: $green;
+	}
+	.prop {
+		color: $dark_red;
+		padding: 0 0 0 2em;
+		text-align: right;
+	}
+	.value {
+		text-align: left;
+		padding: 0 0 0 .3em;
+	}
+	.bracket {
+		color: $dark-grey;
+	}
+}
+.per_content {
+	margin: 0 auto;
+	width: 20em;
+}
+
+.per_prop {
+	display: inline-block;
+}
