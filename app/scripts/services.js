@@ -23,3 +23,10 @@ everthisServices.factory('WebDev', ['$resource',
       query: {method:'GET', params:{postName:'posts'}, isArray:true}
     });
   }]);
+everthisServices.factory('HTML&CSS', ['$resource',
+  function($resource){
+    return $resource('json/HTML&CSS/:postName.json', {}, {
+      query: {method:'GET', params:{postName:'posts'}, isArray:true}
+    });
+  }]);
+

@@ -1,0 +1,24 @@
+<div class="film-title-area">
+	<h1>{{film.postTitle}}</h1>
+</div>
+
+<div class="per_pun" ng-repeat="content in film.contents">
+	<div class="per_content" ng-repeat="per_content in content">
+		<div class="bracket_row"><span class="selector">{{per_content.selector}}</span> <span class="bracket">{</span></div>
+		<span class="per_prop">
+			<div class="prop" ng-repeat="prop in per_content.property">
+			{{prop}}: 
+			</div>
+		</span>
+
+		<span class="per_prop">
+			<div class="value" ng-repeat="prop in per_content.value">
+			{{prop}};
+			</div>
+		</span>
+		<div class="bracket_row end bracket">}</div>
+	</div>
+
+
+</div>
+

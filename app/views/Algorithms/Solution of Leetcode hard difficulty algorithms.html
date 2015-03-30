@@ -1,0 +1,97 @@
+<div class="film-title-area">
+	<h1>Solution of Leetcode hard difficulty algorithms</h1>
+</div>
+<h2>#10 Regular Expression Matching</h2>
+<pre class="brush: js;">
+	/**
+	 * @param {string} s
+	 * @param {string} p
+	 * @returns {boolean}
+	 */
+	var isMatch = function(s, p) {
+	            if (p.length === 0) {
+	            return s.length === 0;
+	        }
+
+	        // length == 1 is the case that is easy to forget.
+	        // as p is subtracted 2 each time, so if original
+	        // p is odd, then finally it will face the length 1
+	        if (p.length === 1) {
+	            return (s.length === 1)
+	                    && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.');
+	        }
+
+	        // next char is not '*': must match current character
+	        if (p.charAt(1) != '*') {
+	            if (s.length < 1) {
+	                return false;
+	            } else {
+	                return (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.')
+	                        && isMatch(s.substring(1), p.substring(1));
+	            }
+	        }
+	        // next char is *
+	        while (s.length > 0
+	               && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.')) {
+	            if (isMatch(s, p.substring(2))) {
+	                return true;
+	            }
+	            s = s.substring(1);
+	        }
+	        return isMatch(s, p.substring(2));
+	};
+</pre>
+
+<h2>#65 Valid Number</h2>
+<pre class="brush: js;">
+	/**
+	 * @param {string} str
+	 * @returns {boolean}
+	 */
+	var isNumber = function(str) {
+            var i = 0;
+	        // skip whitespace in the front
+	        for( ; i < str.length && ' ' == str[i]; ++ i);
+	        // handle positive and negative symbols
+	        if('+' == str[i] || '-' == str[i])
+	            ++ i;
+	        // handle the following numbers
+	        var digit = false, dot = false, exp = false;
+	        for( ; i < str.length; ++ i) {
+	            // '.' can not appear twice，there could be no numbers in front of '.'
+	            if('.' == str[i] && !dot) {
+	                dot = true;
+	             // 'e'can not appear twice，there must numbers in front of 'e'
+	            } else if('e' == str[i] && !exp && digit) {
+	                // '.' must not appear behind 'e'，int (positive or negative) must be behind 'e'.
+	                dot = exp = true;
+	                if(i + 1 < str.length && ('+' == str[i + 1] || '-' == str[i + 1]))
+	                    ++ i;
+	                if(i + 1 >= str.length || !(str[i + 1] >= '0' && str[i + 1] <= '9'))
+	                    return false;
+	            } else if(str[i] >= '0' && str[i] <= '9') {
+	                digit = true;
+	            } else {
+	                break;
+	            }
+	        }
+	        // skip following space
+	        for( ; i < str.length && ' ' == str[i]; ++ i);
+	        
+	        return digit && i == str.length;
+	};
+</pre>
+<p>50个阶梯，一次可以上一阶或两阶，走上去，共有多少种走法?</p>
+<pre class="brush: js;">
+	function f(a){
+	    var $={};
+	    function _(a) {
+	        return $[a] ? $[a] : ($[a] = a &lt;= 1 ? 1 : _(a-1) + _(a-2));
+	    }
+	    return _(a);
+	};
+	alert(f(50));
+</pre>
+<p class="hint">考虑到这里会有大量重复的运算，所以放置一个变量存储每个n对应的走法数。</p>
+
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>
