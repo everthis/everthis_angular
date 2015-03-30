@@ -1,7 +1,58 @@
 <div class="film-title-area">
 	<h1>Solution of Leetcode's hard difficulty algorithms</h1>
 </div>
-<h2>#10 Regular Expression Matching</h2>
+<h2>#4 Median of Two Sorted Arrays <span class="sub_title">2015-03-30</span></h2>
+<pre class="brush: js;">
+	/**
+	 * @param {number[]} A
+	 * @param {number[]} B
+	 * @return {number}
+	 */
+
+	var findMedianSortedArrays = function(A, B) {
+		var m = A.length,
+		    n = B.length;
+			// assume n >= m
+		    if (m > n) {
+		        return findMedianSortedArrays(B, A);
+		    }
+
+		var imin = 0,
+		    imax = m,
+		    i, j, num1, num2;
+	    while ( imin <= imax ) {
+	        i = (imin + imax) >> 1;
+	        j = ((m + n + 1) >> 1) - i;
+	        if (j > 0 && i < m && B[j - 1] > A[i]) {
+	            imin = i + 1;
+	        } else if (i > 0 && j < n && A[i - 1] > B[j]) {
+	            imax = i - 1;
+	        } else {
+	            if ( i === 0 ) {
+	                num1 = B[j - 1];
+	            } else if (j === 0) {
+	                num1 = A[i - 1];
+	            } else {
+	                num1 = Math.max(A[i - 1], B[j - 1]);
+	            }
+
+	            if ((m + n) & 1) {
+	                return num1;
+	            }
+
+	            if (i === m) {
+	                num2 = B[j];
+	            } else if (j === n) {
+	                num2 = A[i];
+	            } else {
+	                num2 = Math.min(A[i], B[j]);
+	            }
+	            return (num1 + num2) / 2.0;
+	        }
+	    }
+	};
+</pre>
+<h2>#10 Regular Expression Matching <span class="sub_title">2015-03-28</span></h2>
 <pre class="brush: js;">
 	/**
 	 * @param {string} s
@@ -42,7 +93,7 @@
 	};
 </pre>
 
-<h2>#65 Valid Number</h2>
+<h2>#65 Valid Number <span class="sub_title">2015-03-27</span></h2>
 <pre class="brush: js;">
 	/**
 	 * @param {string} str
