@@ -1,5 +1,5 @@
 <div class="film-title-area">
-	<h1>Solution of Leetcode hard difficulty algorithms</h1>
+	<h1>Solution of Leetcode's hard difficulty algorithms</h1>
 </div>
 <h2>#10 Regular Expression Matching</h2>
 <pre class="brush: js;">
@@ -77,10 +77,46 @@
 	        }
 	        // skip following space
 	        for( ; i < str.length && ' ' == str[i]; ++ i);
-	        
+
 	        return digit && i == str.length;
 	};
 </pre>
+
+<h2>#68 Text Justification <span class="sub_title">2015-03-30</span></h2>
+<pre class="brush: js;">
+	/**
+	 * @param {string[]} words
+	 * @param {number} L
+	 * @returns {string[]}
+	 */
+	var fullJustify = function(words, L) {
+	    var res = [""];
+	    if (words.length === 0 || L === 0) {
+	        return res;
+	    } else {
+	        res.shift();
+	        for (var i = 0, k, l; i < words.length; i += k) {
+	            for (k = l = 0; i + k < words.length && l + words[i + k].length <= L - k; k++) {
+	                l += words[i + k].length;
+	            }
+	            var tmp = words[i];
+	            for (j = 0; j < k - 1; j++) {
+	                if (i + k >= words.length) {
+	                    tmp += " ";
+	                } else {
+	                	// Array(3).join('a') returns "aa"
+	                    tmp += Array(parseInt((L - l) / (k - 1) + (j < (L - l) % (k - 1))) + 1 ).join(" ");
+	                }
+	                tmp += words[i + j + 1];
+	            }
+	            tmp += Array(parseInt(L - tmp.length) + 1).join(" ");
+	            res.push(tmp);
+	        }
+	        return res;
+	    }
+	};
+</pre>
+
 <p>50个阶梯，一次可以上一阶或两阶，走上去，共有多少种走法?</p>
 <pre class="brush: js;">
 	function f(a){

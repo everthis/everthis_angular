@@ -72,6 +72,10 @@ code, kbd, pre, samp {
 h1, h2, h3, h4 {
     // font-family: "pt-sans-caption";
     font-family: "pt-sans-caption", sans-serif;
+    .sub_title {
+        font-size: $sm-font-size;
+        color: $dark-grey;
+    }
 }
 h1 {
   font-size: 2em;
