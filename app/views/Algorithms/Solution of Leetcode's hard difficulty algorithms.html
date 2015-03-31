@@ -168,6 +168,64 @@
 	};
 </pre>
 
+<h2>#164 Maximum Gap <span class="sub_title">2015-03-31</span></h2>
+<pre  class="brush: js;">
+	/**
+	 * @param {number[]} num
+	 * @return {number}
+	 */
+	var maximumGap = function(num) {
+	        if (num === null || num.length < 2) {
+	            return 0;
+	        }
+
+	    // get the max and min value of the array
+	    var min = num[0];
+	    var max = num[0];
+	    for (i = 0; i < num.length; i++) {
+	        min = Math.min(min, num[i]);
+	        max = Math.max(max, num[i]);
+	    }
+	    // the minimum possibale gap, ceiling of the integer division
+	    var gap = Math.ceil((max - min)/(num.length - 1));
+	    var bucketsMIN = [];// store the min value in that bucket
+	    var bucketsMAX = [];// store the max value in that bucket
+	    var max_int = Math.pow(2, 31) - 1;
+	    var min_int = -Math.pow(2, 31);
+
+	    bucketsMIN = Array.apply(null, new Array(num.length)).map(function(){return max_int;});
+	    bucketsMAX = Array.apply(null, new Array(num.length)).map(function(){return min_int;});
+
+	    // put numbers into buckets
+	    for (i = 0; i < num.length; i++) {
+	        if (num[i] == min || num[i] == max) {
+	            // continue;
+	        } else {
+	            var idx = (num[i] - min) / gap; // index of the right position in the buckets
+	            idx = parseInt(idx);
+	            bucketsMIN[idx] = Math.min(num[i], bucketsMIN[idx]);
+	            bucketsMAX[idx] = Math.max(num[i], bucketsMAX[idx]);
+	        }
+	    }
+	    // scan the buckets for the max gap
+	    var maxGap = min_int;
+	    var previous = min;
+	    for ( i = 0; i < num.length - 1; i++) {
+	        if (bucketsMIN[i] === max_int && bucketsMAX[i] == min_int) {
+	            // empty bucket
+	            // continue;
+	        } else {
+	                    // min value minus the previous value is the current gap
+	        maxGap = Math.max(maxGap, bucketsMIN[i] - previous);
+	        // update previous bucket value
+	        previous = bucketsMAX[i];
+	        }
+	    }
+	    maxGap = Math.max(maxGap, max - previous); // updata the final max value gap
+	    return maxGap;
+	};
+</pre>
+
 <p>50个阶梯，一次可以上一阶或两阶，走上去，共有多少种走法?</p>
 <pre class="brush: js;">
 	function f(a){
