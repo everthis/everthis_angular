@@ -23,6 +23,25 @@
         margin: 0 auto;
     }
 }
+.column {
+    vertical-align: top;
+    @media only screen
+    and (max-device-width : 960px) {
+        h2 {
+            font-size: 12px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
+.wf,
+#grunt {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
 .column.fourth {
     width: 25%;
     display: inline-block;

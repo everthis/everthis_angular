@@ -4,16 +4,20 @@ and (max-device-width : 960px) {
 		padding: .5em 0;
 	}
 	.site-header .home-link .logo {
-		font-size: 2px;
+		font-size: 4px;
 	}
 	.site-header .sub-header {
 		// font-size: 1px;
 	}
 	.site-header .sub-head {
-		padding: 0 0 0 2em;
+		padding: 0 0 0 5px;
 	}
 	.site-header .home-logo {
-		padding: 0 0 0 2em;
+		padding: 0 0 0 5px;
+	}
+	.sub-header {
+		font-size: 10px;
+		line-height: 24px;
 	}
 	.sort-field {
 		display: none;
@@ -46,6 +50,7 @@ and (max-device-width : 960px) {
 		}
 	}
 }
+
 
 /* ios safari line number fix */
 

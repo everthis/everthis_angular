@@ -16,6 +16,12 @@
         a[title="email"] {
             vertical-align: top;
         }
+        @media only screen
+        and (max-device-width: 768px) {
+            & {
+                width: 200px;
+            }
+        }
     }
     .email_address {
         vertical-align: top;
@@ -24,6 +30,13 @@
     .copyrights {
         display: inline-block;
         width: 45%;
+        @media only screen
+        and (max-device-width: 768px) {
+            & {
+                width: 60px;
+                float: right;
+            }
+        }
         .address {
             @extend .contact_item;
             margin-left: .3em;
