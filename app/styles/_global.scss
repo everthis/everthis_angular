@@ -112,6 +112,13 @@ p {
     text-align: center;
 
 }
+.center_img_container {
+    text-align: center;
+    img {
+        width: 100%;
+        border: 1px solid $purple;
+    }
+}
 .img-container {
 
 }
