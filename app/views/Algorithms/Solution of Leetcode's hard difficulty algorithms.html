@@ -78,7 +78,7 @@
 
 	LRUCache.prototype.set_get = function(key, returnEntry) {
 	    var entry = this._keymap[key];
-	    // Not cached. Sorry.
+	    // Not cached.
 	    if (entry === undefined && returnEntry === true) {
 	        this._set_get_return = undefined;
 	    } else {
