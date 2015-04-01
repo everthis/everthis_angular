@@ -168,6 +168,139 @@
 	};
 </pre>
 
+<h2>#146 LRU Cache <span class="sub_title">2015-04-01</span></h2>
+<pre class="brush: js;">
+	/**
+	 * @constructor
+	 */
+	var LRUCache = function(capacity) {
+	    this._length = 0;
+	    this.limit = capacity;
+	    this._keymap = {};
+	    this._set_get_return = {};
+	};
+
+	/**
+	 * @param {number} key
+	 * @returns {number}
+	 */
+	LRUCache.prototype.get = function(key) {
+	    var entry = this._keymap[key];
+	    if (entry === undefined) {
+	        return -1;
+	    } // Not cached.
+
+	    else {
+	      this.arrange(entry);
+	      return entry.value;
+	    }
+	};
+
+	/**
+	 * @param {number} key
+	 * @param {number} value
+	 * @returns {void}
+	 */
+	LRUCache.prototype.set = function(key, value) {
+	    var entry;
+	    this.set_get(key, true);
+	    entry = this._set_get_return;
+	    if (entry) {
+	        entry.value = value;
+	        this.arrange(entry);
+	    } else {
+	        this.addTail(key, value);
+	    }
+	};
+
+	LRUCache.prototype.arrange = function(node) {
+	    if (node === this._tail) {
+	      return;
+	    } else if (node === this._head){
+	        var _head = this._head;
+	        this._head = _head.next;
+	        // this._head has been changed.
+	        this._head.prev = null;
+
+	        // move _head to tail
+	        this._tail.next = _head;
+	        _head.prev = this._tail;
+	        this._tail = _head;
+	    } else {
+	        var _current = node;
+	        node.prev.next = _current.next;
+	        node.next.prev = _current.prev;
+
+	        // move _current to tail
+	        this._tail.next = _current;
+	        _current.prev = this._tail;
+	        this._tail = _current;
+	    }
+	};
+
+
+	LRUCache.prototype.set_get = function(key, returnEntry) {
+	    var entry = this._keymap[key];
+	    // Not cached. Sorry.
+	    if (entry === undefined && returnEntry === true) {
+	        this._set_get_return = undefined;
+	    } else {
+	        this._set_get_return = entry;
+	    }
+	};
+
+	LRUCache.prototype.addTail = function(key, value) {
+	    //create a new item object, place data in
+	    var node = {
+	            key: key,
+	            value: value,
+	            next: null,
+	            prev: null
+	        };
+
+	    this._keymap[key] = node;
+
+	    //special case: no items in the list yet
+	    if (this._length === 0) {
+	        this._head = node;
+	        this._tail = node;
+	        //don't forget to update the count
+	        this._length++;
+	    } else if (this._length !== 0 && this._length < this.limit) {
+	        //attach to the tail node
+	        this._tail.next = node;
+	        node.prev = this._tail;
+	        this._tail = node;
+	        //don't forget to update the count
+	        this._length++;
+	    } else {
+	        this.shift();
+	        this.addTail(key, value);
+	    }
+	};
+
+	LRUCache.prototype.shift = function() {
+	    var node = this._head;
+	    this._head = node.next;
+	    /*
+	     * If there's only one item in the list and you remove it,
+	     * then this._head will be null. In that case, you should
+	     * also set this._tail to be null to effectively destroy
+	     * the list. Otherwise, set the previous pointer on the
+	     * new this._head to be null.
+	     */
+	    if (!this._head) {
+	        this._tail = null;
+	    } else {
+	        this._head.prev = null;
+	    }
+
+	    delete this._keymap[node.key];
+	    //decrement the length
+	    this._length--;
+	}
+</pre>
+
 <h2>#164 Maximum Gap <span class="sub_title">2015-03-31</span></h2>
 <pre  class="brush: js;">
 	/**
