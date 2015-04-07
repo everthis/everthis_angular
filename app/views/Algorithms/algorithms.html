@@ -1,0 +1,83 @@
+<pre  class="brush: js;">
+function BubbleSort(array) {
+　 var length = array.length;
+   var sub_length = length;
+　　for(i=0; i<=length-2; i++, sub_length--) {
+　　　　for(j=1; j<= sub_length - 1; j++) {
+　　　　　　//对两个元素进行交换
+　　　　　　if(array[j] < array[j-1]) {
+　　　　　　　　temp = array[j];
+　　　　　　　　array[j] = array[j-1];
+　　　　　　　　array[j-1] = temp;
+　　　　　　}
+　　　　}
+　　}
+  return array;
+}
+</pre>
+
+<pre class="brush: js;">
+	function quickSort(arr){
+		// 如果数组只有一项，就返回原数组
+		if(arr.length <= 1){
+			return arr;
+		} else {
+			    // 取数组中间项数
+			var pivotIndex = Math.floor(arr.length / 2),
+			    // 取到剔除数组的中间改项数
+			    pivot = arr.splice(pivotIndex, 1),
+			    leftArray = [],
+			    rightArray = [];
+			for(var i = 0, len = arr.length; i < len; i++){
+				// 如果该循环项小于“基准”项，放进左边数组，否则放进右边数组
+				if(arr[i] < pivot){
+					leftArray.push(arr[i]);
+				} else {
+					rightArray.push(arr[i]);
+				}
+			}
+			// 不断递归调用，然后把结果拼接成最后的结果数组
+			// return arguments.callee(leftArray).concat(pivot, arguments.callee(rightArray));
+			return quickSort(leftArray).concat(pivot, quickSort(rightArray));
+		}
+	}
+
+</pre>
+
+<pre class="brush: js;">
+	function selectionSort(arr) {
+	      var i, j, minIndex, tmp;
+	      var n = arr.length;
+	      for (i = 0; i < n - 1; i++) {
+	            minIndex = i;
+	            for (j = i + 1; j < n; j++)
+	                  if (arr[j] < arr[minIndex])
+	                        minIndex = j;
+	            if (minIndex != i) {
+	                  tmp = arr[i];
+	                  arr[i] = arr[minIndex];
+	                  arr[minIndex] = tmp;
+	            }
+	      }
+	      return arr;
+	}
+
+</pre>
+
+<pre class="brush: js;">
+function insertionSort(arr) {
+      var i, j, newValue;
+      for (i = 1; i < arr.length; i++) {
+            newValue = arr[i];
+            j = i;
+            while (j > 0 && arr[j - 1] > newValue) {
+                  arr[j] = arr[j - 1];
+                  j--;
+            }
+            arr[j] = newValue;
+      }
+      return arr;
+}
+</pre>
+
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>

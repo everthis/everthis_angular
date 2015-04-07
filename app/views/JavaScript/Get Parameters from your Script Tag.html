@@ -21,6 +21,78 @@
       return result;
     }
 </pre>
+<h2>Get Pseudo-Element Properties with JavaScript</h2>
+<pre  class="brush: js;">
+  // Get the color value of .element:before
+  var color = window.getComputedStyle(
+    document.querySelector('.element'), ':before'
+  ).getPropertyValue('color');
 
+  // Get the content value of .element:before
+  var content = window.getComputedStyle(
+    document.querySelector('.element'), ':before'
+  ).getPropertyValue('content');
+</pre>
+
+<h2>classList API</h2>
+<pre class="brush: js;">
+  myDiv.classList.add('myCssClass'); // Adds a class
+
+  myDiv.classList.remove('myCssClass'); // Removes a class
+
+  myDiv.classList.toggle('myCssClass'); // Toggles a class
+</pre>
+
+<h2>Add and Remove Rules Directly to Stylesheets</h2>
+<pre class="brush: js;">
+  function addCSSRule(sheet, selector, rules, index) {
+    if(sheet.insertRule) {
+      sheet.insertRule(selector + "{" + rules + "}", index);
+    }
+    else {
+      sheet.addRule(selector, rules, index);
+    }
+  }
+
+  // Use it!
+  addCSSRule(document.styleSheets[0], "header", "float: left");
+</pre>
+
+<h2>CSS pointer-events</h2>
+<p>disabling an element when the value is none but otherwise allowing the element to function per usual when the value isn't none. pointer-events even prevent JavaScript events from firing!</p>
+<p>Click on that element and any addEventListener callback you've placed on the element will not fire.</p>
+<pre class="brush: css;">
+  .disabled { pointer-events: none; }
+</pre>
+
+<h2>JavaScript Debounce Function</h2>
+<p>it limits the rate at which a function can fire. </p>
+<pre class="brush: js;">
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  // usage
+  var myEfficientFn = debounce(function() {
+    // All the taxing stuff you do
+  }, 250);
+
+  window.addEventListener('resize', myEfficientFn);
+</pre>
 
 <script type="text/javascript-lazy" src="scripts/syntaxhighter.js"></script>
