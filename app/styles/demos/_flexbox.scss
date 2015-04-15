@@ -1,0 +1,50 @@
+.demos-flex {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    background-color: #999;
+    .item {
+        width: 80px;
+        background-color: #ddd;
+        text-align: center;
+        &.flex_auto {
+            flex: auto;
+        }
+    }
+}
+
+.demos-holyGrail {
+    display: flex;
+    * {
+      background-color: #ddd;
+    }
+    > article {
+        order: 2;
+        min-width: 12em;
+        flex: 1;
+    }
+    > nav {
+        order: 1;
+        width: 200px;
+    }
+    > aside {
+        order: 3;
+        width: 200px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* Too narrow to support three columns */
+
+    .demos-holyGrail {
+        flex-flow: column;
+    }
+    .demos-holyGrail > article,
+    .demos-holyGrail > nav,
+    .demos-holyGrail > aside {
+        /* Return them to document order */
+
+        order: 0;
+        width: auto;
+    }
+}

@@ -102,6 +102,57 @@
     box-sizing: inherit;
   }
 </pre>
+
+<h2>vertical horizontal center</h2>
+<pre class="brush: css;">
+  /* method 1 */
+  .element {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+</pre>
+
+<pre class="brush: css;">
+  /* method 2 */
+  .parent {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .child {
+    display: table-cell;
+    vertical-align: middle;
+  }
+</pre>
+
+<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+  /* method 3 */
+  <div style="position: absolute; left: 50%;">
+       <div style="position: relative; left: -50%; border: dotted red 1px;">
+           I am some centered shrink-to-fit content! <br />
+           tum te tum
+       </div>
+   </div>
+]]></script>
+
+<pre class="brush: css;">
+  /* method 4 */
+  .flex_container {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+  }
+  .flex_child {
+    align-self: center; /* or auto */
+  }
+</pre>
+
 <div>
   <img src="images/sele.JPG" alt="">
 </div>

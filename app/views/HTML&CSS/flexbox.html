@@ -1,0 +1,113 @@
+<h1>flexbox</h1>
+<a href="http://www.w3.org/TR/css3-flexbox/">http://www.w3.org/TR/css3-flexbox/</a>
+<script type="syntaxhighlighter" class="brush: css"><![CDATA[
+.demos-flex {
+  display: flex;
+  flex-flow: row wrap;
+  width: 300px;
+  background-color: #999;
+
+  .item {
+    width: 80px;
+    background-color: #ddd;
+    text-align: center;
+    &.flex_auto {
+    	flex: auto;
+    }
+  }
+}
+
+]]></script>
+
+<div class="grid-container">
+	<span class="grid grid-md-6 grid-sm-12">
+		<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+			<div class="demos-flex">
+			  <div class='item'>1</div>
+			  <div class='item'>2</div>
+			  <div class='item'>3</div>
+			  <div class='item'>4</div>
+			</div>
+		]]></script>
+	</span>
+	<span class="grid grid-md-6 grid-sm-12">
+		<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+			<div class="demos-flex">
+			  <div class='item flex_auto'>1</div>
+			  <div class='item flex_auto'>2</div>
+			  <div class='item flex_auto'>3</div>
+			  <div class='item flex_auto'>4</div>
+			</div>
+		]]></script>
+	</span>
+</div>
+<div class="grid-container">
+	<span class="grid grid-md-6 grid-sm-12">
+		<div class="demos-flex">
+		  <div class='item'>1</div>
+		  <div class='item'>2</div>
+		  <div class='item'>3</div>
+		  <div class='item'>4</div>
+		</div>
+	</span>
+	<span class="grid grid-md-6 grid-sm-12">
+		<div class="demos-flex">
+		  <div class='item flex_auto'>1</div>
+		  <div class='item flex_auto'>2</div>
+		  <div class='item flex_auto'>3</div>
+		  <div class='item flex_auto'>4</div>
+		</div>
+	</span>
+</div>
+
+<pre class="brush: css;">
+.demos-holyGrail {
+    display: flex;
+    > article {
+        order: 2;
+        min-width: 12em;
+        flex: 1;
+    }
+    > nav {
+        order: 1;
+        width: 200px;
+    }
+    > aside {
+        order: 3;
+        width: 200px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* Too narrow to support three columns */
+
+    .demos-holyGrail {
+        flex-flow: column;
+    }
+    .demos-holyGrail > article,
+    .demos-holyGrail > nav,
+    .demos-holyGrail > aside {
+        /* Return them to document order */
+
+        order: 0;
+        width: auto;
+    }
+}
+</pre>
+
+<script type="syntaxhighlighter" class="brush: css"><![CDATA[
+<div class='demos-holyGrail'>
+   <article>lorem100</article>
+   <nav>...</nav>
+   <aside>...</aside>
+</div>
+]]></script>
+
+<div class='demos-holyGrail'>
+   <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet culpa, soluta blanditiis, laboriosam autem expedita! Repellat consectetur excepturi incidunt beatae distinctio voluptas, tempore vel velit autem provident deserunt quas fugiat molestiae tempora laborum nam, aspernatur delectus repudiandae. Quaerat et, sint sapiente culpa quidem labore? Delectus doloribus, necessitatibus ipsa placeat possimus quisquam, quam ut quis, ratione sequi, nesciunt? Nihil mollitia enim quam a odit harum ratione ut! Excepturi consectetur, tempora ratione qui magnam voluptatibus odit vel maxime ipsum. Possimus animi at, ad officiis? Possimus eaque fugiat omnis ea ipsa ratione cupiditate odio dolores, tempora voluptatum culpa molestias quis alias qui et.</article>
+   <nav>...</nav>
+   <aside>...</aside>
+</div>
+
+
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>
