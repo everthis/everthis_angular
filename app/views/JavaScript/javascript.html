@@ -190,6 +190,15 @@ OR
 <p>
 	Note that if the value of an instanceof test can change based on changes to the prototype property of constructors, it cannot be changed by changing an object prototype, because changing an object prototype is not possible in standard ECMAScript. It is however possible using the non-standard __proto__ pseudo-property.
 </p>
+<p>
+	通过var创建的全局变量（在任何函数体之外创建的变量）不能被删除。
+	没有用var创建的隐式全局变量（不考虑函数内的情况）可以被删除。
+</p>
+<p>
+	bind returns a function which will act like the original function but with this predefined. It is usually used when you want to pass a function to an event handler or other async callback.
+
+	call and apply will call a function immediately letting you specify both the value of this and any arguments the function will receive.
+</p>
 <!-- <h2>JavaScript Errors</h2>
 <pre class="brush: js;">
 Uncaught TypeError: undefined is not a function
