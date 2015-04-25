@@ -168,6 +168,25 @@ OR
 	})();
 </pre>
 
+<pre class="brush: js;">
+	function myFunction() {
+	    if (window.top != window.self) {
+	        document.getElementById("demo").innerHTML = "This window is NOT the topmost window!";
+	    } else { 
+	        document.getElementById("demo").innerHTML = "This window is the topmost window!";
+	    } 
+	}
+</pre>
+
+<pre>
+	function onlyUnique(value, index, self) { 
+	    return self.indexOf(value) === index;
+	}
+
+	// usage example:
+	var a = ['a', 1, 'a', 2, '1'];
+	var unique = a.filter( onlyUnique ); // returns ['a', 1, 2, '1']
+</pre>
 <h2>.call and .apply</h2>
 <p>A useful mnemonic is "A for array and C for comma."</p>
 <h2>this</h2>
