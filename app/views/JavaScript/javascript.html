@@ -168,6 +168,7 @@ OR
 	})();
 </pre>
 
+<h2>tell whether page is embeded in another page or iframe</h2>
 <pre class="brush: js;">
 	function myFunction() {
 	    if (window.top != window.self) {
@@ -178,7 +179,8 @@ OR
 	}
 </pre>
 
-<pre>
+<h2>unique array</h2>
+<pre class="brush: js;">
 	function onlyUnique(value, index, self) { 
 	    return self.indexOf(value) === index;
 	}
@@ -186,7 +188,32 @@ OR
 	// usage example:
 	var a = ['a', 1, 'a', 2, '1'];
 	var unique = a.filter( onlyUnique ); // returns ['a', 1, 2, '1']
+
+
+	function uniq(a) {
+	    var prims = {"boolean":{}, "number":{}, "string":{}}, objs = [];
+
+	    return a.filter(function(item) {
+	        var type = typeof item;
+	        if(type in prims)
+	            return prims[type].hasOwnProperty(item) ? false : (prims[type][item] = true);
+	        else
+	            return objs.indexOf(item) >= 0 ? false : objs.push(item);
+	    });
+	}
+
+	function uniqBy(a, key) {
+	    var seen = {};
+	    return a.filter(function(item) {
+	        var k = key(item);
+	        return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+	    })
+	}
+	a = [[1,2,3], [4,5,6], [1,2,3]]
+	b = uniqBy(a, JSON.stringify)
+	console.log(b) // [[1,2,3], [4,5,6]]
 </pre>
+
 <h2>.call and .apply</h2>
 <p>A useful mnemonic is "A for array and C for comma."</p>
 <h2>this</h2>
