@@ -458,6 +458,15 @@ OR
 	(0.1 + 0.2).toFixed(); // "0"
 	(0.1 + 0.2).toFixed(1); // "0.3"
 </pre>
+
+<h3>Execution context</h3>
+<p>
+	Execution context is a concept in the language spec that—in layman's terms—roughly equates to the 'environment' a function executes in; that is, variable scope (and the scope chain, variables in closures from outer scopes), function arguments, and the value of the this object.
+	The call stack is a collection of execution contexts.
+	Logically, set of active execution contexts forms a stack. The bottom of this stack is always a global context, the top — a current (active) execution context. The stack is modified (pushed/popped) during the entering and exiting various kinds of EC.
+	<a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/</a>
+</p>
+<p><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">http://ryanmorr.com/understanding-scope-and-context-in-javascript/</a>scope is function-based, while context is object-based.</p>
 <!-- <h2>JavaScript Errors</h2>
 <pre class="brush: js;">
 Uncaught TypeError: undefined is not a function
