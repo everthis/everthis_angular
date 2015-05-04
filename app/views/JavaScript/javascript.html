@@ -173,15 +173,15 @@ OR
 	function myFunction() {
 	    if (window.top != window.self) {
 	        document.getElementById("demo").innerHTML = "This window is NOT the topmost window!";
-	    } else { 
+	    } else {
 	        document.getElementById("demo").innerHTML = "This window is the topmost window!";
-	    } 
+	    }
 	}
 </pre>
 
 <h2>unique array</h2>
 <pre class="brush: js;">
-	function onlyUnique(value, index, self) { 
+	function onlyUnique(value, index, self) {
 	    return self.indexOf(value) === index;
 	}
 
@@ -214,6 +214,33 @@ OR
 	console.log(b) // [[1,2,3], [4,5,6]]
 </pre>
 
+<pre class="brush: js;">
+	var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
+	object[foo] = 'value';
+	console.log(object[bar]); // "value"
+</pre>
+<p>Property names must be strings. This means that non-string objects cannot be used as keys in the object. Any non-string object, including a number, is typecasted into a string via the toString method.</p>
+<p>This also outputs "value", since both foo and bar are converted to the same string. In the SpiderMonkey JavaScript engine, this string would be "['object Object']".</p>
+
+<h2>Comparing Objects</h2>
+<p>In JavaScript objects are a reference type. Two distinct objects are never equal, even if they have the same properties. Only comparing the same object reference with itself yields true.</p>
+<pre class="brush: js;">
+	// Two variables, two distict objects with the same properties
+	var fruit = {name: "apple"};
+	var fruitbear = {name: "apple"};
+
+	fruit == fruitbear // return false
+	fruit === fruitbear // return false
+
+	// Two variables, a single object
+	var fruit = {name: "apple"};
+	var fruitbear = fruit;  // assign fruit object reference to fruitbear
+
+	// here fruit and fruitbear are pointing to same object
+	fruit == fruitbear // return true
+	fruit === fruitbear // return true
+</pre>
+
 <h2>.call and .apply</h2>
 <p>A useful mnemonic is "A for array and C for comma."</p>
 <h2>this</h2>
@@ -244,6 +271,60 @@ OR
 	bind returns a function which will act like the original function but with this predefined. It is usually used when you want to pass a function to an event handler or other async callback.
 
 	call and apply will call a function immediately letting you specify both the value of this and any arguments the function will receive.
+</p>
+
+<h2>给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡，你来说下会执行几次事件，然后会先执行冒泡还是捕获?</h2>
+<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+<style type="text/css">
+#one {
+    width:400px;
+    height:400px;
+    background: red;
+}
+#two {
+    width:200px;
+    height:200px;
+    background: green;
+}
+    #three{
+    width:100px;
+    height:100px;
+    background: yellow;
+    }
+</style>
+
+<div id="one">
+    <div id="two">
+        <div id="three">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var one = document.querySelector('#one'),
+    two = document.querySelector('#two'),
+    three = document.querySelector('#three');
+
+one.addEventListener('click', function() {
+    alert('out capture')
+}, true)
+one.addEventListener('click', function() {
+     alert('out bubble')
+}, false)
+
+two.addEventListener('click', function() {
+    alert('middle')
+})
+three.addEventListener('click', function() {
+    alert('inner')
+})
+</script>
+]]></script>
+<p>
+	默认情况下，是执行两次的，但谁先执行~~
+	得看是谁触发的事件，
+	如果是DOM元素本身，谁先定义，谁先执行；
+	如果是DOM子元素触发的，那就是捕获先执行，再冒泡~~
 </p>
 <!-- <h2>JavaScript Errors</h2>
 <pre class="brush: js;">
