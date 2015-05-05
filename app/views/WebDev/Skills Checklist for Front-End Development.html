@@ -1,0 +1,66 @@
+<div class="film-title-area">
+    <h1>{{data.postTitle}}</h1>
+</div>
+
+
+<div ng-repeat="content in data.contents">
+	<h2>{{content.category}}</h2>
+	<div ng-repeat="sub in content.content">
+		<h3>{{sub.sub_category}}</h3>
+		<ul class="list">
+			<li ng-repeat="per_link in sub.links">
+				<div><a class="custom_decoration" href="{{per_link.link}}">{{per_link.link_text}}</a></div>
+				<div ng-if="per_link.hints.length" ng-repeat="per_hint in per_link.hints">{{per_hint}}</div>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+<!--
+<h2>HTML</h2>
+<h3>Semantic HTML</h3>
+<ul class="list">
+    <li>
+        <div><a class="custom_decoration" href="http://html5doctor.com/i-b-em-strong-element/">i-b-em-strong-element</a></div>
+    </li>
+</ul>
+
+<h2>CSS</h2>
+<h3>Stacking Contexts and Stacking Order</h3>
+<ul class="list">
+    <li>
+        <div><a class="custom_decoration" href="http://www.w3.org/TR/CSS2/zindex.html">http://www.w3.org/TR/CSS2/zindex.html</a></div>
+    </li>
+    <li>
+        <div><a class="custom_decoration" href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/" target="_blank">what-no-one-told-you-about-z-index</a></div>
+        <div>First of all, z-index only works on positioned elements. If you try to set a z-index on an element with no position specified, it will do nothing. Secondly, z-index values can create stacking contexts</div>
+        <div>if an element is contained in a stacking context at the bottom of the stacking order, there is no way to get it to appear in front of another element in a different stacking context that is higher in the stacking order, even with a z-index of a billion!</div>
+    </li>
+</ul>
+<h3>flexbox</h3>
+<ul class="list">
+    <li>
+        <div><a class="custom_decoration" href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">a-visual-guide-to-css3-flexbox-properties</a></div>
+    </li>
+    <li>
+        <div><a class="custom_decoration" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">a-guide-to-flexbox</a></div>
+    </li>
+</ul>
+<h3>BFC</h3>
+<ul class="list">
+    <li>
+        <div><a class="custom_decoration" href="http://www.w3.org/TR/CSS2/visuren.html#block-formatting">http://www.w3.org/TR/CSS2/visuren.html#block-formatting</a></div>
+    </li>
+    <li>
+        <div><a class="custom_decoration" href="http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work">how-does-the-css-block-formatting-context-work</a></div>
+    </li>    <li>
+        <div><a class="custom_decoration" href="http://www.html-js.com/article/1866">CSS之BFC详解</a></div>
+    </li>
+    <li>
+        <div><a class="custom_decoration" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block_formatting_context</a></div>
+    </li>
+</ul>
+<h2>JavaScript</h2> -->

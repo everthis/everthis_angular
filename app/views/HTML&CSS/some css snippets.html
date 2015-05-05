@@ -153,6 +153,23 @@
   }
 </pre>
 
+<h2>clearfix</h2>
+<pre class="brush: css;">
+  %clearfix {
+    &:before, &:after {
+      content:" ";
+      display:table;
+    }
+
+    &:after {
+      clear:both;
+    }
+
+    & {
+      *zoom:1;
+    }
+  }
+</pre>
 <div>
   <img src="images/sele.JPG" alt="">
 </div>

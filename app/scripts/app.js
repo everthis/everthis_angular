@@ -45,7 +45,7 @@ everthisApp.config(['$routeProvider',
             templateUrl: function(params) {
                 return '/views/WebDev/' + params.postName + '.html';
             },
-            controller: 'everthisCommonCtrl'
+            controller: 'everthisWebDevCtrl'
         }).
         when('/views/JavaScript/:postName', {
             templateUrl: function(params) {

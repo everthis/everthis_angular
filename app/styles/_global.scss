@@ -33,6 +33,11 @@ a:active {
 a:link {
     color: $purple;
 }
+a.custom_decoration {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $purple;
+}
 a:visited {
     color: $purple;
 }
@@ -93,6 +98,10 @@ h2 {
     font-size: 1.7em;
     margin: 0.4em 0;
 
+}
+h3 {
+    font-size: 1.3em;
+    margin: .3em 0;
 }
 li, p {
     // font-family: "Noto Serif",serif;

@@ -1,0 +1,68 @@
+{
+    "postTitle": "Skills Checklist for Front-End Development",
+    "contents": [{
+        "category": "HTML",
+        "content": [{
+        	"sub_category": "Semantic HTML",
+        	"links":[{
+        		"link": "http://html5doctor.com/i-b-em-strong-element/",
+        		"link_text": "i-b-em-strong-element",
+        		"hints": []
+        		}]
+        }]
+    }, {
+        "category": "CSS",
+        "content": [{
+        	"sub_category": "Stacking Contexts and Stacking Order",
+        	"links":[{
+        		"link": "http://www.w3.org/TR/CSS2/zindex.html",
+        		"link_text": "http://www.w3.org/TR/CSS2/zindex.html",
+        		"hints": []
+        		}, {
+        		"link": "http://philipwalton.com/articles/what-no-one-told-you-about-z-index/",
+        		"link_text": "what-no-one-told-you-about-z-index",
+        		"hints": ["First of all, z-index only works on positioned elements. If you try to set a z-index on an element with no position specified, it will do nothing. Secondly, z-index values can create stacking contexts.", "if an element is contained in a stacking context at the bottom of the stacking order, there is no way to get it to appear in front of another element in a different stacking context that is higher in the stacking order, even with a z-index of a billion!"]
+        		}]
+        }, {
+        	"sub_category": "flexbox",
+        	"links":[{
+        		"link": "https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties",
+        		"link_text": "a-visual-guide-to-css3-flexbox-properties",
+        		"hints": []
+        		}, {
+        		"link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+        		"link_text": "a-guide-to-flexbox",
+        		"hints": []
+        		}]
+        }, {
+        	"sub_category": "BFC",
+        	"links":[{
+        		"link": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
+        		"link_text": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
+        		"hints": []
+        		}, {
+        		"link": "http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work",
+        		"link_text": "how-does-the-css-block-formatting-context-work",
+        		"hints": []
+        		}, {
+        		"link": "http://www.html-js.com/article/1866",
+        		"link_text": "CSS之BFC详解",
+        		"hints": []
+        		}, {
+        		"link": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context",
+        		"link_text": "Block_formatting_context",
+        		"hints": []
+        		}]
+        }]
+    }, {
+        "category": "JavaScript",
+        "content": [{
+        	"sub_category": "",
+        	"links":[{
+        		"link": "",
+        		"link_text": "",
+        		"hints": []
+        		}]
+        }]
+    }]
+}

@@ -115,9 +115,9 @@ everthisControllers.controller('everthisHTML&CSSCtrl', ['$scope', '$routeParams'
 
 everthisControllers.controller('everthisWebDevCtrl', ['$scope', '$routeParams', 'WebDev',
     function($scope, $routeParams, WebDev) {
-        $scope.film = WebDev.get({
+        $scope.data = WebDev.get({
             postName: $routeParams.postName
-        }, function(film) {});
+        }, function(data) {});
     }
 ]);
 
