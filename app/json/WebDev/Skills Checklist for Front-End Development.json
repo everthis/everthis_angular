@@ -68,6 +68,24 @@
     }, {
         "category": "JavaScript",
         "content": [{
+            "sub_category": "Inheritance_and_the_prototype_chain",
+            "links":[{
+                "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+                "link_text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+                "hints": []
+                }, {
+                "link": "http://blog.vjeux.com/2011/javascript/how-prototypal-inheritance-really-works.html",
+                "link_text": "how-prototypal-inheritance-really-works",
+                "hints": []
+                }, {
+                "link": "http://wildlyinaccurate.com/understanding-javascript-inheritance-and-the-prototype-chain/",
+                "link_text": "understanding-javascript-inheritance-and-the-prototype-chain",
+                "hints": []
+                }]
+        }]
+    }, {
+        "category": "Algorithms",
+        "content": [{
         	"sub_category": "",
         	"links":[{
         		"link": "",
