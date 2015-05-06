@@ -137,6 +137,20 @@
                 "link_text": "http://visualgo.net/",
                 "hints": []
                 }]
+        }, {
+            "sub_category": "Complexities",
+            "links":[{
+                "link": "http://bigocheatsheet.com/",
+                "link_text": "Know Thy Complexities!",
+                "hints": []
+                }]
+        }, {
+            "sub_category": "tutorials",
+            "links":[{
+                "link": "https://www.topcoder.com/community/data-science/data-science-tutorials/",
+                "link_text": "data-science-tutorials",
+                "hints": []
+                }]
         }]
     }, {
         "category": "Interview Questions",

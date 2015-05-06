@@ -140,6 +140,7 @@ p {
     background-color: $purple;
     color: $white;
     z-index: $highest-z-index;
+    white-space: nowrap;
 }
 .ul-list {
     @extend %decimal-list;
