@@ -61,7 +61,39 @@ function BubbleSort(array) {
 	      }
 	      return arr;
 	}
+	
+	// OR
 
+	function swap(items, firstIndex, secondIndex){
+	    var temp = items[firstIndex];
+	    items[firstIndex] = items[secondIndex];
+	    items[secondIndex] = temp;
+	}
+	function selectionSort(items){
+
+	    var len = items.length,
+	        min;
+
+	    for (i=0; i < len; i++){
+
+	        //set minimum to this position
+	        min = i;
+
+	        //check the rest of the array to see if anything is smaller
+	        for (j=i+1; j < len; j++){
+	            if (items[j] < items[min]){
+	                min = j;
+	            }
+	        }
+
+	        //if the minimum isn't in the position, swap it
+	        if (i != min){
+	            swap(items, i, min);
+	        }
+	    }
+
+	    return items;
+	}
 </pre>
 
 <pre class="brush: js;">
@@ -96,6 +128,33 @@ function binarySearch(values, target, start, end) {
   return middle; //found!
 }
 findIndex([1, 4, 6, 7, 12, 13, 15, 18, 19, 20, 22, 24], 20);
+
+// OR
+
+//Copyright 2009 Nicholas C. Zakas. All rights reserved.
+//MIT-Licensed, see source file
+function binarySearch(items, value){
+
+    var startIndex  = 0,
+        stopIndex   = items.length - 1,
+        middle      = Math.floor((stopIndex + startIndex)/2);
+
+    while(items[middle] != value && startIndex < stopIndex){
+
+        //adjust search area
+        if (value < items[middle]){
+            stopIndex = middle - 1;
+        } else if (value > items[middle]){
+            startIndex = middle + 1;
+        }
+
+        //recalculate middle
+        middle = Math.floor((stopIndex + startIndex)/2);
+    }
+
+    //make sure it's the right value
+    return (items[middle] != value) ? -1 : middle;
+}
 </pre>
 
 <pre class="brush: js;">
