@@ -82,14 +82,79 @@
                 "link_text": "understanding-javascript-inheritance-and-the-prototype-chain",
                 "hints": []
                 }]
+        }, {
+            "sub_category": "Execution context and Scope chain",
+            "links":[{
+                "link": "http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/",
+                "link_text": "ECMA-262-3 in detail. Chapter 1. Execution Contexts.",
+                "hints": []
+                }, {
+                "link": "http://ryanmorr.com/understanding-scope-and-context-in-javascript/",
+                "link_text": "understanding-scope-and-context-in-javascript",
+                "hints": []
+                }, {
+                "link": "http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/",
+                "link_text": "what-is-the-execution-context-in-javascript",
+                "hints": []
+                }, {
+                "link": "http://stackoverflow.com/questions/1484143/scope-chain-in-javascript",
+                "link_text": "scope-chain-in-javascript",
+                "hints": []
+                }]
+        }, {
+            "sub_category": "JavaScript-Module-Pattern",
+            "links":[{
+                "link": "http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html",
+                "link_text": "JavaScript-Module-Pattern-In-Depth",
+                "hints": []
+                }, {
+                "link": "http://addyosmani.com/resources/essentialjsdesignpatterns/book/",
+                "link_text": "Learning JavaScript Design Patterns --- A book by Addy Osmani",
+                "hints": []
+                }]
+        }, {
+            "sub_category": "Closures",
+            "links":[{
+                "link": "http://stackoverflow.com/questions/111102/how-do-javascript-closures-work",
+                "link_text": "how-do-javascript-closures-work",
+                "hints": []
+                }, {
+                "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+                "link_text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+                "hints": []
+                }]
         }]
     }, {
-        "category": "Algorithms",
+        "category": "Algorithms and data structures",
         "content": [{
-        	"sub_category": "",
+            "sub_category": "Collection",
+            "links":[{
+                "link": "https://github.com/tayllan/awesome-algorithms",
+                "link_text": "https://github.com/tayllan/awesome-algorithms",
+                "hints": []
+                }, {
+                "link": "http://visualgo.net/",
+                "link_text": "http://visualgo.net/",
+                "hints": []
+                }]
+        }]
+    }, {
+        "category": "Interview Questions",
+        "content": [{
+            "sub_category": "Collection",
+            "links":[{
+                "link": "https://github.com/h5bp/Front-end-Developer-Interview-Questions",
+                "link_text": "https://github.com/h5bp/Front-end-Developer-Interview-Questions",
+                "hints": []
+                }]
+        }]
+    }, {
+        "category": "development resources",
+        "content": [{
+        	"sub_category": "Collection",
         	"links":[{
-        		"link": "",
-        		"link_text": "",
+        		"link": "https://github.com/dypsilon/frontend-dev-bookmarks",
+        		"link_text": "https://github.com/dypsilon/frontend-dev-bookmarks",
         		"hints": []
         		}]
         }]
