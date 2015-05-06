@@ -22,6 +22,10 @@
         		"link": "http://philipwalton.com/articles/what-no-one-told-you-about-z-index/",
         		"link_text": "what-no-one-told-you-about-z-index",
         		"hints": ["First of all, z-index only works on positioned elements. If you try to set a z-index on an element with no position specified, it will do nothing. Secondly, z-index values can create stacking contexts.", "if an element is contained in a stacking context at the bottom of the stacking order, there is no way to get it to appear in front of another element in a different stacking context that is higher in the stacking order, even with a z-index of a billion!"]
+        		}, {
+        		"link": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context",
+        		"link_text": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context",
+        		"hints": []
         		}]
         }, {
         	"sub_category": "flexbox",
@@ -32,6 +36,13 @@
         		}, {
         		"link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
         		"link_text": "a-guide-to-flexbox",
+        		"hints": []
+        		}]
+        }, {
+        	"sub_category": "css-selectors",
+        	"links":[{
+        		"link": "http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left",
+        		"link_text": "why-do-browsers-match-css-selectors-from-right-to-left",
         		"hints": []
         		}]
         }, {
