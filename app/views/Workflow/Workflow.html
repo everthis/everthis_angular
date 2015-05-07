@@ -1,0 +1,11 @@
+<div class="postTitle">{{data.postTitle}}</div>
+<div class="row">
+	<span class="item" ng-repeat="content in data.contents">
+		<div class="center-img-container">
+	        <img ng-src="{{data.imagesLocation}}{{content.image}}" alt="{{image}}">
+		</div>
+		<div class="center-img-container">
+	        <span>{{content.text}}</span>
+		</div>
+	</span>
+</div>

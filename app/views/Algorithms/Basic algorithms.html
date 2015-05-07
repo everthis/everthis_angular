@@ -1,3 +1,8 @@
+<div class="film-title-area">
+	<h1>Basic algorithms</h1>
+</div>
+
+<h2>BubbleSort</h2>
 <pre  class="brush: js;">
 function BubbleSort(array) {
 　 var length = array.length;
@@ -16,6 +21,7 @@ function BubbleSort(array) {
 }
 </pre>
 
+<h2>quickSort</h2>
 <pre class="brush: js;">
 	function quickSort(arr){
 		// 如果数组只有一项，就返回原数组
@@ -44,6 +50,7 @@ function BubbleSort(array) {
 
 </pre>
 
+<h2>selectionSort</h2>
 <pre class="brush: js;">
 	function selectionSort(arr) {
 	      var i, j, minIndex, tmp;
@@ -61,7 +68,7 @@ function BubbleSort(array) {
 	      }
 	      return arr;
 	}
-	
+
 	// OR
 
 	function swap(items, firstIndex, secondIndex){
@@ -96,6 +103,7 @@ function BubbleSort(array) {
 	}
 </pre>
 
+<h2>insertionSort</h2>
 <pre class="brush: js;">
 function insertionSort(arr) {
       var i, j, newValue;
@@ -112,6 +120,7 @@ function insertionSort(arr) {
 }
 </pre>
 
+<h2>binarySearch</h2>
 <pre class="brush: js;">
 function findIndex(values, target) {
   return binarySearch(values, target, 0, values.length - 1);
@@ -157,6 +166,7 @@ function binarySearch(items, value){
 }
 </pre>
 
+<h2>BST</h2>
 <pre class="brush: js;">
 	function BinaryTree(value, left, right) {
 	    this.value = value;
@@ -167,7 +177,7 @@ function binarySearch(items, value){
 	BinaryTree.prototype.inorder   = function(f) {this.walk(f,['left','this','right'])}
 	BinaryTree.prototype.postorder = function(f) {this.walk(f,['left','right','this'])}
 	BinaryTree.prototype.walk = function(func, order) {
-	    for (var i in order) 
+	    for (var i in order)
 	        switch (order[i]) {
 	            case "this": func(this.value); break;
 	            case "left": if (this.left) this.left.walk(func, order); break;
@@ -183,7 +193,7 @@ function binarySearch(items, value){
 	        if (node.right) queue.push(node.right);
 	    }
 	}
-	 
+
 	// convenience function for creating a binary tree
 	function createBinaryTreeFromArray(ary) {
 	    var left = null, right = null;
@@ -191,14 +201,14 @@ function binarySearch(items, value){
 	    if (ary[2]) right = createBinaryTreeFromArray(ary[2]);
 	    return new BinaryTree(ary[0], left, right);
 	}
-	 
+
 	var tree = createBinaryTreeFromArray([1, [2, [4, [7]], [5]], [3, [6, [8],[9]]]]);
 
 	function cl(t){
 		console.log(t);
 	}
-	tree.preorder(cl); 
-	tree.inorder(cl); 
+	tree.preorder(cl);
+	tree.inorder(cl);
 	tree.postorder(cl);
 	tree.levelorder(cl);
 </pre>

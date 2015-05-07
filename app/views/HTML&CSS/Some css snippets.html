@@ -1,0 +1,176 @@
+<h1>REVERSE ELLIPSIS</h1>
+<div class="grid-container">
+	<span class="grid grid-md-6 grid-sm-12">
+		<h2>Ellipsis</h2>
+		<div class="box ellipsis">Here is some long content that doesn't fit.</div>
+		<div class="box ellipsis">Here is some that does fit.</div>
+	</span>
+	<span class="grid grid-md-6 grid-sm-12">
+		<h2>reverse ellipsis</h2>
+		<div class="box ellipsis reverse-ellipsis"><span>Here is some long content that doesn't fit.</span></div>
+		<div class="box ellipsis reverse-ellipsis"><span>Here is some that does fit.</span></div>
+	</span>
+</div>
+
+
+<pre class="brush: css;">
+	/**
+	 * 1. Hide any overflow
+	 * 2. Prevent any line-break
+	 * 3. Add ellipsis at end of line
+	 */
+	.ellipsis {
+	    overflow: hidden;        /* 1 */
+	    white-space: nowrap;     /* 2 */
+	    text-overflow: ellipsis; /* 3 */
+	}
+</pre>
+<h5>cross browser solution</h5>
+<pre class="brush: css;">
+.reverse-ellipsis {
+  text-overflow: clip;
+  position: relative;
+  background-color: white;
+  &:before {
+  	content: '\02026';
+  	position: absolute;
+  	z-index: 1;
+  	left: -1em;
+  	background-color: inherit;
+  	padding-left: 1em;
+  	margin-left: 0.5em;
+  }
+  span {
+  	min-width: 100%;
+  	position: relative;
+  	display: inline-block;
+  	float: right;
+  	overflow: visible;
+  	background-color: inherit;
+  	text-indent: 0.5em;
+  	&:before {
+  		content: '';
+  		position: absolute;
+  		display: inline-block;
+  		width: 1em;
+  		height: 1em;
+  		background-color: inherit;
+  		z-index: 200;
+  		left: -.5em;
+  	}
+  }
+}
+</pre>
+
+<h1>CSS star</h1>
+<div class="star-box"></div>
+<pre class="brush: css;">
+  .star-box {
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(-72deg, transparent 15%, #f77 15%) no-repeat,
+      linear-gradient(72deg, transparent 15%, #7f7 15%) no-repeat 100% 0,
+      linear-gradient(36deg, #77f 47%, transparent 47%) no-repeat 0 45%,
+      linear-gradient(-36deg, #077 47%, transparent 47%) no-repeat 100% 45%,
+      linear-gradient(-72deg, transparent 47%, #f70 47%) no-repeat 0 100%,
+      linear-gradient(72deg, transparent 47%, #ff7 47%) no-repeat 100% 100%,
+      linear-gradient(-36deg, #707 45%, transparent 45%) no-repeat 0 100%,
+      linear-gradient(36deg, #f7f 45%, transparent 45%) no-repeat 100% 100%;
+      background-size: 50% 37.5%, 50% 37.5%, 50% 17.7%, 50% 17.7%, 50% 45.8%, 50% 45.8%, 50% 34.7%, 50% 34.7%;
+      font-size: 8em;
+  }
+</pre>
+
+<h1>Moving Elements With Translate() Is Better Than Pos:abs Top/left</h1>
+<h2>Guidelines for animation</h2>
+<ul class="ul-list">
+  <li>Use CSS keyframe animation or CSS transitions, if at all possible. The browser can optimize painting and compositing bigtime here.</li>
+  <li>If needs to be it’s JS-based animation, use requestAnimationFrame. Avoid setTimeout, setInterval.</li>
+  <li>Avoid changing inline styles on every frame (jQuery animate()-style) if you can, declarative animations in CSS can be optimized by the browser way more.</li>
+  <li>Using 2D transforms instead of absolute positioning will typically provide better FPS by way of smaller paint times and smoother animation.</li>
+  <li>Use Timeline Frame’s mode to investigate what is slowing down your behavior</li>
+  <li>"Show Paint Rects” and “Render Composited Layer Borders" are good pro-moves to verify where your element is being rendered.</li>
+</ul>
+
+<h1>Box-sizing: Border-box</h1>
+<pre class="brush: css;">
+  /* apply a natural box layout model to all elements, but allowing components to change */
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+</pre>
+
+<h2>vertical horizontal center</h2>
+<pre class="brush: css;">
+  /* method 1 */
+  .element {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+</pre>
+
+<pre class="brush: css;">
+  /* method 2 */
+  .parent {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .child {
+    display: table-cell;
+    vertical-align: middle;
+  }
+</pre>
+
+<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+  /* method 3 */
+  <div style="position: absolute; left: 50%;">
+       <div style="position: relative; left: -50%; border: dotted red 1px;">
+           I am some centered shrink-to-fit content! <br />
+           tum te tum
+       </div>
+   </div>
+]]></script>
+
+<pre class="brush: css;">
+  /* method 4 */
+  .flex_container {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+  }
+  .flex_child {
+    align-self: center; /* or auto */
+  }
+</pre>
+
+<h2>clearfix</h2>
+<pre class="brush: css;">
+  %clearfix {
+    &:before, &:after {
+      content:" ";
+      display:table;
+    }
+
+    &:after {
+      clear:both;
+    }
+
+    & {
+      *zoom:1;
+    }
+  }
+</pre>
+<div>
+  <img src="images/sele.JPG" alt="">
+</div>
+<script type="text/javascript-lazy" src="/scripts/syntaxhighter.js"></script>

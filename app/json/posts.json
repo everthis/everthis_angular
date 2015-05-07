@@ -20,12 +20,12 @@
         "category": "WebDev",
         "isModified": "yes"
     },{
-        "postName": "some css snippets",
+        "postName": "Some css snippets",
         "date": "2014-12-19",
         "category": "HTML&CSS",
         "isModified": "yes"
     },{
-        "postName": "workflow",
+        "postName": "Workflow",
         "date": "2014-12-20",
         "category": "Workflow",
         "isModified": "yes"
@@ -40,7 +40,7 @@
         "category": "Linux",
         "isModified": ""
     },{
-        "postName": "javascript",
+        "postName": "JavaScript Basics",
         "date": "2015-01-07",
         "category": "JavaScript",
         "isModified": ""
@@ -70,11 +70,6 @@
         "category": "Hardware",
         "isModified": ""
     },{
-        "postName": "develop principles",
-        "date": "2015-01-29",
-        "category": "WebDev",
-        "isModified": ""
-    },{
         "postName": "The matrix",
         "date": "2013-10-19",
         "category": "Films",
@@ -85,7 +80,7 @@
         "category": "HTML&CSS",
         "isModified": ""
     },{
-        "postName": "algorithms",
+        "postName": "Basic algorithms",
         "date": "2015-03-15",
         "category": "Algorithms",
         "isModified": ""

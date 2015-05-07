@@ -123,6 +123,28 @@
                 "link_text": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
                 "hints": []
                 }]
+        }, {
+            "sub_category": "JavaScript Function",
+            "links":[{
+                "link": "http://kangax.github.io/nfe/",
+                "link_text": "Named function expressions demystified",
+                "hints": []
+                }]
+        }, {
+            "sub_category": "JavaScript API",
+            "links":[{
+                "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition",
+                "link_text": "Node.compareDocumentPosition()",
+                "hints": []
+                }, {
+                "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/contains",
+                "link_text": "Node.contains()",
+                "hints": []
+                }, {
+                "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset",
+                "link_text": "HTMLElement.dataset",
+                "hints": []
+                }]
         }]
     }, {
         "category": "Algorithms and data structures",
