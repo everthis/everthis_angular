@@ -28,16 +28,42 @@
         		"hints": []
         		}]
         }, {
-        	"sub_category": "flexbox",
+            "sub_category": "flexbox",
+            "links":[{
+                "link": "https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties",
+                "link_text": "a-visual-guide-to-css3-flexbox-properties",
+                "hints": []
+                }, {
+                "link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+                "link_text": "a-guide-to-flexbox",
+                "hints": []
+                }]
+        }, {
+        	"sub_category": "Pseudo-classes and Pseudo-elements",
         	"links":[{
-        		"link": "https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties",
-        		"link_text": "a-visual-guide-to-css3-flexbox-properties",
+        		"link": "http://www.d.umn.edu/~lcarlson/csswork/selectors/pseudo_dif.html",
+        		"link_text": "Difference between a pseudo-class and a pseudo-element",
         		"hints": []
         		}, {
-        		"link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
-        		"link_text": "a-guide-to-flexbox",
+        		"link": "http://stackoverflow.com/questions/8069973/what-is-the-difference-between-a-pseudo-class-and-a-pseudo-element-in-css",
+        		"link_text": "What is the difference between a pseudo-class and a pseudo-element in CSS?",
         		"hints": []
         		}]
+        }, {
+            "sub_category": "CSS Specificity",
+            "links":[{
+                "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity",
+                "link_text": "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity",
+                "hints": []
+                }, {
+                "link": "http://www.standardista.com/css3/css-specificity/",
+                "link_text": "css-specificity",
+                "hints": []
+                }, {
+                "link": "http://specificity.keegan.st/",
+                "link_text": "Specificity Calculator",
+                "hints": []
+                }]
         }, {
         	"sub_category": "css-selectors",
         	"links":[{
@@ -175,12 +201,34 @@
                 }]
         }]
     }, {
+        "category": "Deployment",
+        "content": [{
+            "sub_category": "The Asset Pipeline",
+            "links":[{
+                "link": "http://guides.rubyonrails.org/asset_pipeline.html",
+                "link_text": "http://guides.rubyonrails.org/asset_pipeline.html",
+                "hints": []
+                }, {
+                "link": "http://www.zhihu.com/question/20790576",
+                "link_text": "http://www.zhihu.com/question/20790576",
+                "hints": []
+                }, {
+                "link": "https://github.com/fouber/blog/blob/master/201405/01.md#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E6%A1%86%E6%9E%B6",
+                "link_text": "前端工程与性能优化",
+                "hints": []
+                }]
+        }]
+    }, {
         "category": "Interview Questions",
         "content": [{
             "sub_category": "Collection",
             "links":[{
                 "link": "https://github.com/h5bp/Front-end-Developer-Interview-Questions",
                 "link_text": "https://github.com/h5bp/Front-end-Developer-Interview-Questions",
+                "hints": []
+                }, {
+                "link": "https://github.com/khan4019/front-end-Interview-Questions",
+                "link_text": "https://github.com/khan4019/front-end-Interview-Questions",
                 "hints": []
                 }]
         }]

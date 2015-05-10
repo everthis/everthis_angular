@@ -220,7 +220,27 @@ OR
 	console.log(object[bar]); // "value"
 </pre>
 <p>Property names must be strings. This means that non-string objects cannot be used as keys in the object. Any non-string object, including a number, is typecasted into a string via the toString method.</p>
-<p>This also outputs "value", since both foo and bar are converted to the same string. In the SpiderMonkey JavaScript engine, this string would be "['object Object']".</p>
+<p>This also outputs "value", since both foo and bar are converted to the same string. In the SpiderMonkey JavaScript engine, this string would be "[object Object]".</p>
+
+<h2>why {} !== Object()? OR {} !== {}</h2>
+<p><a href="http://es5.github.io/#x11.9.6">http://es5.github.io/#x11.9.6</a></p>
+<pre class="brush: js;">
+	var o = {};
+	var p = new Object();
+
+	p === o; //false
+
+	o.__proto__===p.__proto__  // true
+
+	11.9.6 The Strict Equality Comparison Algorithm
+
+	The comparison x === y, where x and y are values, produces true or  false. Such a comparison is performed as follows:
+
+	...
+
+	7. Return true if x and y refer to the same object. Otherwise, return  false.
+</pre>
+<p>In this case, although both are empty objects, they are created separately and hence do not refer to the same object.</p>
 
 <h2>Comparing Objects</h2>
 <p>In JavaScript objects are a reference type. Two distinct objects are never equal, even if they have the same properties. Only comparing the same object reference with itself yields true.</p>
@@ -485,7 +505,7 @@ three.addEventListener('click', function() {
 	})(window); //<- 插入分号
 </pre>
 
-<p>Handling changes to the value of `undefined`</p>
+<h2>Handling changes to the value of `undefined`</h2>
 <pre class="brush: js;">
 	'use strict;'
 </pre>
@@ -507,6 +527,14 @@ three.addEventListener('click', function() {
 	})('Hello World', 42);
 </pre>
 
+<h2>null</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof</a></p>
+<pre class="brush: js;">
+	// This stands since the beginning of JavaScript
+	typeof null === 'object';
+</pre>
+<p>In the first implementation of JavaScript, JavaScript values were represented as a type tag and a value. The type tag for objects was 0. null was represented as the NULL pointer (0x00 in most platforms). Consequently, null had 0 as type tag, hence the bogus typeof return value.</p>
+
 <p>建议不要在调用定时器函数时，为了向回调函数传递参数而使用字符串的形式。当需要向回调函数传递参数时，可以创建一个匿名函数，在函数内执行真实的回调函数。</p>
 <pre class="brush: js;">
 	function foo(a, b, c) {}
@@ -520,10 +548,18 @@ three.addEventListener('click', function() {
 	}, 1000)
 </pre>
 
-<p>toFixed, 四舍六入五留双</p>
-<p>这里“四”是指≤4 时舍去，"六"是指≥6时进上，"五"指的是根据5后面的数字来定，当5后有数时，舍5入1；当5后无有效数字时，需要分两种情况来讲：①5前为奇数，舍5入1；②5前为偶数，舍5不进。（0是偶数）</p>
+<p>toFixed, </p>
 <pre class="brush: js;">
 	// JavaScript将小数作为浮点数对待，所以可能会产生一些四舍五入的错误
+	
+	0.1 + 0.2; // 0.30000000000000004
+	(0.1 + 0.2).toFixed(); // "0"
+	(0.1 + 0.2).toFixed(1); // "0.3"
+</pre>
+
+<h2>四舍六入五留双</h2>
+<p>这里“四”是指≤4 时舍去，"六"是指≥6时进上，"五"指的是根据5后面的数字来定，当5后有数时，舍5入1；当5后无有效数字时，需要分两种情况来讲：①5前为奇数，舍5入1；②5前为偶数，舍5不进。（0是偶数）</p>
+<pre class="brush: js;">
 	// "四舍"
 	// 0.53664——0.5366
 	// 10.2731——10.27
@@ -554,21 +590,18 @@ three.addEventListener('click', function() {
     // 12.64501——12.65
     // 18.27509——18.28
     // 38.305000001——38.31
-
-	0.1 + 0.2; // 0.30000000000000004
-	(0.1 + 0.2).toFixed(); // "0"
-	(0.1 + 0.2).toFixed(1); // "0.3"
 </pre>
 
-<h3>Execution context</h3>
+<h2>Execution context</h2>
 <p>
 	Execution context is a concept in the language spec that—in layman's terms—roughly equates to the 'environment' a function executes in; that is, variable scope (and the scope chain, variables in closures from outer scopes), function arguments, and the value of the this object.
 	The call stack is a collection of execution contexts.
-	Logically, set of active execution contexts forms a stack. The bottom of this stack is always a global context, the top — a current (active) execution context. The stack is modified (pushed/popped) during the entering and exiting various kinds of EC.
-	<a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/</a>
+	Logically, set of active execution contexts forms a stack. The bottom of this stack is always a global context, the top — a current (active) execution context. The stack is modified (pushed/popped) during the entering and exiting various kinds of EC.	
 </p>
+<p><a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/</a></p>
 <p><a href="http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057">http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057</a></p>
-<p><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">http://ryanmorr.com/understanding-scope-and-context-in-javascript/</a>scope is function-based, while context is object-based.</p>
+<p><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">http://ryanmorr.com/understanding-scope-and-context-in-javascript/</a></p>
+<p>scope is function-based, while context is object-based.</p>
 
 <p>Array instances inherit array methods (such as forEach or map) because their prototype chain looks like the following:</p>
 <pre class="brush: js;">
@@ -580,7 +613,7 @@ three.addEventListener('click', function() {
 	myNodeList --> NodeList.prototype --> Object.prototype --> null
 </pre>
 
-<h3>Array.prototype.slice.call(arguments) OR [].slice.call(arguments)</h3>
+<h2>Array.prototype.slice.call(arguments) OR [].slice.call(arguments)</h2>
 <p><a href="http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work">http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work</a></p>
 <pre class="brush: js;">
 	object.method(); // the object automatically becomes the value of this in the method().
