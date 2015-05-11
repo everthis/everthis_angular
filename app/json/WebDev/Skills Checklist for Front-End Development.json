@@ -63,6 +63,10 @@
                 "link": "http://specificity.keegan.st/",
                 "link_text": "Specificity Calculator",
                 "hints": []
+                }, {
+                "link": "http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/",
+                "link_text": "css-specificity-things-you-should-know",
+                "hints": []
                 }]
         }, {
         	"sub_category": "css-selectors",
@@ -169,6 +173,17 @@
                 }, {
                 "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset",
                 "link_text": "HTMLElement.dataset",
+                "hints": []
+                }]
+        }, {
+            "sub_category": "Others",
+            "links":[{
+                "link": "http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects/7614380#7614380",
+                "link_text": "What is the difference between native objects and host objects?",
+                "hints": []
+                }, {
+                "link": "http://stackoverflow.com/questions/2243824/what-is-the-difference-between-string-slice-and-string-substring",
+                "link_text": "what-is-the-difference-between-string-slice-and-string-substring",
                 "hints": []
                 }]
         }]
