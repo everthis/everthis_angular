@@ -654,6 +654,59 @@ three.addEventListener('click', function() {
 
 	}());​
 </pre>
+
+<pre class="brush: js;">
+	// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript?page=3&tab=votes#tab-top
+
+	url_args_decode = function (url) {
+	  var args_enc, el, i, nameval, ret;
+	  ret = {};
+	  // use the DOM to parse the URL via an 'a' element
+	  el = document.createElement("a");
+	  el.href = url;
+	  // strip off initial ? on search and split
+	  args_enc = el.search.substring(1).split('&');
+	  for (i = 0; i < args_enc.length; i++) {
+	    // convert + into space, split on =, and then decode 
+	    args_enc[i].replace(/\+/g, ' ');
+	    nameval = args_enc[i].split('=', 2);
+	    ret[decodeURIComponent(nameval[0])]=decodeURIComponent(nameval[1]);
+	  }
+	  return ret;
+	};
+
+	url_args_replace = function (url, args) {
+	  var args_enc, el, name;
+	  // use the DOM to parse the URL via an 'a' element
+	  el = document.createElement("a");
+	  el.href = url;
+	  args_enc = [];
+	  // encode args to go into url
+	  for (name in args) {
+	    if (args.hasOwnProperty(name)) {
+	      name = encodeURIComponent(name);
+	      args[name] = encodeURIComponent(args[name]);
+	      args_enc.push(name + '=' + args[name]);
+	    }
+	  }
+	  if (args_enc.length > 0) {
+	    el.search = '?' + args_enc.join('&');
+	  } else {
+	    el.search = '';
+	  }
+	  return el.href;
+	};
+</pre>
+
+<pre class="brush: js;">
+	Function.prototype.bind = Function.prototype.bind || function(context){
+	  var self = this;
+
+	  return function(){
+	    return self.apply(context, arguments);
+	  };
+	}
+</pre>
 <!-- <h2>JavaScript Errors</h2>
 <pre class="brush: js;">
 Uncaught TypeError: undefined is not a function
