@@ -223,7 +223,7 @@ OR
 <p>This also outputs "value", since both foo and bar are converted to the same string. In the SpiderMonkey JavaScript engine, this string would be "[object Object]".</p>
 
 <h2>why {} !== Object()? OR {} !== {}</h2>
-<p><a href="http://es5.github.io/#x11.9.6">http://es5.github.io/#x11.9.6</a></p>
+<p><a class="custom_decoration" href="http://es5.github.io/#x11.9.6">http://es5.github.io/#x11.9.6</a></p>
 <pre class="brush: js;">
 	var o = {};
 	var p = new Object();
@@ -528,7 +528,7 @@ three.addEventListener('click', function() {
 </pre>
 
 <h2>null</h2>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof</a></p>
+<p><a class="custom_decoration" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof</a></p>
 <pre class="brush: js;">
 	// This stands since the beginning of JavaScript
 	typeof null === 'object';
@@ -598,9 +598,9 @@ three.addEventListener('click', function() {
 	The call stack is a collection of execution contexts.
 	Logically, set of active execution contexts forms a stack. The bottom of this stack is always a global context, the top — a current (active) execution context. The stack is modified (pushed/popped) during the entering and exiting various kinds of EC.	
 </p>
-<p><a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/</a></p>
-<p><a href="http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057">http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057</a></p>
-<p><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">http://ryanmorr.com/understanding-scope-and-context-in-javascript/</a></p>
+<p><a class="custom_decoration" href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/</a></p>
+<p><a class="custom_decoration" href="http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057">http://stackoverflow.com/questions/7721200/using-javascript-closures-in-settimeout/7722057#7722057</a></p>
+<p><a class="custom_decoration" href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/">http://ryanmorr.com/understanding-scope-and-context-in-javascript/</a></p>
 <p>scope is function-based, while context is object-based.</p>
 
 <p>Array instances inherit array methods (such as forEach or map) because their prototype chain looks like the following:</p>
@@ -608,13 +608,13 @@ three.addEventListener('click', function() {
 	// (The prototype chain of an object can be obtained by calling Object.getPrototypeOf several times.)
 	myArray --> Array.prototype --> Object.prototype --> null
 </pre>
-<p><a href="https://developer.mozilla.org/en/docs/Web/API/NodeList">https://developer.mozilla.org/en/docs/Web/API/NodeList</a>Unlike arrays, NodeList prototype chain looks like the following:</p>
+<p><a class="custom_decoration" href="https://developer.mozilla.org/en/docs/Web/API/NodeList">https://developer.mozilla.org/en/docs/Web/API/NodeList</a>Unlike arrays, NodeList prototype chain looks like the following:</p>
 <pre class="brush: js;">
 	myNodeList --> NodeList.prototype --> Object.prototype --> null
 </pre>
 
-<h2>Array.prototype.slice.call(arguments) OR [].slice.call(arguments)</h2>
-<p><a href="http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work">http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work</a></p>
+<h2>Array.prototype.slice.call( arguments) OR [].slice.call(arguments)</h2>
+<p><a class="custom_decoration" href="http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work">http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work</a></p>
 <pre class="brush: js;">
 	object.method(); // the object automatically becomes the value of this in the method().
 </pre>

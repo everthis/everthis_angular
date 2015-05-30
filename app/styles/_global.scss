@@ -33,6 +33,7 @@ a:active {
 a:link {
     color: $purple;
 }
+
 a.custom_decoration {
     @include force-wrap;
     text-decoration: none;
