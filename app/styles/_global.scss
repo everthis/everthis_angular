@@ -34,6 +34,7 @@ a:link {
     color: $purple;
 }
 a.custom_decoration {
+    @include force-wrap;
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid $purple;
