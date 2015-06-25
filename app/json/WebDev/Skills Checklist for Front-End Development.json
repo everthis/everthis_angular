@@ -161,6 +161,13 @@
                 "hints": []
                 }]
         }, {
+            "sub_category": "Debounce and Throttle: a visual explanation",
+            "links":[{
+                "link": "http://drupalmotion.com/article/debounce-and-throttle-visual-explanation",
+                "link_text": "Debounce and Throttle: a visual explanation",
+                "hints": []
+                }]
+        }, {
             "sub_category": "JavaScript API",
             "links":[{
                 "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition",
