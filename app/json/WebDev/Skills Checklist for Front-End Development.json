@@ -208,6 +208,10 @@
                 "link": "http://stackoverflow.com/questions/2243824/what-is-the-difference-between-string-slice-and-string-substring",
                 "link_text": "what-is-the-difference-between-string-slice-and-string-substring",
                 "hints": []
+                }, {
+                "link": "http://danthedev.com/2015/07/25/binary-in-javascript/",
+                "link_text": "Binary in Javascript",
+                "hints": []
                 }]
         }]
     }, {
