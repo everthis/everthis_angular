@@ -215,6 +215,16 @@
                 }]
         }]
     }, {
+        "category": "Testing",
+        "content": [{
+            "sub_category": "Writing Testable JavaScript",
+            "links":[{
+                "link": "http://www.adequatelygood.com/Writing-Testable-JavaScript.html",
+                "link_text": "Writing Testable JavaScript",
+                "hints": []
+                }]
+        }]
+    }, {
         "category": "Algorithms and data structures",
         "content": [{
             "sub_category": "Collection",
