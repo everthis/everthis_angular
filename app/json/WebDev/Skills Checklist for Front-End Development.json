@@ -76,22 +76,29 @@
         		"hints": []
         		}]
         }, {
-        	"sub_category": "BFC",
+            "sub_category": "BFC",
+            "links":[{
+                "link": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
+                "link_text": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
+                "hints": []
+                }, {
+                "link": "http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work",
+                "link_text": "how-does-the-css-block-formatting-context-work",
+                "hints": []
+                }, {
+                "link": "http://www.html-js.com/article/1866",
+                "link_text": "CSS之BFC详解",
+                "hints": []
+                }, {
+                "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context",
+                "link_text": "Block_formatting_context",
+                "hints": []
+                }]
+        }, {
+        	"sub_category": "mobile",
         	"links":[{
-        		"link": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
-        		"link_text": "http://www.w3.org/TR/CSS2/visuren.html#block-formatting",
-        		"hints": []
-        		}, {
-        		"link": "http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work",
-        		"link_text": "how-does-the-css-block-formatting-context-work",
-        		"hints": []
-        		}, {
-        		"link": "http://www.html-js.com/article/1866",
-        		"link_text": "CSS之BFC详解",
-        		"hints": []
-        		}, {
-        		"link": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context",
-        		"link_text": "Block_formatting_context",
+        		"link": "https://github.com/amfe/article/issues/10",
+        		"link_text": "Font Boosting",
         		"hints": []
         		}]
         }]
