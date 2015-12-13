@@ -242,6 +242,16 @@
                 }]
         }]
     }, {
+        "category": "Performance",
+        "content": [{
+            "sub_category": "Performance in CSS and Javascript",
+            "links":[{
+                "link": "http://tobiasahlin.com/blog/how-to-animate-box-shadow/",
+                "link_text": "How to animate 'box-shadow' with silky smooth performance",
+                "hints": []
+                }]
+        }]
+    }, {
         "category": "Algorithms and data structures",
         "content": [{
             "sub_category": "Collection",
