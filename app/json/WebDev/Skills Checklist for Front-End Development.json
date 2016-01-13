@@ -8,13 +8,14 @@
         		"link": "http://html5doctor.com/i-b-em-strong-element/",
         		"link_text": "i-b-em-strong-element",
         		"hints": []
-        		},{
-            "sub_category": "前端的基礎修養",
-            "links":[{
-                "link": "https://lepture.com/zh/2015/fe-microdata",
-                "link_text": "前端的基礎修養：Microdata",
-                "hints": []
-                }]
+        		}]
+         },{
+         "sub_category": "前端的基礎修養",
+         "links":[{
+             "link": "https://lepture.com/zh/2015/fe-microdata",
+             "link_text": "前端的基礎修養：Microdata",
+             "hints": []
+             }]
         }]
     }, {
         "category": "CSS",
@@ -238,6 +239,16 @@
             "links":[{
                 "link": "http://www.adequatelygood.com/Writing-Testable-JavaScript.html",
                 "link_text": "Writing Testable JavaScript",
+                "hints": []
+                }]
+        }]
+    }, {
+        "category": "Performance",
+        "content": [{
+            "sub_category": "Performance in CSS and Javascript",
+            "links":[{
+                "link": "http://tobiasahlin.com/blog/how-to-animate-box-shadow/",
+                "link_text": "How to animate 'box-shadow' with silky smooth performance",
                 "hints": []
                 }]
         }]
